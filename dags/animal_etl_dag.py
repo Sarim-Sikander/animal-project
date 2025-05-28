@@ -26,7 +26,7 @@ default_args = {
 }
 
 dag = DAG(
-    "animal_etl_pipeline_v3_fixed",
+    "animal_etl_pipeline_v3",
     default_args=default_args,
     description="ETL pipeline for animal data processing - Fixed data corruption",
     schedule_interval=settings.DAG_SCHEDULE,
