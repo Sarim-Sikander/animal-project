@@ -1,0 +1,22 @@
+[2025-05-28T09:03:22.199+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: animal_etl_pipeline.health_check manual__2025-05-28T09:03:13.149197+00:00 [queued]>
+[2025-05-28T09:03:22.213+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: animal_etl_pipeline.health_check manual__2025-05-28T09:03:13.149197+00:00 [queued]>
+[2025-05-28T09:03:22.213+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 4
+[2025-05-28T09:03:22.233+0000] {taskinstance.py:2217} INFO - Executing <Task(HealthCheckOperator): health_check> on 2025-05-28 09:03:13.149197+00:00
+[2025-05-28T09:03:22.240+0000] {standard_task_runner.py:60} INFO - Started process 62 to run task
+[2025-05-28T09:03:22.242+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'animal_etl_pipeline', 'health_check', 'manual__2025-05-28T09:03:13.149197+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/animal_etl_dag.py', '--cfg-path', '/tmp/tmpgui_00m9']
+[2025-05-28T09:03:22.243+0000] {standard_task_runner.py:88} INFO - Job 3: Subtask health_check
+[2025-05-28T09:03:22.308+0000] {task_command.py:423} INFO - Running <TaskInstance: animal_etl_pipeline.health_check manual__2025-05-28T09:03:13.149197+00:00 [running]> on host 432e2a45d2a3
+[2025-05-28T09:03:22.428+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='admin@company.com' AIRFLOW_CTX_DAG_OWNER='data_team' AIRFLOW_CTX_DAG_ID='animal_etl_pipeline' AIRFLOW_CTX_TASK_ID='health_check' AIRFLOW_CTX_EXECUTION_DATE='2025-05-28T09:03:13.149197+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-28T09:03:13.149197+00:00'
+[2025-05-28T09:03:22.471+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 439, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/opt/airflow/plugins/operators/animal_etl_operators.py", line 137, in execute
+    raise AirflowException("Animals API health check failed")
+airflow.exceptions.AirflowException: Animals API health check failed
+[2025-05-28T09:03:22.480+0000] {taskinstance.py:1149} INFO - Marking task as UP_FOR_RETRY. dag_id=animal_etl_pipeline, task_id=health_check, execution_date=20250528T090313, start_date=20250528T090322, end_date=20250528T090322
+[2025-05-28T09:03:22.495+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 3 for task health_check (Animals API health check failed; 62)
+[2025-05-28T09:03:22.536+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-05-28T09:03:22.569+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

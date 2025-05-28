@@ -1,0 +1,17 @@
+[2025-05-28T10:36:15.624+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: animal_etl_pipeline_v1.0.1.cleanup manual__2025-05-28T10:10:56.366192+00:00 [queued]>
+[2025-05-28T10:36:15.641+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: animal_etl_pipeline_v1.0.1.cleanup manual__2025-05-28T10:10:56.366192+00:00 [queued]>
+[2025-05-28T10:36:15.642+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 4
+[2025-05-28T10:36:15.664+0000] {taskinstance.py:2217} INFO - Executing <Task(BashOperator): cleanup> on 2025-05-28 10:10:56.366192+00:00
+[2025-05-28T10:36:15.671+0000] {standard_task_runner.py:60} INFO - Started process 99 to run task
+[2025-05-28T10:36:15.674+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'animal_etl_pipeline_v1.0.1', 'cleanup', 'manual__2025-05-28T10:10:56.366192+00:00', '--job-id', '28', '--raw', '--subdir', 'DAGS_FOLDER/animal_etl_dag.py', '--cfg-path', '/tmp/tmp43y2zq8p']
+[2025-05-28T10:36:15.675+0000] {standard_task_runner.py:88} INFO - Job 28: Subtask cleanup
+[2025-05-28T10:36:15.736+0000] {task_command.py:423} INFO - Running <TaskInstance: animal_etl_pipeline_v1.0.1.cleanup manual__2025-05-28T10:10:56.366192+00:00 [running]> on host 92026f8f66a7
+[2025-05-28T10:36:15.842+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='admin@company.com' AIRFLOW_CTX_DAG_OWNER='data_team' AIRFLOW_CTX_DAG_ID='animal_etl_pipeline_v1.0.1' AIRFLOW_CTX_TASK_ID='cleanup' AIRFLOW_CTX_EXECUTION_DATE='2025-05-28T10:10:56.366192+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-28T10:10:56.366192+00:00'
+[2025-05-28T10:36:15.843+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-05-28T10:36:15.845+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'echo "Animal ETL pipeline completed - cleanup done"']
+[2025-05-28T10:36:15.858+0000] {subprocess.py:86} INFO - Output:
+[2025-05-28T10:36:15.861+0000] {subprocess.py:93} INFO - Animal ETL pipeline completed - cleanup done
+[2025-05-28T10:36:15.862+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-05-28T10:36:15.893+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=animal_etl_pipeline_v1.0.1, task_id=cleanup, execution_date=20250528T101056, start_date=20250528T103615, end_date=20250528T103615
+[2025-05-28T10:36:15.926+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-05-28T10:36:15.947+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

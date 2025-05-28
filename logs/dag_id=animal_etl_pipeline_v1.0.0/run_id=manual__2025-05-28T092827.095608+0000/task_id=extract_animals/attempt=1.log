@@ -1,0 +1,1271 @@
+[2025-05-28T09:28:29.289+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: animal_etl_pipeline_v1.0.0.extract_animals manual__2025-05-28T09:28:27.095608+00:00 [queued]>
+[2025-05-28T09:28:29.301+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: animal_etl_pipeline_v1.0.0.extract_animals manual__2025-05-28T09:28:27.095608+00:00 [queued]>
+[2025-05-28T09:28:29.302+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 4
+[2025-05-28T09:28:29.322+0000] {taskinstance.py:2217} INFO - Executing <Task(ExtractAnimalsOperator): extract_animals> on 2025-05-28 09:28:27.095608+00:00
+[2025-05-28T09:28:29.329+0000] {standard_task_runner.py:60} INFO - Started process 67 to run task
+[2025-05-28T09:28:29.333+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'animal_etl_pipeline_v1.0.0', 'extract_animals', 'manual__2025-05-28T09:28:27.095608+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/animal_etl_dag.py', '--cfg-path', '/tmp/tmp7uiqpnwe']
+[2025-05-28T09:28:29.334+0000] {standard_task_runner.py:88} INFO - Job 13: Subtask extract_animals
+[2025-05-28T09:28:29.397+0000] {task_command.py:423} INFO - Running <TaskInstance: animal_etl_pipeline_v1.0.0.extract_animals manual__2025-05-28T09:28:27.095608+00:00 [running]> on host 92026f8f66a7
+[2025-05-28T09:28:29.493+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='admin@company.com' AIRFLOW_CTX_DAG_OWNER='data_team' AIRFLOW_CTX_DAG_ID='animal_etl_pipeline_v1.0.0' AIRFLOW_CTX_TASK_ID='extract_animals' AIRFLOW_CTX_EXECUTION_DATE='2025-05-28T09:28:27.095608+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-28T09:28:27.095608+00:00'
+[2025-05-28T09:28:29.495+0000] {animals_api_hook.py:55} INFO - Starting to fetch all animals
+[2025-05-28T09:28:29.495+0000] {animals_api_hook.py:33} INFO - Fetching animals page 1
+[2025-05-28T09:28:29.536+0000] {animals_api_hook.py:65} INFO - Fetched page 1: 10 animals
+[2025-05-28T09:28:29.536+0000] {animals_api_hook.py:33} INFO - Fetching animals page 2
+[2025-05-28T09:28:29.565+0000] {animals_api_hook.py:65} INFO - Fetched page 2: 10 animals
+[2025-05-28T09:28:29.565+0000] {animals_api_hook.py:33} INFO - Fetching animals page 3
+[2025-05-28T09:28:29.593+0000] {animals_api_hook.py:65} INFO - Fetched page 3: 10 animals
+[2025-05-28T09:28:29.593+0000] {animals_api_hook.py:33} INFO - Fetching animals page 4
+[2025-05-28T09:28:29.622+0000] {animals_api_hook.py:65} INFO - Fetched page 4: 10 animals
+[2025-05-28T09:28:29.622+0000] {animals_api_hook.py:33} INFO - Fetching animals page 5
+[2025-05-28T09:28:29.651+0000] {animals_api_hook.py:65} INFO - Fetched page 5: 10 animals
+[2025-05-28T09:28:29.651+0000] {animals_api_hook.py:33} INFO - Fetching animals page 6
+[2025-05-28T09:28:29.680+0000] {animals_api_hook.py:65} INFO - Fetched page 6: 10 animals
+[2025-05-28T09:28:29.680+0000] {animals_api_hook.py:33} INFO - Fetching animals page 7
+[2025-05-28T09:28:29.714+0000] {animals_api_hook.py:65} INFO - Fetched page 7: 10 animals
+[2025-05-28T09:28:29.715+0000] {animals_api_hook.py:33} INFO - Fetching animals page 8
+[2025-05-28T09:28:29.741+0000] {animals_api_hook.py:65} INFO - Fetched page 8: 10 animals
+[2025-05-28T09:28:29.742+0000] {animals_api_hook.py:33} INFO - Fetching animals page 9
+[2025-05-28T09:28:29.768+0000] {animals_api_hook.py:65} INFO - Fetched page 9: 10 animals
+[2025-05-28T09:28:29.769+0000] {animals_api_hook.py:33} INFO - Fetching animals page 10
+[2025-05-28T09:28:29.796+0000] {animals_api_hook.py:65} INFO - Fetched page 10: 10 animals
+[2025-05-28T09:28:29.796+0000] {animals_api_hook.py:33} INFO - Fetching animals page 11
+[2025-05-28T09:28:29.822+0000] {animals_api_hook.py:65} INFO - Fetched page 11: 10 animals
+[2025-05-28T09:28:29.823+0000] {animals_api_hook.py:33} INFO - Fetching animals page 12
+[2025-05-28T09:28:29.850+0000] {animals_api_hook.py:65} INFO - Fetched page 12: 10 animals
+[2025-05-28T09:28:29.850+0000] {animals_api_hook.py:33} INFO - Fetching animals page 13
+[2025-05-28T09:28:29.880+0000] {animals_api_hook.py:65} INFO - Fetched page 13: 10 animals
+[2025-05-28T09:28:29.880+0000] {animals_api_hook.py:33} INFO - Fetching animals page 14
+[2025-05-28T09:28:29.909+0000] {animals_api_hook.py:65} INFO - Fetched page 14: 10 animals
+[2025-05-28T09:28:29.909+0000] {animals_api_hook.py:33} INFO - Fetching animals page 15
+[2025-05-28T09:28:29.951+0000] {animals_api_hook.py:65} INFO - Fetched page 15: 10 animals
+[2025-05-28T09:28:29.952+0000] {animals_api_hook.py:33} INFO - Fetching animals page 16
+[2025-05-28T09:28:29.978+0000] {animals_api_hook.py:65} INFO - Fetched page 16: 10 animals
+[2025-05-28T09:28:29.979+0000] {animals_api_hook.py:33} INFO - Fetching animals page 17
+[2025-05-28T09:28:30.005+0000] {animals_api_hook.py:65} INFO - Fetched page 17: 10 animals
+[2025-05-28T09:28:30.006+0000] {animals_api_hook.py:33} INFO - Fetching animals page 18
+[2025-05-28T09:28:30.034+0000] {animals_api_hook.py:65} INFO - Fetched page 18: 10 animals
+[2025-05-28T09:28:30.034+0000] {animals_api_hook.py:33} INFO - Fetching animals page 19
+[2025-05-28T09:28:30.060+0000] {animals_api_hook.py:65} INFO - Fetched page 19: 10 animals
+[2025-05-28T09:28:30.061+0000] {animals_api_hook.py:33} INFO - Fetching animals page 20
+[2025-05-28T09:28:30.088+0000] {animals_api_hook.py:65} INFO - Fetched page 20: 10 animals
+[2025-05-28T09:28:30.089+0000] {animals_api_hook.py:33} INFO - Fetching animals page 21
+[2025-05-28T09:28:30.116+0000] {animals_api_hook.py:65} INFO - Fetched page 21: 10 animals
+[2025-05-28T09:28:30.117+0000] {animals_api_hook.py:33} INFO - Fetching animals page 22
+[2025-05-28T09:28:30.143+0000] {animals_api_hook.py:65} INFO - Fetched page 22: 10 animals
+[2025-05-28T09:28:30.144+0000] {animals_api_hook.py:33} INFO - Fetching animals page 23
+[2025-05-28T09:28:30.183+0000] {animals_api_hook.py:65} INFO - Fetched page 23: 10 animals
+[2025-05-28T09:28:30.184+0000] {animals_api_hook.py:33} INFO - Fetching animals page 24
+[2025-05-28T09:28:30.210+0000] {animals_api_hook.py:65} INFO - Fetched page 24: 10 animals
+[2025-05-28T09:28:30.211+0000] {animals_api_hook.py:33} INFO - Fetching animals page 25
+[2025-05-28T09:28:30.237+0000] {animals_api_hook.py:65} INFO - Fetched page 25: 10 animals
+[2025-05-28T09:28:30.238+0000] {animals_api_hook.py:33} INFO - Fetching animals page 26
+[2025-05-28T09:28:30.265+0000] {animals_api_hook.py:65} INFO - Fetched page 26: 10 animals
+[2025-05-28T09:28:30.265+0000] {animals_api_hook.py:33} INFO - Fetching animals page 27
+[2025-05-28T09:28:30.292+0000] {animals_api_hook.py:65} INFO - Fetched page 27: 10 animals
+[2025-05-28T09:28:30.292+0000] {animals_api_hook.py:33} INFO - Fetching animals page 28
+[2025-05-28T09:28:30.318+0000] {animals_api_hook.py:65} INFO - Fetched page 28: 10 animals
+[2025-05-28T09:28:30.319+0000] {animals_api_hook.py:33} INFO - Fetching animals page 29
+[2025-05-28T09:28:30.346+0000] {animals_api_hook.py:65} INFO - Fetched page 29: 10 animals
+[2025-05-28T09:28:30.346+0000] {animals_api_hook.py:33} INFO - Fetching animals page 30
+[2025-05-28T09:28:30.373+0000] {animals_api_hook.py:65} INFO - Fetched page 30: 10 animals
+[2025-05-28T09:28:30.373+0000] {animals_api_hook.py:33} INFO - Fetching animals page 31
+[2025-05-28T09:28:30.399+0000] {animals_api_hook.py:65} INFO - Fetched page 31: 10 animals
+[2025-05-28T09:28:30.400+0000] {animals_api_hook.py:33} INFO - Fetching animals page 32
+[2025-05-28T09:28:30.439+0000] {animals_api_hook.py:65} INFO - Fetched page 32: 10 animals
+[2025-05-28T09:28:30.439+0000] {animals_api_hook.py:33} INFO - Fetching animals page 33
+[2025-05-28T09:28:30.465+0000] {animals_api_hook.py:65} INFO - Fetched page 33: 10 animals
+[2025-05-28T09:28:30.466+0000] {animals_api_hook.py:33} INFO - Fetching animals page 34
+[2025-05-28T09:28:30.495+0000] {animals_api_hook.py:65} INFO - Fetched page 34: 10 animals
+[2025-05-28T09:28:30.496+0000] {animals_api_hook.py:33} INFO - Fetching animals page 35
+[2025-05-28T09:28:30.533+0000] {animals_api_hook.py:65} INFO - Fetched page 35: 10 animals
+[2025-05-28T09:28:30.533+0000] {animals_api_hook.py:33} INFO - Fetching animals page 36
+[2025-05-28T09:28:30.566+0000] {animals_api_hook.py:65} INFO - Fetched page 36: 10 animals
+[2025-05-28T09:28:30.567+0000] {animals_api_hook.py:33} INFO - Fetching animals page 37
+[2025-05-28T09:28:30.594+0000] {animals_api_hook.py:65} INFO - Fetched page 37: 10 animals
+[2025-05-28T09:28:30.594+0000] {animals_api_hook.py:33} INFO - Fetching animals page 38
+[2025-05-28T09:28:30.622+0000] {animals_api_hook.py:65} INFO - Fetched page 38: 10 animals
+[2025-05-28T09:28:30.622+0000] {animals_api_hook.py:33} INFO - Fetching animals page 39
+[2025-05-28T09:28:30.649+0000] {animals_api_hook.py:65} INFO - Fetched page 39: 10 animals
+[2025-05-28T09:28:30.650+0000] {animals_api_hook.py:33} INFO - Fetching animals page 40
+[2025-05-28T09:28:30.688+0000] {animals_api_hook.py:65} INFO - Fetched page 40: 10 animals
+[2025-05-28T09:28:30.689+0000] {animals_api_hook.py:33} INFO - Fetching animals page 41
+[2025-05-28T09:28:30.716+0000] {animals_api_hook.py:65} INFO - Fetched page 41: 10 animals
+[2025-05-28T09:28:30.717+0000] {animals_api_hook.py:33} INFO - Fetching animals page 42
+[2025-05-28T09:28:44.743+0000] {animals_api_hook.py:65} INFO - Fetched page 42: 10 animals
+[2025-05-28T09:28:44.743+0000] {animals_api_hook.py:33} INFO - Fetching animals page 43
+[2025-05-28T09:28:44.768+0000] {animals_api_hook.py:65} INFO - Fetched page 43: 10 animals
+[2025-05-28T09:28:44.769+0000] {animals_api_hook.py:33} INFO - Fetching animals page 44
+[2025-05-28T09:28:44.795+0000] {animals_api_hook.py:65} INFO - Fetched page 44: 10 animals
+[2025-05-28T09:28:44.795+0000] {animals_api_hook.py:33} INFO - Fetching animals page 45
+[2025-05-28T09:28:44.820+0000] {animals_api_hook.py:65} INFO - Fetched page 45: 10 animals
+[2025-05-28T09:28:44.821+0000] {animals_api_hook.py:33} INFO - Fetching animals page 46
+[2025-05-28T09:28:44.846+0000] {animals_api_hook.py:65} INFO - Fetched page 46: 10 animals
+[2025-05-28T09:28:44.846+0000] {animals_api_hook.py:33} INFO - Fetching animals page 47
+[2025-05-28T09:28:44.871+0000] {animals_api_hook.py:65} INFO - Fetched page 47: 10 animals
+[2025-05-28T09:28:44.872+0000] {animals_api_hook.py:33} INFO - Fetching animals page 48
+[2025-05-28T09:28:44.907+0000] {animals_api_hook.py:65} INFO - Fetched page 48: 10 animals
+[2025-05-28T09:28:44.907+0000] {animals_api_hook.py:33} INFO - Fetching animals page 49
+[2025-05-28T09:28:44.933+0000] {animals_api_hook.py:65} INFO - Fetched page 49: 10 animals
+[2025-05-28T09:28:44.934+0000] {animals_api_hook.py:33} INFO - Fetching animals page 50
+[2025-05-28T09:28:44.959+0000] {animals_api_hook.py:65} INFO - Fetched page 50: 10 animals
+[2025-05-28T09:28:44.960+0000] {animals_api_hook.py:33} INFO - Fetching animals page 51
+[2025-05-28T09:28:44.985+0000] {animals_api_hook.py:65} INFO - Fetched page 51: 10 animals
+[2025-05-28T09:28:44.985+0000] {animals_api_hook.py:33} INFO - Fetching animals page 52
+[2025-05-28T09:28:45.011+0000] {animals_api_hook.py:65} INFO - Fetched page 52: 10 animals
+[2025-05-28T09:28:45.012+0000] {animals_api_hook.py:33} INFO - Fetching animals page 53
+[2025-05-28T09:28:45.037+0000] {animals_api_hook.py:65} INFO - Fetched page 53: 10 animals
+[2025-05-28T09:28:45.038+0000] {animals_api_hook.py:33} INFO - Fetching animals page 54
+[2025-05-28T09:28:45.065+0000] {animals_api_hook.py:65} INFO - Fetched page 54: 10 animals
+[2025-05-28T09:28:45.065+0000] {animals_api_hook.py:33} INFO - Fetching animals page 55
+[2025-05-28T09:28:45.091+0000] {animals_api_hook.py:65} INFO - Fetched page 55: 10 animals
+[2025-05-28T09:28:45.092+0000] {animals_api_hook.py:33} INFO - Fetching animals page 56
+[2025-05-28T09:28:45.117+0000] {animals_api_hook.py:65} INFO - Fetched page 56: 10 animals
+[2025-05-28T09:28:45.118+0000] {animals_api_hook.py:33} INFO - Fetching animals page 57
+[2025-05-28T09:28:45.159+0000] {animals_api_hook.py:65} INFO - Fetched page 57: 10 animals
+[2025-05-28T09:28:45.159+0000] {animals_api_hook.py:33} INFO - Fetching animals page 58
+[2025-05-28T09:28:45.185+0000] {animals_api_hook.py:65} INFO - Fetched page 58: 10 animals
+[2025-05-28T09:28:45.185+0000] {animals_api_hook.py:33} INFO - Fetching animals page 59
+[2025-05-28T09:28:45.210+0000] {animals_api_hook.py:65} INFO - Fetched page 59: 10 animals
+[2025-05-28T09:28:45.211+0000] {animals_api_hook.py:33} INFO - Fetching animals page 60
+[2025-05-28T09:28:45.236+0000] {animals_api_hook.py:65} INFO - Fetched page 60: 10 animals
+[2025-05-28T09:28:45.237+0000] {animals_api_hook.py:33} INFO - Fetching animals page 61
+[2025-05-28T09:28:45.263+0000] {animals_api_hook.py:65} INFO - Fetched page 61: 10 animals
+[2025-05-28T09:28:45.264+0000] {animals_api_hook.py:33} INFO - Fetching animals page 62
+[2025-05-28T09:28:45.290+0000] {animals_api_hook.py:65} INFO - Fetched page 62: 10 animals
+[2025-05-28T09:28:45.290+0000] {animals_api_hook.py:33} INFO - Fetching animals page 63
+[2025-05-28T09:28:45.315+0000] {animals_api_hook.py:65} INFO - Fetched page 63: 10 animals
+[2025-05-28T09:28:45.316+0000] {animals_api_hook.py:33} INFO - Fetching animals page 64
+[2025-05-28T09:28:45.341+0000] {animals_api_hook.py:65} INFO - Fetched page 64: 10 animals
+[2025-05-28T09:28:45.342+0000] {animals_api_hook.py:33} INFO - Fetching animals page 65
+[2025-05-28T09:28:45.376+0000] {animals_api_hook.py:65} INFO - Fetched page 65: 10 animals
+[2025-05-28T09:28:45.377+0000] {animals_api_hook.py:33} INFO - Fetching animals page 66
+[2025-05-28T09:28:45.403+0000] {animals_api_hook.py:65} INFO - Fetched page 66: 10 animals
+[2025-05-28T09:28:45.403+0000] {animals_api_hook.py:33} INFO - Fetching animals page 67
+[2025-05-28T09:28:45.429+0000] {animals_api_hook.py:65} INFO - Fetched page 67: 10 animals
+[2025-05-28T09:28:45.429+0000] {animals_api_hook.py:33} INFO - Fetching animals page 68
+[2025-05-28T09:28:45.455+0000] {animals_api_hook.py:65} INFO - Fetched page 68: 10 animals
+[2025-05-28T09:28:45.456+0000] {animals_api_hook.py:33} INFO - Fetching animals page 69
+[2025-05-28T09:28:45.481+0000] {animals_api_hook.py:65} INFO - Fetched page 69: 10 animals
+[2025-05-28T09:28:45.481+0000] {animals_api_hook.py:33} INFO - Fetching animals page 70
+[2025-05-28T09:28:45.511+0000] {animals_api_hook.py:65} INFO - Fetched page 70: 10 animals
+[2025-05-28T09:28:45.511+0000] {animals_api_hook.py:33} INFO - Fetching animals page 71
+[2025-05-28T09:28:45.536+0000] {animals_api_hook.py:65} INFO - Fetched page 71: 10 animals
+[2025-05-28T09:28:45.536+0000] {animals_api_hook.py:33} INFO - Fetching animals page 72
+[2025-05-28T09:28:45.561+0000] {animals_api_hook.py:65} INFO - Fetched page 72: 10 animals
+[2025-05-28T09:28:45.562+0000] {animals_api_hook.py:33} INFO - Fetching animals page 73
+[2025-05-28T09:28:45.588+0000] {animals_api_hook.py:65} INFO - Fetched page 73: 10 animals
+[2025-05-28T09:28:45.588+0000] {animals_api_hook.py:33} INFO - Fetching animals page 74
+[2025-05-28T09:28:45.628+0000] {animals_api_hook.py:65} INFO - Fetched page 74: 10 animals
+[2025-05-28T09:28:45.629+0000] {animals_api_hook.py:33} INFO - Fetching animals page 75
+[2025-05-28T09:28:45.655+0000] {animals_api_hook.py:65} INFO - Fetched page 75: 10 animals
+[2025-05-28T09:28:45.655+0000] {animals_api_hook.py:33} INFO - Fetching animals page 76
+[2025-05-28T09:28:45.681+0000] {animals_api_hook.py:65} INFO - Fetched page 76: 10 animals
+[2025-05-28T09:28:45.681+0000] {animals_api_hook.py:33} INFO - Fetching animals page 77
+[2025-05-28T09:28:45.706+0000] {animals_api_hook.py:65} INFO - Fetched page 77: 10 animals
+[2025-05-28T09:28:45.707+0000] {animals_api_hook.py:33} INFO - Fetching animals page 78
+[2025-05-28T09:28:45.732+0000] {animals_api_hook.py:65} INFO - Fetched page 78: 10 animals
+[2025-05-28T09:28:45.733+0000] {animals_api_hook.py:33} INFO - Fetching animals page 79
+[2025-05-28T09:28:45.758+0000] {animals_api_hook.py:65} INFO - Fetched page 79: 10 animals
+[2025-05-28T09:28:45.759+0000] {animals_api_hook.py:33} INFO - Fetching animals page 80
+[2025-05-28T09:28:55.785+0000] {animals_api_hook.py:65} INFO - Fetched page 80: 10 animals
+[2025-05-28T09:28:55.785+0000] {animals_api_hook.py:33} INFO - Fetching animals page 81
+[2025-05-28T09:28:55.813+0000] {animals_api_hook.py:65} INFO - Fetched page 81: 10 animals
+[2025-05-28T09:28:55.813+0000] {animals_api_hook.py:33} INFO - Fetching animals page 82
+[2025-05-28T09:28:55.848+0000] {animals_api_hook.py:65} INFO - Fetched page 82: 10 animals
+[2025-05-28T09:28:55.849+0000] {animals_api_hook.py:33} INFO - Fetching animals page 83
+[2025-05-28T09:28:55.875+0000] {animals_api_hook.py:65} INFO - Fetched page 83: 10 animals
+[2025-05-28T09:28:55.876+0000] {animals_api_hook.py:33} INFO - Fetching animals page 84
+[2025-05-28T09:28:55.902+0000] {animals_api_hook.py:65} INFO - Fetched page 84: 10 animals
+[2025-05-28T09:28:55.903+0000] {animals_api_hook.py:33} INFO - Fetching animals page 85
+[2025-05-28T09:28:55.928+0000] {animals_api_hook.py:65} INFO - Fetched page 85: 10 animals
+[2025-05-28T09:28:55.929+0000] {animals_api_hook.py:33} INFO - Fetching animals page 86
+[2025-05-28T09:28:55.956+0000] {animals_api_hook.py:65} INFO - Fetched page 86: 10 animals
+[2025-05-28T09:28:55.957+0000] {animals_api_hook.py:33} INFO - Fetching animals page 87
+[2025-05-28T09:28:55.984+0000] {animals_api_hook.py:65} INFO - Fetched page 87: 10 animals
+[2025-05-28T09:28:55.984+0000] {animals_api_hook.py:33} INFO - Fetching animals page 88
+[2025-05-28T09:28:56.012+0000] {animals_api_hook.py:65} INFO - Fetched page 88: 10 animals
+[2025-05-28T09:28:56.013+0000] {animals_api_hook.py:33} INFO - Fetching animals page 89
+[2025-05-28T09:28:56.041+0000] {animals_api_hook.py:65} INFO - Fetched page 89: 10 animals
+[2025-05-28T09:28:56.042+0000] {animals_api_hook.py:33} INFO - Fetching animals page 90
+[2025-05-28T09:28:56.068+0000] {animals_api_hook.py:65} INFO - Fetched page 90: 10 animals
+[2025-05-28T09:28:56.069+0000] {animals_api_hook.py:33} INFO - Fetching animals page 91
+[2025-05-28T09:28:56.104+0000] {animals_api_hook.py:65} INFO - Fetched page 91: 10 animals
+[2025-05-28T09:28:56.104+0000] {animals_api_hook.py:33} INFO - Fetching animals page 92
+[2025-05-28T09:28:56.131+0000] {animals_api_hook.py:65} INFO - Fetched page 92: 10 animals
+[2025-05-28T09:28:56.131+0000] {animals_api_hook.py:33} INFO - Fetching animals page 93
+[2025-05-28T09:28:56.157+0000] {animals_api_hook.py:65} INFO - Fetched page 93: 10 animals
+[2025-05-28T09:28:56.157+0000] {animals_api_hook.py:33} INFO - Fetching animals page 94
+[2025-05-28T09:28:56.182+0000] {animals_api_hook.py:65} INFO - Fetched page 94: 10 animals
+[2025-05-28T09:28:56.183+0000] {animals_api_hook.py:33} INFO - Fetching animals page 95
+[2025-05-28T09:28:56.209+0000] {animals_api_hook.py:65} INFO - Fetched page 95: 10 animals
+[2025-05-28T09:28:56.209+0000] {animals_api_hook.py:33} INFO - Fetching animals page 96
+[2025-05-28T09:28:56.234+0000] {animals_api_hook.py:65} INFO - Fetched page 96: 10 animals
+[2025-05-28T09:28:56.235+0000] {animals_api_hook.py:33} INFO - Fetching animals page 97
+[2025-05-28T09:28:56.260+0000] {animals_api_hook.py:65} INFO - Fetched page 97: 10 animals
+[2025-05-28T09:28:56.261+0000] {animals_api_hook.py:33} INFO - Fetching animals page 98
+[2025-05-28T09:28:56.286+0000] {animals_api_hook.py:65} INFO - Fetched page 98: 10 animals
+[2025-05-28T09:28:56.286+0000] {animals_api_hook.py:33} INFO - Fetching animals page 99
+[2025-05-28T09:28:56.321+0000] {animals_api_hook.py:65} INFO - Fetched page 99: 10 animals
+[2025-05-28T09:28:56.321+0000] {animals_api_hook.py:33} INFO - Fetching animals page 100
+[2025-05-28T09:28:56.348+0000] {animals_api_hook.py:65} INFO - Fetched page 100: 10 animals
+[2025-05-28T09:28:56.349+0000] {animals_api_hook.py:33} INFO - Fetching animals page 101
+[2025-05-28T09:28:56.375+0000] {animals_api_hook.py:65} INFO - Fetched page 101: 10 animals
+[2025-05-28T09:28:56.376+0000] {animals_api_hook.py:33} INFO - Fetching animals page 102
+[2025-05-28T09:28:56.402+0000] {animals_api_hook.py:65} INFO - Fetched page 102: 10 animals
+[2025-05-28T09:28:56.402+0000] {animals_api_hook.py:33} INFO - Fetching animals page 103
+[2025-05-28T09:28:56.428+0000] {animals_api_hook.py:65} INFO - Fetched page 103: 10 animals
+[2025-05-28T09:28:56.428+0000] {animals_api_hook.py:33} INFO - Fetching animals page 104
+[2025-05-28T09:28:56.454+0000] {animals_api_hook.py:65} INFO - Fetched page 104: 10 animals
+[2025-05-28T09:28:56.454+0000] {animals_api_hook.py:33} INFO - Fetching animals page 105
+[2025-05-28T09:28:56.480+0000] {animals_api_hook.py:65} INFO - Fetched page 105: 10 animals
+[2025-05-28T09:28:56.481+0000] {animals_api_hook.py:33} INFO - Fetching animals page 106
+[2025-05-28T09:28:57.506+0000] {animals_api_hook.py:33} INFO - Fetching animals page 106
+[2025-05-28T09:28:57.541+0000] {animals_api_hook.py:65} INFO - Fetched page 106: 10 animals
+[2025-05-28T09:28:57.542+0000] {animals_api_hook.py:33} INFO - Fetching animals page 107
+[2025-05-28T09:28:57.568+0000] {animals_api_hook.py:65} INFO - Fetched page 107: 10 animals
+[2025-05-28T09:28:57.569+0000] {animals_api_hook.py:33} INFO - Fetching animals page 108
+[2025-05-28T09:28:57.595+0000] {animals_api_hook.py:65} INFO - Fetched page 108: 10 animals
+[2025-05-28T09:28:57.596+0000] {animals_api_hook.py:33} INFO - Fetching animals page 109
+[2025-05-28T09:28:57.621+0000] {animals_api_hook.py:65} INFO - Fetched page 109: 10 animals
+[2025-05-28T09:28:57.622+0000] {animals_api_hook.py:33} INFO - Fetching animals page 110
+[2025-05-28T09:29:09.649+0000] {animals_api_hook.py:65} INFO - Fetched page 110: 10 animals
+[2025-05-28T09:29:09.650+0000] {animals_api_hook.py:33} INFO - Fetching animals page 111
+[2025-05-28T09:29:09.676+0000] {animals_api_hook.py:65} INFO - Fetched page 111: 10 animals
+[2025-05-28T09:29:09.676+0000] {animals_api_hook.py:33} INFO - Fetching animals page 112
+[2025-05-28T09:29:09.702+0000] {animals_api_hook.py:65} INFO - Fetched page 112: 10 animals
+[2025-05-28T09:29:09.703+0000] {animals_api_hook.py:33} INFO - Fetching animals page 113
+[2025-05-28T09:29:09.728+0000] {animals_api_hook.py:65} INFO - Fetched page 113: 10 animals
+[2025-05-28T09:29:09.729+0000] {animals_api_hook.py:33} INFO - Fetching animals page 114
+[2025-05-28T09:29:09.755+0000] {animals_api_hook.py:65} INFO - Fetched page 114: 10 animals
+[2025-05-28T09:29:09.756+0000] {animals_api_hook.py:33} INFO - Fetching animals page 115
+[2025-05-28T09:29:09.795+0000] {animals_api_hook.py:65} INFO - Fetched page 115: 10 animals
+[2025-05-28T09:29:09.795+0000] {animals_api_hook.py:33} INFO - Fetching animals page 116
+[2025-05-28T09:29:09.821+0000] {animals_api_hook.py:65} INFO - Fetched page 116: 10 animals
+[2025-05-28T09:29:09.822+0000] {animals_api_hook.py:33} INFO - Fetching animals page 117
+[2025-05-28T09:29:09.848+0000] {animals_api_hook.py:65} INFO - Fetched page 117: 10 animals
+[2025-05-28T09:29:09.848+0000] {animals_api_hook.py:33} INFO - Fetching animals page 118
+[2025-05-28T09:29:09.875+0000] {animals_api_hook.py:65} INFO - Fetched page 118: 10 animals
+[2025-05-28T09:29:09.875+0000] {animals_api_hook.py:33} INFO - Fetching animals page 119
+[2025-05-28T09:29:09.900+0000] {animals_api_hook.py:65} INFO - Fetched page 119: 10 animals
+[2025-05-28T09:29:09.901+0000] {animals_api_hook.py:33} INFO - Fetching animals page 120
+[2025-05-28T09:29:09.928+0000] {animals_api_hook.py:65} INFO - Fetched page 120: 10 animals
+[2025-05-28T09:29:09.928+0000] {animals_api_hook.py:33} INFO - Fetching animals page 121
+[2025-05-28T09:29:09.953+0000] {animals_api_hook.py:65} INFO - Fetched page 121: 10 animals
+[2025-05-28T09:29:09.954+0000] {animals_api_hook.py:33} INFO - Fetching animals page 122
+[2025-05-28T09:29:09.979+0000] {animals_api_hook.py:65} INFO - Fetched page 122: 10 animals
+[2025-05-28T09:29:09.980+0000] {animals_api_hook.py:33} INFO - Fetching animals page 123
+[2025-05-28T09:29:10.013+0000] {animals_api_hook.py:65} INFO - Fetched page 123: 10 animals
+[2025-05-28T09:29:10.014+0000] {animals_api_hook.py:33} INFO - Fetching animals page 124
+[2025-05-28T09:29:10.040+0000] {animals_api_hook.py:65} INFO - Fetched page 124: 10 animals
+[2025-05-28T09:29:10.040+0000] {animals_api_hook.py:33} INFO - Fetching animals page 125
+[2025-05-28T09:29:10.066+0000] {animals_api_hook.py:65} INFO - Fetched page 125: 10 animals
+[2025-05-28T09:29:10.066+0000] {animals_api_hook.py:33} INFO - Fetching animals page 126
+[2025-05-28T09:29:10.092+0000] {animals_api_hook.py:65} INFO - Fetched page 126: 10 animals
+[2025-05-28T09:29:10.092+0000] {animals_api_hook.py:33} INFO - Fetching animals page 127
+[2025-05-28T09:29:10.117+0000] {animals_api_hook.py:65} INFO - Fetched page 127: 10 animals
+[2025-05-28T09:29:10.118+0000] {animals_api_hook.py:33} INFO - Fetching animals page 128
+[2025-05-28T09:29:10.143+0000] {animals_api_hook.py:65} INFO - Fetched page 128: 10 animals
+[2025-05-28T09:29:10.144+0000] {animals_api_hook.py:33} INFO - Fetching animals page 129
+[2025-05-28T09:29:10.169+0000] {animals_api_hook.py:65} INFO - Fetched page 129: 10 animals
+[2025-05-28T09:29:10.169+0000] {animals_api_hook.py:33} INFO - Fetching animals page 130
+[2025-05-28T09:29:10.195+0000] {animals_api_hook.py:65} INFO - Fetched page 130: 10 animals
+[2025-05-28T09:29:10.195+0000] {animals_api_hook.py:33} INFO - Fetching animals page 131
+[2025-05-28T09:29:10.221+0000] {animals_api_hook.py:65} INFO - Fetched page 131: 10 animals
+[2025-05-28T09:29:10.221+0000] {animals_api_hook.py:33} INFO - Fetching animals page 132
+[2025-05-28T09:29:10.255+0000] {animals_api_hook.py:65} INFO - Fetched page 132: 10 animals
+[2025-05-28T09:29:10.256+0000] {animals_api_hook.py:33} INFO - Fetching animals page 133
+[2025-05-28T09:29:10.281+0000] {animals_api_hook.py:65} INFO - Fetched page 133: 10 animals
+[2025-05-28T09:29:10.282+0000] {animals_api_hook.py:33} INFO - Fetching animals page 134
+[2025-05-28T09:29:10.307+0000] {animals_api_hook.py:65} INFO - Fetched page 134: 10 animals
+[2025-05-28T09:29:10.308+0000] {animals_api_hook.py:33} INFO - Fetching animals page 135
+[2025-05-28T09:29:10.334+0000] {animals_api_hook.py:65} INFO - Fetched page 135: 10 animals
+[2025-05-28T09:29:10.334+0000] {animals_api_hook.py:33} INFO - Fetching animals page 136
+[2025-05-28T09:29:10.360+0000] {animals_api_hook.py:65} INFO - Fetched page 136: 10 animals
+[2025-05-28T09:29:10.360+0000] {animals_api_hook.py:33} INFO - Fetching animals page 137
+[2025-05-28T09:29:10.385+0000] {animals_api_hook.py:65} INFO - Fetched page 137: 10 animals
+[2025-05-28T09:29:10.386+0000] {animals_api_hook.py:33} INFO - Fetching animals page 138
+[2025-05-28T09:29:10.411+0000] {animals_api_hook.py:65} INFO - Fetched page 138: 10 animals
+[2025-05-28T09:29:10.412+0000] {animals_api_hook.py:33} INFO - Fetching animals page 139
+[2025-05-28T09:29:10.438+0000] {animals_api_hook.py:65} INFO - Fetched page 139: 10 animals
+[2025-05-28T09:29:10.439+0000] {animals_api_hook.py:33} INFO - Fetching animals page 140
+[2025-05-28T09:29:10.473+0000] {animals_api_hook.py:65} INFO - Fetched page 140: 10 animals
+[2025-05-28T09:29:10.474+0000] {animals_api_hook.py:33} INFO - Fetching animals page 141
+[2025-05-28T09:29:10.501+0000] {animals_api_hook.py:65} INFO - Fetched page 141: 10 animals
+[2025-05-28T09:29:10.501+0000] {animals_api_hook.py:33} INFO - Fetching animals page 142
+[2025-05-28T09:29:10.528+0000] {animals_api_hook.py:65} INFO - Fetched page 142: 10 animals
+[2025-05-28T09:29:10.528+0000] {animals_api_hook.py:33} INFO - Fetching animals page 143
+[2025-05-28T09:29:10.556+0000] {animals_api_hook.py:65} INFO - Fetched page 143: 10 animals
+[2025-05-28T09:29:10.556+0000] {animals_api_hook.py:33} INFO - Fetching animals page 144
+[2025-05-28T09:29:10.582+0000] {animals_api_hook.py:65} INFO - Fetched page 144: 10 animals
+[2025-05-28T09:29:10.582+0000] {animals_api_hook.py:33} INFO - Fetching animals page 145
+[2025-05-28T09:29:10.608+0000] {animals_api_hook.py:65} INFO - Fetched page 145: 10 animals
+[2025-05-28T09:29:10.609+0000] {animals_api_hook.py:33} INFO - Fetching animals page 146
+[2025-05-28T09:29:10.634+0000] {animals_api_hook.py:65} INFO - Fetched page 146: 10 animals
+[2025-05-28T09:29:10.635+0000] {animals_api_hook.py:33} INFO - Fetching animals page 147
+[2025-05-28T09:29:10.660+0000] {animals_api_hook.py:65} INFO - Fetched page 147: 10 animals
+[2025-05-28T09:29:10.661+0000] {animals_api_hook.py:33} INFO - Fetching animals page 148
+[2025-05-28T09:29:10.694+0000] {animals_api_hook.py:65} INFO - Fetched page 148: 10 animals
+[2025-05-28T09:29:10.695+0000] {animals_api_hook.py:33} INFO - Fetching animals page 149
+[2025-05-28T09:29:10.720+0000] {animals_api_hook.py:65} INFO - Fetched page 149: 10 animals
+[2025-05-28T09:29:10.721+0000] {animals_api_hook.py:33} INFO - Fetching animals page 150
+[2025-05-28T09:29:10.746+0000] {animals_api_hook.py:65} INFO - Fetched page 150: 10 animals
+[2025-05-28T09:29:10.747+0000] {animals_api_hook.py:33} INFO - Fetching animals page 151
+[2025-05-28T09:29:10.772+0000] {animals_api_hook.py:65} INFO - Fetched page 151: 10 animals
+[2025-05-28T09:29:10.773+0000] {animals_api_hook.py:33} INFO - Fetching animals page 152
+[2025-05-28T09:29:10.798+0000] {animals_api_hook.py:65} INFO - Fetched page 152: 10 animals
+[2025-05-28T09:29:10.798+0000] {animals_api_hook.py:33} INFO - Fetching animals page 153
+[2025-05-28T09:29:10.824+0000] {animals_api_hook.py:65} INFO - Fetched page 153: 10 animals
+[2025-05-28T09:29:10.824+0000] {animals_api_hook.py:33} INFO - Fetching animals page 154
+[2025-05-28T09:29:10.850+0000] {animals_api_hook.py:65} INFO - Fetched page 154: 10 animals
+[2025-05-28T09:29:10.850+0000] {animals_api_hook.py:33} INFO - Fetching animals page 155
+[2025-05-28T09:29:10.876+0000] {animals_api_hook.py:65} INFO - Fetched page 155: 10 animals
+[2025-05-28T09:29:10.876+0000] {animals_api_hook.py:33} INFO - Fetching animals page 156
+[2025-05-28T09:29:10.902+0000] {animals_api_hook.py:65} INFO - Fetched page 156: 10 animals
+[2025-05-28T09:29:10.903+0000] {animals_api_hook.py:33} INFO - Fetching animals page 157
+[2025-05-28T09:29:10.936+0000] {animals_api_hook.py:65} INFO - Fetched page 157: 10 animals
+[2025-05-28T09:29:10.937+0000] {animals_api_hook.py:33} INFO - Fetching animals page 158
+[2025-05-28T09:29:10.963+0000] {animals_api_hook.py:65} INFO - Fetched page 158: 10 animals
+[2025-05-28T09:29:10.964+0000] {animals_api_hook.py:33} INFO - Fetching animals page 159
+[2025-05-28T09:29:10.989+0000] {animals_api_hook.py:65} INFO - Fetched page 159: 10 animals
+[2025-05-28T09:29:10.990+0000] {animals_api_hook.py:33} INFO - Fetching animals page 160
+[2025-05-28T09:29:11.015+0000] {animals_api_hook.py:65} INFO - Fetched page 160: 10 animals
+[2025-05-28T09:29:11.016+0000] {animals_api_hook.py:33} INFO - Fetching animals page 161
+[2025-05-28T09:29:11.041+0000] {animals_api_hook.py:65} INFO - Fetched page 161: 10 animals
+[2025-05-28T09:29:11.042+0000] {animals_api_hook.py:33} INFO - Fetching animals page 162
+[2025-05-28T09:29:11.067+0000] {animals_api_hook.py:65} INFO - Fetched page 162: 10 animals
+[2025-05-28T09:29:11.067+0000] {animals_api_hook.py:33} INFO - Fetching animals page 163
+[2025-05-28T09:29:11.093+0000] {animals_api_hook.py:65} INFO - Fetched page 163: 10 animals
+[2025-05-28T09:29:11.093+0000] {animals_api_hook.py:33} INFO - Fetching animals page 164
+[2025-05-28T09:29:11.118+0000] {animals_api_hook.py:65} INFO - Fetched page 164: 10 animals
+[2025-05-28T09:29:11.119+0000] {animals_api_hook.py:33} INFO - Fetching animals page 165
+[2025-05-28T09:29:11.152+0000] {animals_api_hook.py:65} INFO - Fetched page 165: 10 animals
+[2025-05-28T09:29:11.152+0000] {animals_api_hook.py:33} INFO - Fetching animals page 166
+[2025-05-28T09:29:11.179+0000] {animals_api_hook.py:65} INFO - Fetched page 166: 10 animals
+[2025-05-28T09:29:11.179+0000] {animals_api_hook.py:33} INFO - Fetching animals page 167
+[2025-05-28T09:29:11.205+0000] {animals_api_hook.py:65} INFO - Fetched page 167: 10 animals
+[2025-05-28T09:29:11.205+0000] {animals_api_hook.py:33} INFO - Fetching animals page 168
+[2025-05-28T09:29:11.231+0000] {animals_api_hook.py:65} INFO - Fetched page 168: 10 animals
+[2025-05-28T09:29:11.231+0000] {animals_api_hook.py:33} INFO - Fetching animals page 169
+[2025-05-28T09:29:11.257+0000] {animals_api_hook.py:65} INFO - Fetched page 169: 10 animals
+[2025-05-28T09:29:11.257+0000] {animals_api_hook.py:33} INFO - Fetching animals page 170
+[2025-05-28T09:29:11.284+0000] {animals_api_hook.py:65} INFO - Fetched page 170: 10 animals
+[2025-05-28T09:29:11.285+0000] {animals_api_hook.py:33} INFO - Fetching animals page 171
+[2025-05-28T09:29:11.312+0000] {animals_api_hook.py:65} INFO - Fetched page 171: 10 animals
+[2025-05-28T09:29:11.312+0000] {animals_api_hook.py:33} INFO - Fetching animals page 172
+[2025-05-28T09:29:11.338+0000] {animals_api_hook.py:65} INFO - Fetched page 172: 10 animals
+[2025-05-28T09:29:11.339+0000] {animals_api_hook.py:33} INFO - Fetching animals page 173
+[2025-05-28T09:29:11.364+0000] {animals_api_hook.py:65} INFO - Fetched page 173: 10 animals
+[2025-05-28T09:29:11.365+0000] {animals_api_hook.py:33} INFO - Fetching animals page 174
+[2025-05-28T09:29:11.401+0000] {animals_api_hook.py:65} INFO - Fetched page 174: 10 animals
+[2025-05-28T09:29:11.401+0000] {animals_api_hook.py:33} INFO - Fetching animals page 175
+[2025-05-28T09:29:11.427+0000] {animals_api_hook.py:65} INFO - Fetched page 175: 10 animals
+[2025-05-28T09:29:11.428+0000] {animals_api_hook.py:33} INFO - Fetching animals page 176
+[2025-05-28T09:29:11.453+0000] {animals_api_hook.py:65} INFO - Fetched page 176: 10 animals
+[2025-05-28T09:29:11.454+0000] {animals_api_hook.py:33} INFO - Fetching animals page 177
+[2025-05-28T09:29:11.480+0000] {animals_api_hook.py:65} INFO - Fetched page 177: 10 animals
+[2025-05-28T09:29:11.480+0000] {animals_api_hook.py:33} INFO - Fetching animals page 178
+[2025-05-28T09:29:11.505+0000] {animals_api_hook.py:65} INFO - Fetched page 178: 10 animals
+[2025-05-28T09:29:11.506+0000] {animals_api_hook.py:33} INFO - Fetching animals page 179
+[2025-05-28T09:29:11.531+0000] {animals_api_hook.py:65} INFO - Fetched page 179: 10 animals
+[2025-05-28T09:29:11.532+0000] {animals_api_hook.py:33} INFO - Fetching animals page 180
+[2025-05-28T09:29:11.558+0000] {animals_api_hook.py:65} INFO - Fetched page 180: 10 animals
+[2025-05-28T09:29:11.558+0000] {animals_api_hook.py:33} INFO - Fetching animals page 181
+[2025-05-28T09:29:11.585+0000] {animals_api_hook.py:65} INFO - Fetched page 181: 10 animals
+[2025-05-28T09:29:11.585+0000] {animals_api_hook.py:33} INFO - Fetching animals page 182
+[2025-05-28T09:29:11.619+0000] {animals_api_hook.py:65} INFO - Fetched page 182: 10 animals
+[2025-05-28T09:29:11.619+0000] {animals_api_hook.py:33} INFO - Fetching animals page 183
+[2025-05-28T09:29:11.646+0000] {animals_api_hook.py:65} INFO - Fetched page 183: 10 animals
+[2025-05-28T09:29:11.646+0000] {animals_api_hook.py:33} INFO - Fetching animals page 184
+[2025-05-28T09:29:11.672+0000] {animals_api_hook.py:65} INFO - Fetched page 184: 10 animals
+[2025-05-28T09:29:11.672+0000] {animals_api_hook.py:33} INFO - Fetching animals page 185
+[2025-05-28T09:29:11.698+0000] {animals_api_hook.py:65} INFO - Fetched page 185: 10 animals
+[2025-05-28T09:29:11.699+0000] {animals_api_hook.py:33} INFO - Fetching animals page 186
+[2025-05-28T09:29:11.724+0000] {animals_api_hook.py:65} INFO - Fetched page 186: 10 animals
+[2025-05-28T09:29:11.725+0000] {animals_api_hook.py:33} INFO - Fetching animals page 187
+[2025-05-28T09:29:11.750+0000] {animals_api_hook.py:65} INFO - Fetched page 187: 10 animals
+[2025-05-28T09:29:11.750+0000] {animals_api_hook.py:33} INFO - Fetching animals page 188
+[2025-05-28T09:29:11.775+0000] {animals_api_hook.py:65} INFO - Fetched page 188: 10 animals
+[2025-05-28T09:29:11.776+0000] {animals_api_hook.py:33} INFO - Fetching animals page 189
+[2025-05-28T09:29:11.802+0000] {animals_api_hook.py:65} INFO - Fetched page 189: 10 animals
+[2025-05-28T09:29:11.803+0000] {animals_api_hook.py:33} INFO - Fetching animals page 190
+[2025-05-28T09:29:11.828+0000] {animals_api_hook.py:65} INFO - Fetched page 190: 10 animals
+[2025-05-28T09:29:11.829+0000] {animals_api_hook.py:33} INFO - Fetching animals page 191
+[2025-05-28T09:29:11.866+0000] {animals_api_hook.py:65} INFO - Fetched page 191: 10 animals
+[2025-05-28T09:29:11.866+0000] {animals_api_hook.py:33} INFO - Fetching animals page 192
+[2025-05-28T09:29:11.892+0000] {animals_api_hook.py:65} INFO - Fetched page 192: 10 animals
+[2025-05-28T09:29:11.893+0000] {animals_api_hook.py:33} INFO - Fetching animals page 193
+[2025-05-28T09:29:11.919+0000] {animals_api_hook.py:65} INFO - Fetched page 193: 10 animals
+[2025-05-28T09:29:11.920+0000] {animals_api_hook.py:33} INFO - Fetching animals page 194
+[2025-05-28T09:29:11.946+0000] {animals_api_hook.py:65} INFO - Fetched page 194: 10 animals
+[2025-05-28T09:29:11.947+0000] {animals_api_hook.py:33} INFO - Fetching animals page 195
+[2025-05-28T09:29:11.972+0000] {animals_api_hook.py:65} INFO - Fetched page 195: 10 animals
+[2025-05-28T09:29:11.972+0000] {animals_api_hook.py:33} INFO - Fetching animals page 196
+[2025-05-28T09:29:11.998+0000] {animals_api_hook.py:65} INFO - Fetched page 196: 10 animals
+[2025-05-28T09:29:11.998+0000] {animals_api_hook.py:33} INFO - Fetching animals page 197
+[2025-05-28T09:29:12.023+0000] {animals_api_hook.py:65} INFO - Fetched page 197: 10 animals
+[2025-05-28T09:29:12.024+0000] {animals_api_hook.py:33} INFO - Fetching animals page 198
+[2025-05-28T09:29:12.049+0000] {animals_api_hook.py:65} INFO - Fetched page 198: 10 animals
+[2025-05-28T09:29:12.050+0000] {animals_api_hook.py:33} INFO - Fetching animals page 199
+[2025-05-28T09:29:12.084+0000] {animals_api_hook.py:65} INFO - Fetched page 199: 10 animals
+[2025-05-28T09:29:12.084+0000] {animals_api_hook.py:33} INFO - Fetching animals page 200
+[2025-05-28T09:29:12.111+0000] {animals_api_hook.py:65} INFO - Fetched page 200: 10 animals
+[2025-05-28T09:29:12.112+0000] {animals_api_hook.py:33} INFO - Fetching animals page 201
+[2025-05-28T09:29:12.137+0000] {animals_api_hook.py:65} INFO - Fetched page 201: 10 animals
+[2025-05-28T09:29:12.138+0000] {animals_api_hook.py:33} INFO - Fetching animals page 202
+[2025-05-28T09:29:12.163+0000] {animals_api_hook.py:65} INFO - Fetched page 202: 10 animals
+[2025-05-28T09:29:12.164+0000] {animals_api_hook.py:33} INFO - Fetching animals page 203
+[2025-05-28T09:29:12.189+0000] {animals_api_hook.py:65} INFO - Fetched page 203: 10 animals
+[2025-05-28T09:29:12.190+0000] {animals_api_hook.py:33} INFO - Fetching animals page 204
+[2025-05-28T09:29:12.215+0000] {animals_api_hook.py:65} INFO - Fetched page 204: 10 animals
+[2025-05-28T09:29:12.216+0000] {animals_api_hook.py:33} INFO - Fetching animals page 205
+[2025-05-28T09:29:12.240+0000] {animals_api_hook.py:65} INFO - Fetched page 205: 10 animals
+[2025-05-28T09:29:12.241+0000] {animals_api_hook.py:33} INFO - Fetching animals page 206
+[2025-05-28T09:29:12.266+0000] {animals_api_hook.py:65} INFO - Fetched page 206: 10 animals
+[2025-05-28T09:29:12.267+0000] {animals_api_hook.py:33} INFO - Fetching animals page 207
+[2025-05-28T09:29:12.299+0000] {animals_api_hook.py:65} INFO - Fetched page 207: 10 animals
+[2025-05-28T09:29:12.300+0000] {animals_api_hook.py:33} INFO - Fetching animals page 208
+[2025-05-28T09:29:12.326+0000] {animals_api_hook.py:65} INFO - Fetched page 208: 10 animals
+[2025-05-28T09:29:12.326+0000] {animals_api_hook.py:33} INFO - Fetching animals page 209
+[2025-05-28T09:29:12.352+0000] {animals_api_hook.py:65} INFO - Fetched page 209: 10 animals
+[2025-05-28T09:29:12.352+0000] {animals_api_hook.py:33} INFO - Fetching animals page 210
+[2025-05-28T09:29:12.378+0000] {animals_api_hook.py:65} INFO - Fetched page 210: 10 animals
+[2025-05-28T09:29:12.378+0000] {animals_api_hook.py:33} INFO - Fetching animals page 211
+[2025-05-28T09:29:12.404+0000] {animals_api_hook.py:65} INFO - Fetched page 211: 10 animals
+[2025-05-28T09:29:12.404+0000] {animals_api_hook.py:33} INFO - Fetching animals page 212
+[2025-05-28T09:29:26.432+0000] {animals_api_hook.py:65} INFO - Fetched page 212: 10 animals
+[2025-05-28T09:29:26.433+0000] {animals_api_hook.py:33} INFO - Fetching animals page 213
+[2025-05-28T09:29:27.456+0000] {animals_api_hook.py:33} INFO - Fetching animals page 213
+[2025-05-28T09:29:29.481+0000] {animals_api_hook.py:33} INFO - Fetching animals page 213
+[2025-05-28T09:29:29.510+0000] {animals_api_hook.py:65} INFO - Fetched page 213: 10 animals
+[2025-05-28T09:29:29.510+0000] {animals_api_hook.py:33} INFO - Fetching animals page 214
+[2025-05-28T09:29:29.536+0000] {animals_api_hook.py:65} INFO - Fetched page 214: 10 animals
+[2025-05-28T09:29:29.537+0000] {animals_api_hook.py:33} INFO - Fetching animals page 215
+[2025-05-28T09:29:29.573+0000] {animals_api_hook.py:65} INFO - Fetched page 215: 10 animals
+[2025-05-28T09:29:29.573+0000] {animals_api_hook.py:33} INFO - Fetching animals page 216
+[2025-05-28T09:29:29.600+0000] {animals_api_hook.py:65} INFO - Fetched page 216: 10 animals
+[2025-05-28T09:29:29.601+0000] {animals_api_hook.py:33} INFO - Fetching animals page 217
+[2025-05-28T09:29:29.628+0000] {animals_api_hook.py:65} INFO - Fetched page 217: 10 animals
+[2025-05-28T09:29:29.628+0000] {animals_api_hook.py:33} INFO - Fetching animals page 218
+[2025-05-28T09:29:29.654+0000] {animals_api_hook.py:65} INFO - Fetched page 218: 10 animals
+[2025-05-28T09:29:29.655+0000] {animals_api_hook.py:33} INFO - Fetching animals page 219
+[2025-05-28T09:29:29.685+0000] {animals_api_hook.py:65} INFO - Fetched page 219: 10 animals
+[2025-05-28T09:29:29.685+0000] {animals_api_hook.py:33} INFO - Fetching animals page 220
+[2025-05-28T09:29:29.712+0000] {animals_api_hook.py:65} INFO - Fetched page 220: 10 animals
+[2025-05-28T09:29:29.712+0000] {animals_api_hook.py:33} INFO - Fetching animals page 221
+[2025-05-28T09:29:29.738+0000] {animals_api_hook.py:65} INFO - Fetched page 221: 10 animals
+[2025-05-28T09:29:29.739+0000] {animals_api_hook.py:33} INFO - Fetching animals page 222
+[2025-05-28T09:29:29.764+0000] {animals_api_hook.py:65} INFO - Fetched page 222: 10 animals
+[2025-05-28T09:29:29.765+0000] {animals_api_hook.py:33} INFO - Fetching animals page 223
+[2025-05-28T09:29:29.798+0000] {animals_api_hook.py:65} INFO - Fetched page 223: 10 animals
+[2025-05-28T09:29:29.798+0000] {animals_api_hook.py:33} INFO - Fetching animals page 224
+[2025-05-28T09:29:29.824+0000] {animals_api_hook.py:65} INFO - Fetched page 224: 10 animals
+[2025-05-28T09:29:29.825+0000] {animals_api_hook.py:33} INFO - Fetching animals page 225
+[2025-05-28T09:29:30.850+0000] {animals_api_hook.py:33} INFO - Fetching animals page 225
+[2025-05-28T09:29:30.877+0000] {animals_api_hook.py:65} INFO - Fetched page 225: 10 animals
+[2025-05-28T09:29:30.877+0000] {animals_api_hook.py:33} INFO - Fetching animals page 226
+[2025-05-28T09:29:30.903+0000] {animals_api_hook.py:65} INFO - Fetched page 226: 10 animals
+[2025-05-28T09:29:30.904+0000] {animals_api_hook.py:33} INFO - Fetching animals page 227
+[2025-05-28T09:29:30.929+0000] {animals_api_hook.py:65} INFO - Fetched page 227: 10 animals
+[2025-05-28T09:29:30.930+0000] {animals_api_hook.py:33} INFO - Fetching animals page 228
+[2025-05-28T09:29:30.955+0000] {animals_api_hook.py:65} INFO - Fetched page 228: 10 animals
+[2025-05-28T09:29:30.956+0000] {animals_api_hook.py:33} INFO - Fetching animals page 229
+[2025-05-28T09:29:30.981+0000] {animals_api_hook.py:65} INFO - Fetched page 229: 10 animals
+[2025-05-28T09:29:30.982+0000] {animals_api_hook.py:33} INFO - Fetching animals page 230
+[2025-05-28T09:29:31.008+0000] {animals_api_hook.py:65} INFO - Fetched page 230: 10 animals
+[2025-05-28T09:29:31.009+0000] {animals_api_hook.py:33} INFO - Fetching animals page 231
+[2025-05-28T09:29:31.045+0000] {animals_api_hook.py:65} INFO - Fetched page 231: 10 animals
+[2025-05-28T09:29:31.046+0000] {animals_api_hook.py:33} INFO - Fetching animals page 232
+[2025-05-28T09:29:31.071+0000] {animals_api_hook.py:65} INFO - Fetched page 232: 10 animals
+[2025-05-28T09:29:31.072+0000] {animals_api_hook.py:33} INFO - Fetching animals page 233
+[2025-05-28T09:29:31.098+0000] {animals_api_hook.py:65} INFO - Fetched page 233: 10 animals
+[2025-05-28T09:29:31.098+0000] {animals_api_hook.py:33} INFO - Fetching animals page 234
+[2025-05-28T09:29:31.125+0000] {animals_api_hook.py:65} INFO - Fetched page 234: 10 animals
+[2025-05-28T09:29:31.126+0000] {animals_api_hook.py:33} INFO - Fetching animals page 235
+[2025-05-28T09:29:31.152+0000] {animals_api_hook.py:65} INFO - Fetched page 235: 10 animals
+[2025-05-28T09:29:31.152+0000] {animals_api_hook.py:33} INFO - Fetching animals page 236
+[2025-05-28T09:29:31.179+0000] {animals_api_hook.py:65} INFO - Fetched page 236: 10 animals
+[2025-05-28T09:29:31.179+0000] {animals_api_hook.py:33} INFO - Fetching animals page 237
+[2025-05-28T09:29:31.206+0000] {animals_api_hook.py:65} INFO - Fetched page 237: 10 animals
+[2025-05-28T09:29:31.206+0000] {animals_api_hook.py:33} INFO - Fetching animals page 238
+[2025-05-28T09:29:31.233+0000] {animals_api_hook.py:65} INFO - Fetched page 238: 10 animals
+[2025-05-28T09:29:31.234+0000] {animals_api_hook.py:33} INFO - Fetching animals page 239
+[2025-05-28T09:29:31.268+0000] {animals_api_hook.py:65} INFO - Fetched page 239: 10 animals
+[2025-05-28T09:29:31.269+0000] {animals_api_hook.py:33} INFO - Fetching animals page 240
+[2025-05-28T09:29:31.295+0000] {animals_api_hook.py:65} INFO - Fetched page 240: 10 animals
+[2025-05-28T09:29:31.296+0000] {animals_api_hook.py:33} INFO - Fetching animals page 241
+[2025-05-28T09:29:31.324+0000] {animals_api_hook.py:65} INFO - Fetched page 241: 10 animals
+[2025-05-28T09:29:31.324+0000] {animals_api_hook.py:33} INFO - Fetching animals page 242
+[2025-05-28T09:29:31.351+0000] {animals_api_hook.py:65} INFO - Fetched page 242: 10 animals
+[2025-05-28T09:29:31.352+0000] {animals_api_hook.py:33} INFO - Fetching animals page 243
+[2025-05-28T09:29:31.381+0000] {animals_api_hook.py:65} INFO - Fetched page 243: 10 animals
+[2025-05-28T09:29:31.381+0000] {animals_api_hook.py:33} INFO - Fetching animals page 244
+[2025-05-28T09:29:31.408+0000] {animals_api_hook.py:65} INFO - Fetched page 244: 10 animals
+[2025-05-28T09:29:31.408+0000] {animals_api_hook.py:33} INFO - Fetching animals page 245
+[2025-05-28T09:29:31.436+0000] {animals_api_hook.py:65} INFO - Fetched page 245: 10 animals
+[2025-05-28T09:29:31.436+0000] {animals_api_hook.py:33} INFO - Fetching animals page 246
+[2025-05-28T09:29:31.464+0000] {animals_api_hook.py:65} INFO - Fetched page 246: 10 animals
+[2025-05-28T09:29:31.465+0000] {animals_api_hook.py:33} INFO - Fetching animals page 247
+[2025-05-28T09:29:31.505+0000] {animals_api_hook.py:65} INFO - Fetched page 247: 10 animals
+[2025-05-28T09:29:31.505+0000] {animals_api_hook.py:33} INFO - Fetching animals page 248
+[2025-05-28T09:29:31.532+0000] {animals_api_hook.py:65} INFO - Fetched page 248: 10 animals
+[2025-05-28T09:29:31.533+0000] {animals_api_hook.py:33} INFO - Fetching animals page 249
+[2025-05-28T09:29:31.559+0000] {animals_api_hook.py:65} INFO - Fetched page 249: 10 animals
+[2025-05-28T09:29:31.559+0000] {animals_api_hook.py:33} INFO - Fetching animals page 250
+[2025-05-28T09:29:31.585+0000] {animals_api_hook.py:65} INFO - Fetched page 250: 10 animals
+[2025-05-28T09:29:31.586+0000] {animals_api_hook.py:33} INFO - Fetching animals page 251
+[2025-05-28T09:29:31.612+0000] {animals_api_hook.py:65} INFO - Fetched page 251: 10 animals
+[2025-05-28T09:29:31.613+0000] {animals_api_hook.py:33} INFO - Fetching animals page 252
+[2025-05-28T09:29:31.641+0000] {animals_api_hook.py:65} INFO - Fetched page 252: 10 animals
+[2025-05-28T09:29:31.641+0000] {animals_api_hook.py:33} INFO - Fetching animals page 253
+[2025-05-28T09:29:31.668+0000] {animals_api_hook.py:65} INFO - Fetched page 253: 10 animals
+[2025-05-28T09:29:31.668+0000] {animals_api_hook.py:33} INFO - Fetching animals page 254
+[2025-05-28T09:29:31.694+0000] {animals_api_hook.py:65} INFO - Fetched page 254: 10 animals
+[2025-05-28T09:29:31.694+0000] {animals_api_hook.py:33} INFO - Fetching animals page 255
+[2025-05-28T09:29:31.728+0000] {animals_api_hook.py:65} INFO - Fetched page 255: 10 animals
+[2025-05-28T09:29:31.729+0000] {animals_api_hook.py:33} INFO - Fetching animals page 256
+[2025-05-28T09:29:31.755+0000] {animals_api_hook.py:65} INFO - Fetched page 256: 10 animals
+[2025-05-28T09:29:31.756+0000] {animals_api_hook.py:33} INFO - Fetching animals page 257
+[2025-05-28T09:29:31.782+0000] {animals_api_hook.py:65} INFO - Fetched page 257: 10 animals
+[2025-05-28T09:29:31.783+0000] {animals_api_hook.py:33} INFO - Fetching animals page 258
+[2025-05-28T09:29:31.809+0000] {animals_api_hook.py:65} INFO - Fetched page 258: 10 animals
+[2025-05-28T09:29:31.810+0000] {animals_api_hook.py:33} INFO - Fetching animals page 259
+[2025-05-28T09:29:31.835+0000] {animals_api_hook.py:65} INFO - Fetched page 259: 10 animals
+[2025-05-28T09:29:31.836+0000] {animals_api_hook.py:33} INFO - Fetching animals page 260
+[2025-05-28T09:29:31.862+0000] {animals_api_hook.py:65} INFO - Fetched page 260: 10 animals
+[2025-05-28T09:29:31.862+0000] {animals_api_hook.py:33} INFO - Fetching animals page 261
+[2025-05-28T09:29:31.889+0000] {animals_api_hook.py:65} INFO - Fetched page 261: 10 animals
+[2025-05-28T09:29:31.889+0000] {animals_api_hook.py:33} INFO - Fetching animals page 262
+[2025-05-28T09:29:31.915+0000] {animals_api_hook.py:65} INFO - Fetched page 262: 10 animals
+[2025-05-28T09:29:31.916+0000] {animals_api_hook.py:33} INFO - Fetching animals page 263
+[2025-05-28T09:29:31.953+0000] {animals_api_hook.py:65} INFO - Fetched page 263: 10 animals
+[2025-05-28T09:29:31.954+0000] {animals_api_hook.py:33} INFO - Fetching animals page 264
+[2025-05-28T09:29:31.981+0000] {animals_api_hook.py:65} INFO - Fetched page 264: 10 animals
+[2025-05-28T09:29:31.982+0000] {animals_api_hook.py:33} INFO - Fetching animals page 265
+[2025-05-28T09:29:40.010+0000] {animals_api_hook.py:65} INFO - Fetched page 265: 10 animals
+[2025-05-28T09:29:40.011+0000] {animals_api_hook.py:33} INFO - Fetching animals page 266
+[2025-05-28T09:29:40.038+0000] {animals_api_hook.py:65} INFO - Fetched page 266: 10 animals
+[2025-05-28T09:29:40.039+0000] {animals_api_hook.py:33} INFO - Fetching animals page 267
+[2025-05-28T09:29:40.063+0000] {animals_api_hook.py:65} INFO - Fetched page 267: 10 animals
+[2025-05-28T09:29:40.064+0000] {animals_api_hook.py:33} INFO - Fetching animals page 268
+[2025-05-28T09:29:40.089+0000] {animals_api_hook.py:65} INFO - Fetched page 268: 10 animals
+[2025-05-28T09:29:40.089+0000] {animals_api_hook.py:33} INFO - Fetching animals page 269
+[2025-05-28T09:29:40.115+0000] {animals_api_hook.py:65} INFO - Fetched page 269: 10 animals
+[2025-05-28T09:29:40.116+0000] {animals_api_hook.py:33} INFO - Fetching animals page 270
+[2025-05-28T09:29:40.141+0000] {animals_api_hook.py:65} INFO - Fetched page 270: 10 animals
+[2025-05-28T09:29:40.142+0000] {animals_api_hook.py:33} INFO - Fetching animals page 271
+[2025-05-28T09:29:40.176+0000] {animals_api_hook.py:65} INFO - Fetched page 271: 10 animals
+[2025-05-28T09:29:40.177+0000] {animals_api_hook.py:33} INFO - Fetching animals page 272
+[2025-05-28T09:29:40.203+0000] {animals_api_hook.py:65} INFO - Fetched page 272: 10 animals
+[2025-05-28T09:29:40.203+0000] {animals_api_hook.py:33} INFO - Fetching animals page 273
+[2025-05-28T09:29:40.229+0000] {animals_api_hook.py:65} INFO - Fetched page 273: 10 animals
+[2025-05-28T09:29:40.229+0000] {animals_api_hook.py:33} INFO - Fetching animals page 274
+[2025-05-28T09:29:40.255+0000] {animals_api_hook.py:65} INFO - Fetched page 274: 10 animals
+[2025-05-28T09:29:40.255+0000] {animals_api_hook.py:33} INFO - Fetching animals page 275
+[2025-05-28T09:29:40.281+0000] {animals_api_hook.py:65} INFO - Fetched page 275: 10 animals
+[2025-05-28T09:29:40.281+0000] {animals_api_hook.py:33} INFO - Fetching animals page 276
+[2025-05-28T09:29:40.307+0000] {animals_api_hook.py:65} INFO - Fetched page 276: 10 animals
+[2025-05-28T09:29:40.307+0000] {animals_api_hook.py:33} INFO - Fetching animals page 277
+[2025-05-28T09:29:40.332+0000] {animals_api_hook.py:65} INFO - Fetched page 277: 10 animals
+[2025-05-28T09:29:40.333+0000] {animals_api_hook.py:33} INFO - Fetching animals page 278
+[2025-05-28T09:29:40.358+0000] {animals_api_hook.py:65} INFO - Fetched page 278: 10 animals
+[2025-05-28T09:29:40.359+0000] {animals_api_hook.py:33} INFO - Fetching animals page 279
+[2025-05-28T09:29:40.393+0000] {animals_api_hook.py:65} INFO - Fetched page 279: 10 animals
+[2025-05-28T09:29:40.394+0000] {animals_api_hook.py:33} INFO - Fetching animals page 280
+[2025-05-28T09:29:40.420+0000] {animals_api_hook.py:65} INFO - Fetched page 280: 10 animals
+[2025-05-28T09:29:40.420+0000] {animals_api_hook.py:33} INFO - Fetching animals page 281
+[2025-05-28T09:29:40.446+0000] {animals_api_hook.py:65} INFO - Fetched page 281: 10 animals
+[2025-05-28T09:29:40.447+0000] {animals_api_hook.py:33} INFO - Fetching animals page 282
+[2025-05-28T09:29:40.472+0000] {animals_api_hook.py:65} INFO - Fetched page 282: 10 animals
+[2025-05-28T09:29:40.473+0000] {animals_api_hook.py:33} INFO - Fetching animals page 283
+[2025-05-28T09:29:40.498+0000] {animals_api_hook.py:65} INFO - Fetched page 283: 10 animals
+[2025-05-28T09:29:40.499+0000] {animals_api_hook.py:33} INFO - Fetching animals page 284
+[2025-05-28T09:29:40.524+0000] {animals_api_hook.py:65} INFO - Fetched page 284: 10 animals
+[2025-05-28T09:29:40.525+0000] {animals_api_hook.py:33} INFO - Fetching animals page 285
+[2025-05-28T09:29:40.550+0000] {animals_api_hook.py:65} INFO - Fetched page 285: 10 animals
+[2025-05-28T09:29:40.551+0000] {animals_api_hook.py:33} INFO - Fetching animals page 286
+[2025-05-28T09:29:40.577+0000] {animals_api_hook.py:65} INFO - Fetched page 286: 10 animals
+[2025-05-28T09:29:40.578+0000] {animals_api_hook.py:33} INFO - Fetching animals page 287
+[2025-05-28T09:29:40.612+0000] {animals_api_hook.py:65} INFO - Fetched page 287: 10 animals
+[2025-05-28T09:29:40.612+0000] {animals_api_hook.py:33} INFO - Fetching animals page 288
+[2025-05-28T09:29:40.638+0000] {animals_api_hook.py:65} INFO - Fetched page 288: 10 animals
+[2025-05-28T09:29:40.639+0000] {animals_api_hook.py:33} INFO - Fetching animals page 289
+[2025-05-28T09:29:40.665+0000] {animals_api_hook.py:65} INFO - Fetched page 289: 10 animals
+[2025-05-28T09:29:40.666+0000] {animals_api_hook.py:33} INFO - Fetching animals page 290
+[2025-05-28T09:29:40.692+0000] {animals_api_hook.py:65} INFO - Fetched page 290: 10 animals
+[2025-05-28T09:29:40.693+0000] {animals_api_hook.py:33} INFO - Fetching animals page 291
+[2025-05-28T09:29:40.719+0000] {animals_api_hook.py:65} INFO - Fetched page 291: 10 animals
+[2025-05-28T09:29:40.720+0000] {animals_api_hook.py:33} INFO - Fetching animals page 292
+[2025-05-28T09:29:40.746+0000] {animals_api_hook.py:65} INFO - Fetched page 292: 10 animals
+[2025-05-28T09:29:40.747+0000] {animals_api_hook.py:33} INFO - Fetching animals page 293
+[2025-05-28T09:29:40.773+0000] {animals_api_hook.py:65} INFO - Fetched page 293: 10 animals
+[2025-05-28T09:29:40.774+0000] {animals_api_hook.py:33} INFO - Fetching animals page 294
+[2025-05-28T09:29:40.799+0000] {animals_api_hook.py:65} INFO - Fetched page 294: 10 animals
+[2025-05-28T09:29:40.800+0000] {animals_api_hook.py:33} INFO - Fetching animals page 295
+[2025-05-28T09:29:40.833+0000] {animals_api_hook.py:65} INFO - Fetched page 295: 10 animals
+[2025-05-28T09:29:40.834+0000] {animals_api_hook.py:33} INFO - Fetching animals page 296
+[2025-05-28T09:29:40.861+0000] {animals_api_hook.py:65} INFO - Fetched page 296: 10 animals
+[2025-05-28T09:29:40.862+0000] {animals_api_hook.py:33} INFO - Fetching animals page 297
+[2025-05-28T09:29:40.887+0000] {animals_api_hook.py:65} INFO - Fetched page 297: 10 animals
+[2025-05-28T09:29:40.888+0000] {animals_api_hook.py:33} INFO - Fetching animals page 298
+[2025-05-28T09:29:40.913+0000] {animals_api_hook.py:65} INFO - Fetched page 298: 10 animals
+[2025-05-28T09:29:40.914+0000] {animals_api_hook.py:33} INFO - Fetching animals page 299
+[2025-05-28T09:29:40.939+0000] {animals_api_hook.py:65} INFO - Fetched page 299: 10 animals
+[2025-05-28T09:29:40.940+0000] {animals_api_hook.py:33} INFO - Fetching animals page 300
+[2025-05-28T09:29:40.966+0000] {animals_api_hook.py:65} INFO - Fetched page 300: 10 animals
+[2025-05-28T09:29:40.966+0000] {animals_api_hook.py:33} INFO - Fetching animals page 301
+[2025-05-28T09:29:40.993+0000] {animals_api_hook.py:65} INFO - Fetched page 301: 10 animals
+[2025-05-28T09:29:40.993+0000] {animals_api_hook.py:33} INFO - Fetching animals page 302
+[2025-05-28T09:29:41.020+0000] {animals_api_hook.py:65} INFO - Fetched page 302: 10 animals
+[2025-05-28T09:29:41.020+0000] {animals_api_hook.py:33} INFO - Fetching animals page 303
+[2025-05-28T09:29:41.054+0000] {animals_api_hook.py:65} INFO - Fetched page 303: 10 animals
+[2025-05-28T09:29:41.055+0000] {animals_api_hook.py:33} INFO - Fetching animals page 304
+[2025-05-28T09:29:41.081+0000] {animals_api_hook.py:65} INFO - Fetched page 304: 10 animals
+[2025-05-28T09:29:41.081+0000] {animals_api_hook.py:33} INFO - Fetching animals page 305
+[2025-05-28T09:29:41.107+0000] {animals_api_hook.py:65} INFO - Fetched page 305: 10 animals
+[2025-05-28T09:29:41.108+0000] {animals_api_hook.py:33} INFO - Fetching animals page 306
+[2025-05-28T09:29:41.134+0000] {animals_api_hook.py:65} INFO - Fetched page 306: 10 animals
+[2025-05-28T09:29:41.135+0000] {animals_api_hook.py:33} INFO - Fetching animals page 307
+[2025-05-28T09:29:41.161+0000] {animals_api_hook.py:65} INFO - Fetched page 307: 10 animals
+[2025-05-28T09:29:41.161+0000] {animals_api_hook.py:33} INFO - Fetching animals page 308
+[2025-05-28T09:29:41.187+0000] {animals_api_hook.py:65} INFO - Fetched page 308: 10 animals
+[2025-05-28T09:29:41.188+0000] {animals_api_hook.py:33} INFO - Fetching animals page 309
+[2025-05-28T09:29:41.213+0000] {animals_api_hook.py:65} INFO - Fetched page 309: 10 animals
+[2025-05-28T09:29:41.214+0000] {animals_api_hook.py:33} INFO - Fetching animals page 310
+[2025-05-28T09:29:41.239+0000] {animals_api_hook.py:65} INFO - Fetched page 310: 10 animals
+[2025-05-28T09:29:41.239+0000] {animals_api_hook.py:33} INFO - Fetching animals page 311
+[2025-05-28T09:29:41.286+0000] {animals_api_hook.py:65} INFO - Fetched page 311: 10 animals
+[2025-05-28T09:29:41.286+0000] {animals_api_hook.py:33} INFO - Fetching animals page 312
+[2025-05-28T09:29:41.312+0000] {animals_api_hook.py:65} INFO - Fetched page 312: 10 animals
+[2025-05-28T09:29:41.313+0000] {animals_api_hook.py:33} INFO - Fetching animals page 313
+[2025-05-28T09:29:41.339+0000] {animals_api_hook.py:65} INFO - Fetched page 313: 10 animals
+[2025-05-28T09:29:41.339+0000] {animals_api_hook.py:33} INFO - Fetching animals page 314
+[2025-05-28T09:29:42.364+0000] {animals_api_hook.py:33} INFO - Fetching animals page 314
+[2025-05-28T09:29:42.394+0000] {animals_api_hook.py:65} INFO - Fetched page 314: 10 animals
+[2025-05-28T09:29:42.394+0000] {animals_api_hook.py:33} INFO - Fetching animals page 315
+[2025-05-28T09:29:42.421+0000] {animals_api_hook.py:65} INFO - Fetched page 315: 10 animals
+[2025-05-28T09:29:42.421+0000] {animals_api_hook.py:33} INFO - Fetching animals page 316
+[2025-05-28T09:29:42.447+0000] {animals_api_hook.py:65} INFO - Fetched page 316: 10 animals
+[2025-05-28T09:29:42.447+0000] {animals_api_hook.py:33} INFO - Fetching animals page 317
+[2025-05-28T09:29:42.472+0000] {animals_api_hook.py:65} INFO - Fetched page 317: 10 animals
+[2025-05-28T09:29:42.473+0000] {animals_api_hook.py:33} INFO - Fetching animals page 318
+[2025-05-28T09:29:42.506+0000] {animals_api_hook.py:65} INFO - Fetched page 318: 10 animals
+[2025-05-28T09:29:42.506+0000] {animals_api_hook.py:33} INFO - Fetching animals page 319
+[2025-05-28T09:29:42.532+0000] {animals_api_hook.py:65} INFO - Fetched page 319: 10 animals
+[2025-05-28T09:29:42.533+0000] {animals_api_hook.py:33} INFO - Fetching animals page 320
+[2025-05-28T09:29:42.558+0000] {animals_api_hook.py:65} INFO - Fetched page 320: 10 animals
+[2025-05-28T09:29:42.559+0000] {animals_api_hook.py:33} INFO - Fetching animals page 321
+[2025-05-28T09:29:42.585+0000] {animals_api_hook.py:65} INFO - Fetched page 321: 10 animals
+[2025-05-28T09:29:42.585+0000] {animals_api_hook.py:33} INFO - Fetching animals page 322
+[2025-05-28T09:29:42.611+0000] {animals_api_hook.py:65} INFO - Fetched page 322: 10 animals
+[2025-05-28T09:29:42.611+0000] {animals_api_hook.py:33} INFO - Fetching animals page 323
+[2025-05-28T09:29:42.637+0000] {animals_api_hook.py:65} INFO - Fetched page 323: 10 animals
+[2025-05-28T09:29:42.637+0000] {animals_api_hook.py:33} INFO - Fetching animals page 324
+[2025-05-28T09:29:42.664+0000] {animals_api_hook.py:65} INFO - Fetched page 324: 10 animals
+[2025-05-28T09:29:42.664+0000] {animals_api_hook.py:33} INFO - Fetching animals page 325
+[2025-05-28T09:29:42.690+0000] {animals_api_hook.py:65} INFO - Fetched page 325: 10 animals
+[2025-05-28T09:29:42.690+0000] {animals_api_hook.py:33} INFO - Fetching animals page 326
+[2025-05-28T09:29:42.723+0000] {animals_api_hook.py:65} INFO - Fetched page 326: 10 animals
+[2025-05-28T09:29:42.723+0000] {animals_api_hook.py:33} INFO - Fetching animals page 327
+[2025-05-28T09:29:42.750+0000] {animals_api_hook.py:65} INFO - Fetched page 327: 10 animals
+[2025-05-28T09:29:42.750+0000] {animals_api_hook.py:33} INFO - Fetching animals page 328
+[2025-05-28T09:29:42.776+0000] {animals_api_hook.py:65} INFO - Fetched page 328: 10 animals
+[2025-05-28T09:29:42.776+0000] {animals_api_hook.py:33} INFO - Fetching animals page 329
+[2025-05-28T09:29:42.803+0000] {animals_api_hook.py:65} INFO - Fetched page 329: 10 animals
+[2025-05-28T09:29:42.803+0000] {animals_api_hook.py:33} INFO - Fetching animals page 330
+[2025-05-28T09:29:42.829+0000] {animals_api_hook.py:65} INFO - Fetched page 330: 10 animals
+[2025-05-28T09:29:42.829+0000] {animals_api_hook.py:33} INFO - Fetching animals page 331
+[2025-05-28T09:29:42.855+0000] {animals_api_hook.py:65} INFO - Fetched page 331: 10 animals
+[2025-05-28T09:29:42.855+0000] {animals_api_hook.py:33} INFO - Fetching animals page 332
+[2025-05-28T09:29:42.880+0000] {animals_api_hook.py:65} INFO - Fetched page 332: 10 animals
+[2025-05-28T09:29:42.881+0000] {animals_api_hook.py:33} INFO - Fetching animals page 333
+[2025-05-28T09:29:42.906+0000] {animals_api_hook.py:65} INFO - Fetched page 333: 10 animals
+[2025-05-28T09:29:42.907+0000] {animals_api_hook.py:33} INFO - Fetching animals page 334
+[2025-05-28T09:29:42.932+0000] {animals_api_hook.py:65} INFO - Fetched page 334: 10 animals
+[2025-05-28T09:29:42.933+0000] {animals_api_hook.py:33} INFO - Fetching animals page 335
+[2025-05-28T09:29:42.968+0000] {animals_api_hook.py:65} INFO - Fetched page 335: 10 animals
+[2025-05-28T09:29:42.969+0000] {animals_api_hook.py:33} INFO - Fetching animals page 336
+[2025-05-28T09:29:42.996+0000] {animals_api_hook.py:65} INFO - Fetched page 336: 10 animals
+[2025-05-28T09:29:42.996+0000] {animals_api_hook.py:33} INFO - Fetching animals page 337
+[2025-05-28T09:29:43.023+0000] {animals_api_hook.py:65} INFO - Fetched page 337: 10 animals
+[2025-05-28T09:29:43.024+0000] {animals_api_hook.py:33} INFO - Fetching animals page 338
+[2025-05-28T09:29:43.050+0000] {animals_api_hook.py:65} INFO - Fetched page 338: 10 animals
+[2025-05-28T09:29:43.050+0000] {animals_api_hook.py:33} INFO - Fetching animals page 339
+[2025-05-28T09:29:43.076+0000] {animals_api_hook.py:65} INFO - Fetched page 339: 10 animals
+[2025-05-28T09:29:43.077+0000] {animals_api_hook.py:33} INFO - Fetching animals page 340
+[2025-05-28T09:29:43.105+0000] {animals_api_hook.py:65} INFO - Fetched page 340: 10 animals
+[2025-05-28T09:29:43.105+0000] {animals_api_hook.py:33} INFO - Fetching animals page 341
+[2025-05-28T09:29:43.131+0000] {animals_api_hook.py:65} INFO - Fetched page 341: 10 animals
+[2025-05-28T09:29:43.131+0000] {animals_api_hook.py:33} INFO - Fetching animals page 342
+[2025-05-28T09:29:43.159+0000] {animals_api_hook.py:65} INFO - Fetched page 342: 10 animals
+[2025-05-28T09:29:43.159+0000] {animals_api_hook.py:33} INFO - Fetching animals page 343
+[2025-05-28T09:29:43.193+0000] {animals_api_hook.py:65} INFO - Fetched page 343: 10 animals
+[2025-05-28T09:29:43.193+0000] {animals_api_hook.py:33} INFO - Fetching animals page 344
+[2025-05-28T09:29:43.220+0000] {animals_api_hook.py:65} INFO - Fetched page 344: 10 animals
+[2025-05-28T09:29:43.220+0000] {animals_api_hook.py:33} INFO - Fetching animals page 345
+[2025-05-28T09:29:43.248+0000] {animals_api_hook.py:65} INFO - Fetched page 345: 10 animals
+[2025-05-28T09:29:43.249+0000] {animals_api_hook.py:33} INFO - Fetching animals page 346
+[2025-05-28T09:29:43.274+0000] {animals_api_hook.py:65} INFO - Fetched page 346: 10 animals
+[2025-05-28T09:29:43.274+0000] {animals_api_hook.py:33} INFO - Fetching animals page 347
+[2025-05-28T09:29:43.299+0000] {animals_api_hook.py:65} INFO - Fetched page 347: 10 animals
+[2025-05-28T09:29:43.300+0000] {animals_api_hook.py:33} INFO - Fetching animals page 348
+[2025-05-28T09:29:43.326+0000] {animals_api_hook.py:65} INFO - Fetched page 348: 10 animals
+[2025-05-28T09:29:43.326+0000] {animals_api_hook.py:33} INFO - Fetching animals page 349
+[2025-05-28T09:29:43.353+0000] {animals_api_hook.py:65} INFO - Fetched page 349: 10 animals
+[2025-05-28T09:29:43.354+0000] {animals_api_hook.py:33} INFO - Fetching animals page 350
+[2025-05-28T09:29:43.379+0000] {animals_api_hook.py:65} INFO - Fetched page 350: 10 animals
+[2025-05-28T09:29:43.379+0000] {animals_api_hook.py:33} INFO - Fetching animals page 351
+[2025-05-28T09:29:43.405+0000] {animals_api_hook.py:65} INFO - Fetched page 351: 10 animals
+[2025-05-28T09:29:43.406+0000] {animals_api_hook.py:33} INFO - Fetching animals page 352
+[2025-05-28T09:29:43.443+0000] {animals_api_hook.py:65} INFO - Fetched page 352: 10 animals
+[2025-05-28T09:29:43.444+0000] {animals_api_hook.py:33} INFO - Fetching animals page 353
+[2025-05-28T09:29:43.471+0000] {animals_api_hook.py:65} INFO - Fetched page 353: 10 animals
+[2025-05-28T09:29:43.472+0000] {animals_api_hook.py:33} INFO - Fetching animals page 354
+[2025-05-28T09:29:43.501+0000] {animals_api_hook.py:65} INFO - Fetched page 354: 10 animals
+[2025-05-28T09:29:43.502+0000] {animals_api_hook.py:33} INFO - Fetching animals page 355
+[2025-05-28T09:29:43.532+0000] {animals_api_hook.py:65} INFO - Fetched page 355: 10 animals
+[2025-05-28T09:29:43.533+0000] {animals_api_hook.py:33} INFO - Fetching animals page 356
+[2025-05-28T09:29:43.559+0000] {animals_api_hook.py:65} INFO - Fetched page 356: 10 animals
+[2025-05-28T09:29:43.559+0000] {animals_api_hook.py:33} INFO - Fetching animals page 357
+[2025-05-28T09:29:43.585+0000] {animals_api_hook.py:65} INFO - Fetched page 357: 10 animals
+[2025-05-28T09:29:43.586+0000] {animals_api_hook.py:33} INFO - Fetching animals page 358
+[2025-05-28T09:29:43.613+0000] {animals_api_hook.py:65} INFO - Fetched page 358: 10 animals
+[2025-05-28T09:29:43.614+0000] {animals_api_hook.py:33} INFO - Fetching animals page 359
+[2025-05-28T09:29:43.641+0000] {animals_api_hook.py:65} INFO - Fetched page 359: 10 animals
+[2025-05-28T09:29:43.641+0000] {animals_api_hook.py:33} INFO - Fetching animals page 360
+[2025-05-28T09:29:43.675+0000] {animals_api_hook.py:65} INFO - Fetched page 360: 10 animals
+[2025-05-28T09:29:43.676+0000] {animals_api_hook.py:33} INFO - Fetching animals page 361
+[2025-05-28T09:29:43.701+0000] {animals_api_hook.py:65} INFO - Fetched page 361: 10 animals
+[2025-05-28T09:29:43.702+0000] {animals_api_hook.py:33} INFO - Fetching animals page 362
+[2025-05-28T09:29:43.728+0000] {animals_api_hook.py:65} INFO - Fetched page 362: 10 animals
+[2025-05-28T09:29:43.729+0000] {animals_api_hook.py:33} INFO - Fetching animals page 363
+[2025-05-28T09:29:43.755+0000] {animals_api_hook.py:65} INFO - Fetched page 363: 10 animals
+[2025-05-28T09:29:43.756+0000] {animals_api_hook.py:33} INFO - Fetching animals page 364
+[2025-05-28T09:29:43.782+0000] {animals_api_hook.py:65} INFO - Fetched page 364: 10 animals
+[2025-05-28T09:29:43.782+0000] {animals_api_hook.py:33} INFO - Fetching animals page 365
+[2025-05-28T09:29:43.810+0000] {animals_api_hook.py:65} INFO - Fetched page 365: 10 animals
+[2025-05-28T09:29:43.810+0000] {animals_api_hook.py:33} INFO - Fetching animals page 366
+[2025-05-28T09:29:43.838+0000] {animals_api_hook.py:65} INFO - Fetched page 366: 10 animals
+[2025-05-28T09:29:43.839+0000] {animals_api_hook.py:33} INFO - Fetching animals page 367
+[2025-05-28T09:29:44.864+0000] {animals_api_hook.py:33} INFO - Fetching animals page 367
+[2025-05-28T09:29:44.900+0000] {animals_api_hook.py:65} INFO - Fetched page 367: 10 animals
+[2025-05-28T09:29:44.901+0000] {animals_api_hook.py:33} INFO - Fetching animals page 368
+[2025-05-28T09:29:44.929+0000] {animals_api_hook.py:65} INFO - Fetched page 368: 10 animals
+[2025-05-28T09:29:44.930+0000] {animals_api_hook.py:33} INFO - Fetching animals page 369
+[2025-05-28T09:29:44.955+0000] {animals_api_hook.py:65} INFO - Fetched page 369: 10 animals
+[2025-05-28T09:29:44.956+0000] {animals_api_hook.py:33} INFO - Fetching animals page 370
+[2025-05-28T09:29:44.982+0000] {animals_api_hook.py:65} INFO - Fetched page 370: 10 animals
+[2025-05-28T09:29:44.983+0000] {animals_api_hook.py:33} INFO - Fetching animals page 371
+[2025-05-28T09:29:45.009+0000] {animals_api_hook.py:65} INFO - Fetched page 371: 10 animals
+[2025-05-28T09:29:45.009+0000] {animals_api_hook.py:33} INFO - Fetching animals page 372
+[2025-05-28T09:29:46.035+0000] {animals_api_hook.py:33} INFO - Fetching animals page 372
+[2025-05-28T09:29:46.067+0000] {animals_api_hook.py:65} INFO - Fetched page 372: 10 animals
+[2025-05-28T09:29:46.067+0000] {animals_api_hook.py:33} INFO - Fetching animals page 373
+[2025-05-28T09:29:46.092+0000] {animals_api_hook.py:65} INFO - Fetched page 373: 10 animals
+[2025-05-28T09:29:46.093+0000] {animals_api_hook.py:33} INFO - Fetching animals page 374
+[2025-05-28T09:29:46.120+0000] {animals_api_hook.py:65} INFO - Fetched page 374: 10 animals
+[2025-05-28T09:29:46.120+0000] {animals_api_hook.py:33} INFO - Fetching animals page 375
+[2025-05-28T09:29:46.154+0000] {animals_api_hook.py:65} INFO - Fetched page 375: 10 animals
+[2025-05-28T09:29:46.155+0000] {animals_api_hook.py:33} INFO - Fetching animals page 376
+[2025-05-28T09:29:46.182+0000] {animals_api_hook.py:65} INFO - Fetched page 376: 10 animals
+[2025-05-28T09:29:46.182+0000] {animals_api_hook.py:33} INFO - Fetching animals page 377
+[2025-05-28T09:29:46.209+0000] {animals_api_hook.py:65} INFO - Fetched page 377: 10 animals
+[2025-05-28T09:29:46.210+0000] {animals_api_hook.py:33} INFO - Fetching animals page 378
+[2025-05-28T09:29:46.236+0000] {animals_api_hook.py:65} INFO - Fetched page 378: 10 animals
+[2025-05-28T09:29:46.237+0000] {animals_api_hook.py:33} INFO - Fetching animals page 379
+[2025-05-28T09:29:46.264+0000] {animals_api_hook.py:65} INFO - Fetched page 379: 10 animals
+[2025-05-28T09:29:46.265+0000] {animals_api_hook.py:33} INFO - Fetching animals page 380
+[2025-05-28T09:29:46.290+0000] {animals_api_hook.py:65} INFO - Fetched page 380: 10 animals
+[2025-05-28T09:29:46.291+0000] {animals_api_hook.py:33} INFO - Fetching animals page 381
+[2025-05-28T09:29:46.317+0000] {animals_api_hook.py:65} INFO - Fetched page 381: 10 animals
+[2025-05-28T09:29:46.318+0000] {animals_api_hook.py:33} INFO - Fetching animals page 382
+[2025-05-28T09:29:46.343+0000] {animals_api_hook.py:65} INFO - Fetched page 382: 10 animals
+[2025-05-28T09:29:46.344+0000] {animals_api_hook.py:33} INFO - Fetching animals page 383
+[2025-05-28T09:29:46.379+0000] {animals_api_hook.py:65} INFO - Fetched page 383: 10 animals
+[2025-05-28T09:29:46.379+0000] {animals_api_hook.py:33} INFO - Fetching animals page 384
+[2025-05-28T09:29:46.407+0000] {animals_api_hook.py:65} INFO - Fetched page 384: 10 animals
+[2025-05-28T09:29:46.408+0000] {animals_api_hook.py:33} INFO - Fetching animals page 385
+[2025-05-28T09:29:46.434+0000] {animals_api_hook.py:65} INFO - Fetched page 385: 10 animals
+[2025-05-28T09:29:46.435+0000] {animals_api_hook.py:33} INFO - Fetching animals page 386
+[2025-05-28T09:29:46.461+0000] {animals_api_hook.py:65} INFO - Fetched page 386: 10 animals
+[2025-05-28T09:29:46.461+0000] {animals_api_hook.py:33} INFO - Fetching animals page 387
+[2025-05-28T09:29:46.488+0000] {animals_api_hook.py:65} INFO - Fetched page 387: 10 animals
+[2025-05-28T09:29:46.488+0000] {animals_api_hook.py:33} INFO - Fetching animals page 388
+[2025-05-28T09:29:46.514+0000] {animals_api_hook.py:65} INFO - Fetched page 388: 10 animals
+[2025-05-28T09:29:46.515+0000] {animals_api_hook.py:33} INFO - Fetching animals page 389
+[2025-05-28T09:29:46.541+0000] {animals_api_hook.py:65} INFO - Fetched page 389: 10 animals
+[2025-05-28T09:29:46.542+0000] {animals_api_hook.py:33} INFO - Fetching animals page 390
+[2025-05-28T09:29:46.568+0000] {animals_api_hook.py:65} INFO - Fetched page 390: 10 animals
+[2025-05-28T09:29:46.568+0000] {animals_api_hook.py:33} INFO - Fetching animals page 391
+[2025-05-28T09:29:46.595+0000] {animals_api_hook.py:65} INFO - Fetched page 391: 10 animals
+[2025-05-28T09:29:46.596+0000] {animals_api_hook.py:33} INFO - Fetching animals page 392
+[2025-05-28T09:29:46.632+0000] {animals_api_hook.py:65} INFO - Fetched page 392: 10 animals
+[2025-05-28T09:29:46.633+0000] {animals_api_hook.py:33} INFO - Fetching animals page 393
+[2025-05-28T09:29:46.660+0000] {animals_api_hook.py:65} INFO - Fetched page 393: 10 animals
+[2025-05-28T09:29:46.661+0000] {animals_api_hook.py:33} INFO - Fetching animals page 394
+[2025-05-28T09:29:46.688+0000] {animals_api_hook.py:65} INFO - Fetched page 394: 10 animals
+[2025-05-28T09:29:46.688+0000] {animals_api_hook.py:33} INFO - Fetching animals page 395
+[2025-05-28T09:29:46.714+0000] {animals_api_hook.py:65} INFO - Fetched page 395: 10 animals
+[2025-05-28T09:29:46.714+0000] {animals_api_hook.py:33} INFO - Fetching animals page 396
+[2025-05-28T09:29:46.740+0000] {animals_api_hook.py:65} INFO - Fetched page 396: 10 animals
+[2025-05-28T09:29:46.741+0000] {animals_api_hook.py:33} INFO - Fetching animals page 397
+[2025-05-28T09:29:46.767+0000] {animals_api_hook.py:65} INFO - Fetched page 397: 10 animals
+[2025-05-28T09:29:46.768+0000] {animals_api_hook.py:33} INFO - Fetching animals page 398
+[2025-05-28T09:29:46.794+0000] {animals_api_hook.py:65} INFO - Fetched page 398: 10 animals
+[2025-05-28T09:29:46.794+0000] {animals_api_hook.py:33} INFO - Fetching animals page 399
+[2025-05-28T09:29:46.820+0000] {animals_api_hook.py:65} INFO - Fetched page 399: 10 animals
+[2025-05-28T09:29:46.820+0000] {animals_api_hook.py:33} INFO - Fetching animals page 400
+[2025-05-28T09:29:46.856+0000] {animals_api_hook.py:65} INFO - Fetched page 400: 10 animals
+[2025-05-28T09:29:46.856+0000] {animals_api_hook.py:33} INFO - Fetching animals page 401
+[2025-05-28T09:29:46.884+0000] {animals_api_hook.py:65} INFO - Fetched page 401: 10 animals
+[2025-05-28T09:29:46.885+0000] {animals_api_hook.py:33} INFO - Fetching animals page 402
+[2025-05-28T09:29:46.912+0000] {animals_api_hook.py:65} INFO - Fetched page 402: 10 animals
+[2025-05-28T09:29:46.913+0000] {animals_api_hook.py:33} INFO - Fetching animals page 403
+[2025-05-28T09:29:46.939+0000] {animals_api_hook.py:65} INFO - Fetched page 403: 10 animals
+[2025-05-28T09:29:46.940+0000] {animals_api_hook.py:33} INFO - Fetching animals page 404
+[2025-05-28T09:29:46.966+0000] {animals_api_hook.py:65} INFO - Fetched page 404: 10 animals
+[2025-05-28T09:29:46.967+0000] {animals_api_hook.py:33} INFO - Fetching animals page 405
+[2025-05-28T09:29:46.994+0000] {animals_api_hook.py:65} INFO - Fetched page 405: 10 animals
+[2025-05-28T09:29:46.995+0000] {animals_api_hook.py:33} INFO - Fetching animals page 406
+[2025-05-28T09:29:47.020+0000] {animals_api_hook.py:65} INFO - Fetched page 406: 10 animals
+[2025-05-28T09:29:47.020+0000] {animals_api_hook.py:33} INFO - Fetching animals page 407
+[2025-05-28T09:29:47.046+0000] {animals_api_hook.py:65} INFO - Fetched page 407: 10 animals
+[2025-05-28T09:29:47.046+0000] {animals_api_hook.py:33} INFO - Fetching animals page 408
+[2025-05-28T09:29:47.087+0000] {animals_api_hook.py:65} INFO - Fetched page 408: 10 animals
+[2025-05-28T09:29:47.088+0000] {animals_api_hook.py:33} INFO - Fetching animals page 409
+[2025-05-28T09:29:47.114+0000] {animals_api_hook.py:65} INFO - Fetched page 409: 10 animals
+[2025-05-28T09:29:47.115+0000] {animals_api_hook.py:33} INFO - Fetching animals page 410
+[2025-05-28T09:29:47.140+0000] {animals_api_hook.py:65} INFO - Fetched page 410: 10 animals
+[2025-05-28T09:29:47.141+0000] {animals_api_hook.py:33} INFO - Fetching animals page 411
+[2025-05-28T09:29:47.168+0000] {animals_api_hook.py:65} INFO - Fetched page 411: 10 animals
+[2025-05-28T09:29:47.169+0000] {animals_api_hook.py:33} INFO - Fetching animals page 412
+[2025-05-28T09:29:47.194+0000] {animals_api_hook.py:65} INFO - Fetched page 412: 10 animals
+[2025-05-28T09:29:47.195+0000] {animals_api_hook.py:33} INFO - Fetching animals page 413
+[2025-05-28T09:29:47.220+0000] {animals_api_hook.py:65} INFO - Fetched page 413: 10 animals
+[2025-05-28T09:29:47.220+0000] {animals_api_hook.py:33} INFO - Fetching animals page 414
+[2025-05-28T09:29:47.247+0000] {animals_api_hook.py:65} INFO - Fetched page 414: 10 animals
+[2025-05-28T09:29:47.248+0000] {animals_api_hook.py:33} INFO - Fetching animals page 415
+[2025-05-28T09:29:47.274+0000] {animals_api_hook.py:65} INFO - Fetched page 415: 10 animals
+[2025-05-28T09:29:47.274+0000] {animals_api_hook.py:33} INFO - Fetching animals page 416
+[2025-05-28T09:29:47.301+0000] {animals_api_hook.py:65} INFO - Fetched page 416: 10 animals
+[2025-05-28T09:29:47.301+0000] {animals_api_hook.py:33} INFO - Fetching animals page 417
+[2025-05-28T09:29:47.337+0000] {animals_api_hook.py:65} INFO - Fetched page 417: 10 animals
+[2025-05-28T09:29:47.337+0000] {animals_api_hook.py:33} INFO - Fetching animals page 418
+[2025-05-28T09:29:47.364+0000] {animals_api_hook.py:65} INFO - Fetched page 418: 10 animals
+[2025-05-28T09:29:47.365+0000] {animals_api_hook.py:33} INFO - Fetching animals page 419
+[2025-05-28T09:29:47.391+0000] {animals_api_hook.py:65} INFO - Fetched page 419: 10 animals
+[2025-05-28T09:29:47.392+0000] {animals_api_hook.py:33} INFO - Fetching animals page 420
+[2025-05-28T09:29:47.419+0000] {animals_api_hook.py:65} INFO - Fetched page 420: 10 animals
+[2025-05-28T09:29:47.419+0000] {animals_api_hook.py:33} INFO - Fetching animals page 421
+[2025-05-28T09:29:47.445+0000] {animals_api_hook.py:65} INFO - Fetched page 421: 10 animals
+[2025-05-28T09:29:47.445+0000] {animals_api_hook.py:33} INFO - Fetching animals page 422
+[2025-05-28T09:29:47.472+0000] {animals_api_hook.py:65} INFO - Fetched page 422: 10 animals
+[2025-05-28T09:29:47.472+0000] {animals_api_hook.py:33} INFO - Fetching animals page 423
+[2025-05-28T09:29:53.499+0000] {animals_api_hook.py:65} INFO - Fetched page 423: 10 animals
+[2025-05-28T09:29:53.499+0000] {animals_api_hook.py:33} INFO - Fetching animals page 424
+[2025-05-28T09:29:53.527+0000] {animals_api_hook.py:65} INFO - Fetched page 424: 10 animals
+[2025-05-28T09:29:53.528+0000] {animals_api_hook.py:33} INFO - Fetching animals page 425
+[2025-05-28T09:29:53.561+0000] {animals_api_hook.py:65} INFO - Fetched page 425: 10 animals
+[2025-05-28T09:29:53.562+0000] {animals_api_hook.py:33} INFO - Fetching animals page 426
+[2025-05-28T09:29:53.590+0000] {animals_api_hook.py:65} INFO - Fetched page 426: 10 animals
+[2025-05-28T09:29:53.590+0000] {animals_api_hook.py:33} INFO - Fetching animals page 427
+[2025-05-28T09:29:53.617+0000] {animals_api_hook.py:65} INFO - Fetched page 427: 10 animals
+[2025-05-28T09:29:53.617+0000] {animals_api_hook.py:33} INFO - Fetching animals page 428
+[2025-05-28T09:29:53.643+0000] {animals_api_hook.py:65} INFO - Fetched page 428: 10 animals
+[2025-05-28T09:29:53.644+0000] {animals_api_hook.py:33} INFO - Fetching animals page 429
+[2025-05-28T09:29:53.669+0000] {animals_api_hook.py:65} INFO - Fetched page 429: 10 animals
+[2025-05-28T09:29:53.669+0000] {animals_api_hook.py:33} INFO - Fetching animals page 430
+[2025-05-28T09:29:53.695+0000] {animals_api_hook.py:65} INFO - Fetched page 430: 10 animals
+[2025-05-28T09:29:53.695+0000] {animals_api_hook.py:33} INFO - Fetching animals page 431
+[2025-05-28T09:29:53.720+0000] {animals_api_hook.py:65} INFO - Fetched page 431: 10 animals
+[2025-05-28T09:29:53.721+0000] {animals_api_hook.py:33} INFO - Fetching animals page 432
+[2025-05-28T09:29:53.747+0000] {animals_api_hook.py:65} INFO - Fetched page 432: 10 animals
+[2025-05-28T09:29:53.748+0000] {animals_api_hook.py:33} INFO - Fetching animals page 433
+[2025-05-28T09:29:53.773+0000] {animals_api_hook.py:65} INFO - Fetched page 433: 10 animals
+[2025-05-28T09:29:53.774+0000] {animals_api_hook.py:33} INFO - Fetching animals page 434
+[2025-05-28T09:29:53.809+0000] {animals_api_hook.py:65} INFO - Fetched page 434: 10 animals
+[2025-05-28T09:29:53.810+0000] {animals_api_hook.py:33} INFO - Fetching animals page 435
+[2025-05-28T09:29:53.835+0000] {animals_api_hook.py:65} INFO - Fetched page 435: 10 animals
+[2025-05-28T09:29:53.836+0000] {animals_api_hook.py:33} INFO - Fetching animals page 436
+[2025-05-28T09:29:53.862+0000] {animals_api_hook.py:65} INFO - Fetched page 436: 10 animals
+[2025-05-28T09:29:53.862+0000] {animals_api_hook.py:33} INFO - Fetching animals page 437
+[2025-05-28T09:29:53.888+0000] {animals_api_hook.py:65} INFO - Fetched page 437: 10 animals
+[2025-05-28T09:29:53.889+0000] {animals_api_hook.py:33} INFO - Fetching animals page 438
+[2025-05-28T09:29:53.914+0000] {animals_api_hook.py:65} INFO - Fetched page 438: 10 animals
+[2025-05-28T09:29:53.915+0000] {animals_api_hook.py:33} INFO - Fetching animals page 439
+[2025-05-28T09:29:53.940+0000] {animals_api_hook.py:65} INFO - Fetched page 439: 10 animals
+[2025-05-28T09:29:53.941+0000] {animals_api_hook.py:33} INFO - Fetching animals page 440
+[2025-05-28T09:29:53.969+0000] {animals_api_hook.py:65} INFO - Fetched page 440: 10 animals
+[2025-05-28T09:29:53.969+0000] {animals_api_hook.py:33} INFO - Fetching animals page 441
+[2025-05-28T09:29:53.995+0000] {animals_api_hook.py:65} INFO - Fetched page 441: 10 animals
+[2025-05-28T09:29:53.995+0000] {animals_api_hook.py:33} INFO - Fetching animals page 442
+[2025-05-28T09:29:54.029+0000] {animals_api_hook.py:65} INFO - Fetched page 442: 10 animals
+[2025-05-28T09:29:54.030+0000] {animals_api_hook.py:33} INFO - Fetching animals page 443
+[2025-05-28T09:29:54.055+0000] {animals_api_hook.py:65} INFO - Fetched page 443: 10 animals
+[2025-05-28T09:29:54.056+0000] {animals_api_hook.py:33} INFO - Fetching animals page 444
+[2025-05-28T09:29:54.081+0000] {animals_api_hook.py:65} INFO - Fetched page 444: 10 animals
+[2025-05-28T09:29:54.082+0000] {animals_api_hook.py:33} INFO - Fetching animals page 445
+[2025-05-28T09:29:54.108+0000] {animals_api_hook.py:65} INFO - Fetched page 445: 10 animals
+[2025-05-28T09:29:54.109+0000] {animals_api_hook.py:33} INFO - Fetching animals page 446
+[2025-05-28T09:29:54.135+0000] {animals_api_hook.py:65} INFO - Fetched page 446: 10 animals
+[2025-05-28T09:29:54.136+0000] {animals_api_hook.py:33} INFO - Fetching animals page 447
+[2025-05-28T09:29:54.162+0000] {animals_api_hook.py:65} INFO - Fetched page 447: 10 animals
+[2025-05-28T09:29:54.163+0000] {animals_api_hook.py:33} INFO - Fetching animals page 448
+[2025-05-28T09:29:54.188+0000] {animals_api_hook.py:65} INFO - Fetched page 448: 10 animals
+[2025-05-28T09:29:54.189+0000] {animals_api_hook.py:33} INFO - Fetching animals page 449
+[2025-05-28T09:29:54.215+0000] {animals_api_hook.py:65} INFO - Fetched page 449: 10 animals
+[2025-05-28T09:29:54.215+0000] {animals_api_hook.py:33} INFO - Fetching animals page 450
+[2025-05-28T09:29:54.241+0000] {animals_api_hook.py:65} INFO - Fetched page 450: 10 animals
+[2025-05-28T09:29:54.242+0000] {animals_api_hook.py:33} INFO - Fetching animals page 451
+[2025-05-28T09:29:54.278+0000] {animals_api_hook.py:65} INFO - Fetched page 451: 10 animals
+[2025-05-28T09:29:54.279+0000] {animals_api_hook.py:33} INFO - Fetching animals page 452
+[2025-05-28T09:30:05.316+0000] {animals_api_hook.py:65} INFO - Fetched page 452: 10 animals
+[2025-05-28T09:30:05.317+0000] {animals_api_hook.py:33} INFO - Fetching animals page 453
+[2025-05-28T09:30:05.343+0000] {animals_api_hook.py:65} INFO - Fetched page 453: 10 animals
+[2025-05-28T09:30:05.343+0000] {animals_api_hook.py:33} INFO - Fetching animals page 454
+[2025-05-28T09:30:05.369+0000] {animals_api_hook.py:65} INFO - Fetched page 454: 10 animals
+[2025-05-28T09:30:05.369+0000] {animals_api_hook.py:33} INFO - Fetching animals page 455
+[2025-05-28T09:30:05.395+0000] {animals_api_hook.py:65} INFO - Fetched page 455: 10 animals
+[2025-05-28T09:30:05.395+0000] {animals_api_hook.py:33} INFO - Fetching animals page 456
+[2025-05-28T09:30:05.421+0000] {animals_api_hook.py:65} INFO - Fetched page 456: 10 animals
+[2025-05-28T09:30:05.422+0000] {animals_api_hook.py:33} INFO - Fetching animals page 457
+[2025-05-28T09:30:05.447+0000] {animals_api_hook.py:65} INFO - Fetched page 457: 10 animals
+[2025-05-28T09:30:05.448+0000] {animals_api_hook.py:33} INFO - Fetching animals page 458
+[2025-05-28T09:30:05.473+0000] {animals_api_hook.py:65} INFO - Fetched page 458: 10 animals
+[2025-05-28T09:30:05.474+0000] {animals_api_hook.py:33} INFO - Fetching animals page 459
+[2025-05-28T09:30:05.511+0000] {animals_api_hook.py:65} INFO - Fetched page 459: 10 animals
+[2025-05-28T09:30:05.511+0000] {animals_api_hook.py:33} INFO - Fetching animals page 460
+[2025-05-28T09:30:05.538+0000] {animals_api_hook.py:65} INFO - Fetched page 460: 10 animals
+[2025-05-28T09:30:05.538+0000] {animals_api_hook.py:33} INFO - Fetching animals page 461
+[2025-05-28T09:30:05.569+0000] {animals_api_hook.py:65} INFO - Fetched page 461: 10 animals
+[2025-05-28T09:30:05.569+0000] {animals_api_hook.py:33} INFO - Fetching animals page 462
+[2025-05-28T09:30:05.596+0000] {animals_api_hook.py:65} INFO - Fetched page 462: 10 animals
+[2025-05-28T09:30:05.597+0000] {animals_api_hook.py:33} INFO - Fetching animals page 463
+[2025-05-28T09:30:05.624+0000] {animals_api_hook.py:65} INFO - Fetched page 463: 10 animals
+[2025-05-28T09:30:05.624+0000] {animals_api_hook.py:33} INFO - Fetching animals page 464
+[2025-05-28T09:30:05.653+0000] {animals_api_hook.py:65} INFO - Fetched page 464: 10 animals
+[2025-05-28T09:30:05.653+0000] {animals_api_hook.py:33} INFO - Fetching animals page 465
+[2025-05-28T09:30:05.680+0000] {animals_api_hook.py:65} INFO - Fetched page 465: 10 animals
+[2025-05-28T09:30:05.680+0000] {animals_api_hook.py:33} INFO - Fetching animals page 466
+[2025-05-28T09:30:05.707+0000] {animals_api_hook.py:65} INFO - Fetched page 466: 10 animals
+[2025-05-28T09:30:05.708+0000] {animals_api_hook.py:33} INFO - Fetching animals page 467
+[2025-05-28T09:30:05.743+0000] {animals_api_hook.py:65} INFO - Fetched page 467: 10 animals
+[2025-05-28T09:30:05.744+0000] {animals_api_hook.py:33} INFO - Fetching animals page 468
+[2025-05-28T09:30:05.771+0000] {animals_api_hook.py:65} INFO - Fetched page 468: 10 animals
+[2025-05-28T09:30:05.771+0000] {animals_api_hook.py:33} INFO - Fetching animals page 469
+[2025-05-28T09:30:05.797+0000] {animals_api_hook.py:65} INFO - Fetched page 469: 10 animals
+[2025-05-28T09:30:05.798+0000] {animals_api_hook.py:33} INFO - Fetching animals page 470
+[2025-05-28T09:30:05.825+0000] {animals_api_hook.py:65} INFO - Fetched page 470: 10 animals
+[2025-05-28T09:30:05.825+0000] {animals_api_hook.py:33} INFO - Fetching animals page 471
+[2025-05-28T09:30:05.853+0000] {animals_api_hook.py:65} INFO - Fetched page 471: 10 animals
+[2025-05-28T09:30:05.854+0000] {animals_api_hook.py:33} INFO - Fetching animals page 472
+[2025-05-28T09:30:05.881+0000] {animals_api_hook.py:65} INFO - Fetched page 472: 10 animals
+[2025-05-28T09:30:05.881+0000] {animals_api_hook.py:33} INFO - Fetching animals page 473
+[2025-05-28T09:30:05.909+0000] {animals_api_hook.py:65} INFO - Fetched page 473: 10 animals
+[2025-05-28T09:30:05.909+0000] {animals_api_hook.py:33} INFO - Fetching animals page 474
+[2025-05-28T09:30:05.936+0000] {animals_api_hook.py:65} INFO - Fetched page 474: 10 animals
+[2025-05-28T09:30:05.937+0000] {animals_api_hook.py:33} INFO - Fetching animals page 475
+[2025-05-28T09:30:05.963+0000] {animals_api_hook.py:65} INFO - Fetched page 475: 10 animals
+[2025-05-28T09:30:05.964+0000] {animals_api_hook.py:33} INFO - Fetching animals page 476
+[2025-05-28T09:30:06.000+0000] {animals_api_hook.py:65} INFO - Fetched page 476: 10 animals
+[2025-05-28T09:30:06.000+0000] {animals_api_hook.py:33} INFO - Fetching animals page 477
+[2025-05-28T09:30:06.028+0000] {animals_api_hook.py:65} INFO - Fetched page 477: 10 animals
+[2025-05-28T09:30:06.029+0000] {animals_api_hook.py:33} INFO - Fetching animals page 478
+[2025-05-28T09:30:06.056+0000] {animals_api_hook.py:65} INFO - Fetched page 478: 10 animals
+[2025-05-28T09:30:06.057+0000] {animals_api_hook.py:33} INFO - Fetching animals page 479
+[2025-05-28T09:30:06.085+0000] {animals_api_hook.py:65} INFO - Fetched page 479: 10 animals
+[2025-05-28T09:30:06.086+0000] {animals_api_hook.py:33} INFO - Fetching animals page 480
+[2025-05-28T09:30:06.112+0000] {animals_api_hook.py:65} INFO - Fetched page 480: 10 animals
+[2025-05-28T09:30:06.112+0000] {animals_api_hook.py:33} INFO - Fetching animals page 481
+[2025-05-28T09:30:06.138+0000] {animals_api_hook.py:65} INFO - Fetched page 481: 10 animals
+[2025-05-28T09:30:06.139+0000] {animals_api_hook.py:33} INFO - Fetching animals page 482
+[2025-05-28T09:30:06.164+0000] {animals_api_hook.py:65} INFO - Fetched page 482: 10 animals
+[2025-05-28T09:30:06.165+0000] {animals_api_hook.py:33} INFO - Fetching animals page 483
+[2025-05-28T09:30:06.191+0000] {animals_api_hook.py:65} INFO - Fetched page 483: 10 animals
+[2025-05-28T09:30:06.192+0000] {animals_api_hook.py:33} INFO - Fetching animals page 484
+[2025-05-28T09:30:06.228+0000] {animals_api_hook.py:65} INFO - Fetched page 484: 10 animals
+[2025-05-28T09:30:06.229+0000] {animals_api_hook.py:33} INFO - Fetching animals page 485
+[2025-05-28T09:30:06.256+0000] {animals_api_hook.py:65} INFO - Fetched page 485: 10 animals
+[2025-05-28T09:30:06.257+0000] {animals_api_hook.py:33} INFO - Fetching animals page 486
+[2025-05-28T09:30:06.283+0000] {animals_api_hook.py:65} INFO - Fetched page 486: 10 animals
+[2025-05-28T09:30:06.284+0000] {animals_api_hook.py:33} INFO - Fetching animals page 487
+[2025-05-28T09:30:06.310+0000] {animals_api_hook.py:65} INFO - Fetched page 487: 10 animals
+[2025-05-28T09:30:06.311+0000] {animals_api_hook.py:33} INFO - Fetching animals page 488
+[2025-05-28T09:30:06.339+0000] {animals_api_hook.py:65} INFO - Fetched page 488: 10 animals
+[2025-05-28T09:30:06.339+0000] {animals_api_hook.py:33} INFO - Fetching animals page 489
+[2025-05-28T09:30:06.366+0000] {animals_api_hook.py:65} INFO - Fetched page 489: 10 animals
+[2025-05-28T09:30:06.366+0000] {animals_api_hook.py:33} INFO - Fetching animals page 490
+[2025-05-28T09:30:06.394+0000] {animals_api_hook.py:65} INFO - Fetched page 490: 10 animals
+[2025-05-28T09:30:06.394+0000] {animals_api_hook.py:33} INFO - Fetching animals page 491
+[2025-05-28T09:30:06.420+0000] {animals_api_hook.py:65} INFO - Fetched page 491: 10 animals
+[2025-05-28T09:30:06.421+0000] {animals_api_hook.py:33} INFO - Fetching animals page 492
+[2025-05-28T09:30:06.448+0000] {animals_api_hook.py:65} INFO - Fetched page 492: 10 animals
+[2025-05-28T09:30:06.448+0000] {animals_api_hook.py:33} INFO - Fetching animals page 493
+[2025-05-28T09:30:06.486+0000] {animals_api_hook.py:65} INFO - Fetched page 493: 10 animals
+[2025-05-28T09:30:06.486+0000] {animals_api_hook.py:33} INFO - Fetching animals page 494
+[2025-05-28T09:30:06.514+0000] {animals_api_hook.py:65} INFO - Fetched page 494: 10 animals
+[2025-05-28T09:30:06.515+0000] {animals_api_hook.py:33} INFO - Fetching animals page 495
+[2025-05-28T09:30:06.540+0000] {animals_api_hook.py:65} INFO - Fetched page 495: 10 animals
+[2025-05-28T09:30:06.541+0000] {animals_api_hook.py:33} INFO - Fetching animals page 496
+[2025-05-28T09:30:06.567+0000] {animals_api_hook.py:65} INFO - Fetched page 496: 10 animals
+[2025-05-28T09:30:06.567+0000] {animals_api_hook.py:33} INFO - Fetching animals page 497
+[2025-05-28T09:30:06.593+0000] {animals_api_hook.py:65} INFO - Fetched page 497: 10 animals
+[2025-05-28T09:30:06.594+0000] {animals_api_hook.py:33} INFO - Fetching animals page 498
+[2025-05-28T09:30:06.619+0000] {animals_api_hook.py:65} INFO - Fetched page 498: 10 animals
+[2025-05-28T09:30:06.620+0000] {animals_api_hook.py:33} INFO - Fetching animals page 499
+[2025-05-28T09:30:06.645+0000] {animals_api_hook.py:65} INFO - Fetched page 499: 10 animals
+[2025-05-28T09:30:06.646+0000] {animals_api_hook.py:33} INFO - Fetching animals page 500
+[2025-05-28T09:30:06.672+0000] {animals_api_hook.py:65} INFO - Fetched page 500: 10 animals
+[2025-05-28T09:30:06.672+0000] {animals_api_hook.py:33} INFO - Fetching animals page 501
+[2025-05-28T09:30:06.705+0000] {animals_api_hook.py:65} INFO - Fetched page 501: 10 animals
+[2025-05-28T09:30:06.706+0000] {animals_api_hook.py:33} INFO - Fetching animals page 502
+[2025-05-28T09:30:06.732+0000] {animals_api_hook.py:65} INFO - Fetched page 502: 10 animals
+[2025-05-28T09:30:06.732+0000] {animals_api_hook.py:33} INFO - Fetching animals page 503
+[2025-05-28T09:30:06.758+0000] {animals_api_hook.py:65} INFO - Fetched page 503: 10 animals
+[2025-05-28T09:30:06.759+0000] {animals_api_hook.py:33} INFO - Fetching animals page 504
+[2025-05-28T09:30:06.785+0000] {animals_api_hook.py:65} INFO - Fetched page 504: 10 animals
+[2025-05-28T09:30:06.785+0000] {animals_api_hook.py:33} INFO - Fetching animals page 505
+[2025-05-28T09:30:06.811+0000] {animals_api_hook.py:65} INFO - Fetched page 505: 10 animals
+[2025-05-28T09:30:06.812+0000] {animals_api_hook.py:33} INFO - Fetching animals page 506
+[2025-05-28T09:30:06.837+0000] {animals_api_hook.py:65} INFO - Fetched page 506: 10 animals
+[2025-05-28T09:30:06.837+0000] {animals_api_hook.py:33} INFO - Fetching animals page 507
+[2025-05-28T09:30:06.863+0000] {animals_api_hook.py:65} INFO - Fetched page 507: 10 animals
+[2025-05-28T09:30:06.864+0000] {animals_api_hook.py:33} INFO - Fetching animals page 508
+[2025-05-28T09:30:06.890+0000] {animals_api_hook.py:65} INFO - Fetched page 508: 10 animals
+[2025-05-28T09:30:06.891+0000] {animals_api_hook.py:33} INFO - Fetching animals page 509
+[2025-05-28T09:30:06.917+0000] {animals_api_hook.py:65} INFO - Fetched page 509: 10 animals
+[2025-05-28T09:30:06.918+0000] {animals_api_hook.py:33} INFO - Fetching animals page 510
+[2025-05-28T09:30:06.958+0000] {animals_api_hook.py:65} INFO - Fetched page 510: 10 animals
+[2025-05-28T09:30:06.958+0000] {animals_api_hook.py:33} INFO - Fetching animals page 511
+[2025-05-28T09:30:06.985+0000] {animals_api_hook.py:65} INFO - Fetched page 511: 10 animals
+[2025-05-28T09:30:06.985+0000] {animals_api_hook.py:33} INFO - Fetching animals page 512
+[2025-05-28T09:30:07.011+0000] {animals_api_hook.py:65} INFO - Fetched page 512: 10 animals
+[2025-05-28T09:30:07.011+0000] {animals_api_hook.py:33} INFO - Fetching animals page 513
+[2025-05-28T09:30:07.037+0000] {animals_api_hook.py:65} INFO - Fetched page 513: 10 animals
+[2025-05-28T09:30:07.037+0000] {animals_api_hook.py:33} INFO - Fetching animals page 514
+[2025-05-28T09:30:07.063+0000] {animals_api_hook.py:65} INFO - Fetched page 514: 10 animals
+[2025-05-28T09:30:07.063+0000] {animals_api_hook.py:33} INFO - Fetching animals page 515
+[2025-05-28T09:30:07.088+0000] {animals_api_hook.py:65} INFO - Fetched page 515: 10 animals
+[2025-05-28T09:30:07.089+0000] {animals_api_hook.py:33} INFO - Fetching animals page 516
+[2025-05-28T09:30:07.114+0000] {animals_api_hook.py:65} INFO - Fetched page 516: 10 animals
+[2025-05-28T09:30:07.115+0000] {animals_api_hook.py:33} INFO - Fetching animals page 517
+[2025-05-28T09:30:07.140+0000] {animals_api_hook.py:65} INFO - Fetched page 517: 10 animals
+[2025-05-28T09:30:07.141+0000] {animals_api_hook.py:33} INFO - Fetching animals page 518
+[2025-05-28T09:30:07.175+0000] {animals_api_hook.py:65} INFO - Fetched page 518: 10 animals
+[2025-05-28T09:30:07.176+0000] {animals_api_hook.py:33} INFO - Fetching animals page 519
+[2025-05-28T09:30:07.202+0000] {animals_api_hook.py:65} INFO - Fetched page 519: 10 animals
+[2025-05-28T09:30:07.203+0000] {animals_api_hook.py:33} INFO - Fetching animals page 520
+[2025-05-28T09:30:07.228+0000] {animals_api_hook.py:65} INFO - Fetched page 520: 10 animals
+[2025-05-28T09:30:07.229+0000] {animals_api_hook.py:33} INFO - Fetching animals page 521
+[2025-05-28T09:30:07.254+0000] {animals_api_hook.py:65} INFO - Fetched page 521: 10 animals
+[2025-05-28T09:30:07.255+0000] {animals_api_hook.py:33} INFO - Fetching animals page 522
+[2025-05-28T09:30:07.280+0000] {animals_api_hook.py:65} INFO - Fetched page 522: 10 animals
+[2025-05-28T09:30:07.281+0000] {animals_api_hook.py:33} INFO - Fetching animals page 523
+[2025-05-28T09:30:07.306+0000] {animals_api_hook.py:65} INFO - Fetched page 523: 10 animals
+[2025-05-28T09:30:07.306+0000] {animals_api_hook.py:33} INFO - Fetching animals page 524
+[2025-05-28T09:30:07.332+0000] {animals_api_hook.py:65} INFO - Fetched page 524: 10 animals
+[2025-05-28T09:30:07.332+0000] {animals_api_hook.py:33} INFO - Fetching animals page 525
+[2025-05-28T09:30:07.358+0000] {animals_api_hook.py:65} INFO - Fetched page 525: 10 animals
+[2025-05-28T09:30:07.358+0000] {animals_api_hook.py:33} INFO - Fetching animals page 526
+[2025-05-28T09:30:07.393+0000] {animals_api_hook.py:65} INFO - Fetched page 526: 10 animals
+[2025-05-28T09:30:07.394+0000] {animals_api_hook.py:33} INFO - Fetching animals page 527
+[2025-05-28T09:30:07.420+0000] {animals_api_hook.py:65} INFO - Fetched page 527: 10 animals
+[2025-05-28T09:30:07.421+0000] {animals_api_hook.py:33} INFO - Fetching animals page 528
+[2025-05-28T09:30:07.447+0000] {animals_api_hook.py:65} INFO - Fetched page 528: 10 animals
+[2025-05-28T09:30:07.447+0000] {animals_api_hook.py:33} INFO - Fetching animals page 529
+[2025-05-28T09:30:07.473+0000] {animals_api_hook.py:65} INFO - Fetched page 529: 10 animals
+[2025-05-28T09:30:07.474+0000] {animals_api_hook.py:33} INFO - Fetching animals page 530
+[2025-05-28T09:30:07.501+0000] {animals_api_hook.py:65} INFO - Fetched page 530: 10 animals
+[2025-05-28T09:30:07.502+0000] {animals_api_hook.py:33} INFO - Fetching animals page 531
+[2025-05-28T09:30:07.527+0000] {animals_api_hook.py:65} INFO - Fetched page 531: 10 animals
+[2025-05-28T09:30:07.528+0000] {animals_api_hook.py:33} INFO - Fetching animals page 532
+[2025-05-28T09:30:07.553+0000] {animals_api_hook.py:65} INFO - Fetched page 532: 10 animals
+[2025-05-28T09:30:07.554+0000] {animals_api_hook.py:33} INFO - Fetching animals page 533
+[2025-05-28T09:30:07.579+0000] {animals_api_hook.py:65} INFO - Fetched page 533: 10 animals
+[2025-05-28T09:30:07.580+0000] {animals_api_hook.py:33} INFO - Fetching animals page 534
+[2025-05-28T09:30:07.607+0000] {animals_api_hook.py:65} INFO - Fetched page 534: 10 animals
+[2025-05-28T09:30:07.608+0000] {animals_api_hook.py:33} INFO - Fetching animals page 535
+[2025-05-28T09:30:07.641+0000] {animals_api_hook.py:65} INFO - Fetched page 535: 10 animals
+[2025-05-28T09:30:07.642+0000] {animals_api_hook.py:33} INFO - Fetching animals page 536
+[2025-05-28T09:30:07.668+0000] {animals_api_hook.py:65} INFO - Fetched page 536: 10 animals
+[2025-05-28T09:30:07.669+0000] {animals_api_hook.py:33} INFO - Fetching animals page 537
+[2025-05-28T09:30:07.694+0000] {animals_api_hook.py:65} INFO - Fetched page 537: 10 animals
+[2025-05-28T09:30:07.695+0000] {animals_api_hook.py:33} INFO - Fetching animals page 538
+[2025-05-28T09:30:07.721+0000] {animals_api_hook.py:65} INFO - Fetched page 538: 10 animals
+[2025-05-28T09:30:07.721+0000] {animals_api_hook.py:33} INFO - Fetching animals page 539
+[2025-05-28T09:30:07.747+0000] {animals_api_hook.py:65} INFO - Fetched page 539: 10 animals
+[2025-05-28T09:30:07.747+0000] {animals_api_hook.py:33} INFO - Fetching animals page 540
+[2025-05-28T09:30:07.774+0000] {animals_api_hook.py:65} INFO - Fetched page 540: 10 animals
+[2025-05-28T09:30:07.775+0000] {animals_api_hook.py:33} INFO - Fetching animals page 541
+[2025-05-28T09:30:07.800+0000] {animals_api_hook.py:65} INFO - Fetched page 541: 10 animals
+[2025-05-28T09:30:07.800+0000] {animals_api_hook.py:33} INFO - Fetching animals page 542
+[2025-05-28T09:30:08.825+0000] {animals_api_hook.py:33} INFO - Fetching animals page 542
+[2025-05-28T09:30:08.863+0000] {animals_api_hook.py:65} INFO - Fetched page 542: 10 animals
+[2025-05-28T09:30:08.864+0000] {animals_api_hook.py:33} INFO - Fetching animals page 543
+[2025-05-28T09:30:08.889+0000] {animals_api_hook.py:65} INFO - Fetched page 543: 10 animals
+[2025-05-28T09:30:08.890+0000] {animals_api_hook.py:33} INFO - Fetching animals page 544
+[2025-05-28T09:30:08.915+0000] {animals_api_hook.py:65} INFO - Fetched page 544: 10 animals
+[2025-05-28T09:30:08.915+0000] {animals_api_hook.py:33} INFO - Fetching animals page 545
+[2025-05-28T09:30:08.941+0000] {animals_api_hook.py:65} INFO - Fetched page 545: 10 animals
+[2025-05-28T09:30:08.942+0000] {animals_api_hook.py:33} INFO - Fetching animals page 546
+[2025-05-28T09:30:08.968+0000] {animals_api_hook.py:65} INFO - Fetched page 546: 10 animals
+[2025-05-28T09:30:08.968+0000] {animals_api_hook.py:33} INFO - Fetching animals page 547
+[2025-05-28T09:30:08.994+0000] {animals_api_hook.py:65} INFO - Fetched page 547: 10 animals
+[2025-05-28T09:30:08.994+0000] {animals_api_hook.py:33} INFO - Fetching animals page 548
+[2025-05-28T09:30:09.020+0000] {animals_api_hook.py:65} INFO - Fetched page 548: 10 animals
+[2025-05-28T09:30:09.021+0000] {animals_api_hook.py:33} INFO - Fetching animals page 549
+[2025-05-28T09:30:09.046+0000] {animals_api_hook.py:65} INFO - Fetched page 549: 10 animals
+[2025-05-28T09:30:09.047+0000] {animals_api_hook.py:33} INFO - Fetching animals page 550
+[2025-05-28T09:30:09.073+0000] {animals_api_hook.py:65} INFO - Fetched page 550: 10 animals
+[2025-05-28T09:30:09.074+0000] {animals_api_hook.py:33} INFO - Fetching animals page 551
+[2025-05-28T09:30:09.108+0000] {animals_api_hook.py:65} INFO - Fetched page 551: 10 animals
+[2025-05-28T09:30:09.109+0000] {animals_api_hook.py:33} INFO - Fetching animals page 552
+[2025-05-28T09:30:09.136+0000] {animals_api_hook.py:65} INFO - Fetched page 552: 10 animals
+[2025-05-28T09:30:09.136+0000] {animals_api_hook.py:33} INFO - Fetching animals page 553
+[2025-05-28T09:30:10.161+0000] {animals_api_hook.py:33} INFO - Fetching animals page 553
+[2025-05-28T09:30:10.187+0000] {animals_api_hook.py:65} INFO - Fetched page 553: 10 animals
+[2025-05-28T09:30:10.187+0000] {animals_api_hook.py:33} INFO - Fetching animals page 554
+[2025-05-28T09:30:10.214+0000] {animals_api_hook.py:65} INFO - Fetched page 554: 10 animals
+[2025-05-28T09:30:10.214+0000] {animals_api_hook.py:33} INFO - Fetching animals page 555
+[2025-05-28T09:30:10.241+0000] {animals_api_hook.py:65} INFO - Fetched page 555: 10 animals
+[2025-05-28T09:30:10.241+0000] {animals_api_hook.py:33} INFO - Fetching animals page 556
+[2025-05-28T09:30:10.267+0000] {animals_api_hook.py:65} INFO - Fetched page 556: 10 animals
+[2025-05-28T09:30:10.267+0000] {animals_api_hook.py:33} INFO - Fetching animals page 557
+[2025-05-28T09:30:10.293+0000] {animals_api_hook.py:65} INFO - Fetched page 557: 10 animals
+[2025-05-28T09:30:10.293+0000] {animals_api_hook.py:33} INFO - Fetching animals page 558
+[2025-05-28T09:30:16.329+0000] {animals_api_hook.py:65} INFO - Fetched page 558: 10 animals
+[2025-05-28T09:30:16.330+0000] {animals_api_hook.py:33} INFO - Fetching animals page 559
+[2025-05-28T09:30:16.356+0000] {animals_api_hook.py:65} INFO - Fetched page 559: 10 animals
+[2025-05-28T09:30:16.357+0000] {animals_api_hook.py:33} INFO - Fetching animals page 560
+[2025-05-28T09:30:16.383+0000] {animals_api_hook.py:65} INFO - Fetched page 560: 10 animals
+[2025-05-28T09:30:16.383+0000] {animals_api_hook.py:33} INFO - Fetching animals page 561
+[2025-05-28T09:30:16.409+0000] {animals_api_hook.py:65} INFO - Fetched page 561: 10 animals
+[2025-05-28T09:30:16.409+0000] {animals_api_hook.py:33} INFO - Fetching animals page 562
+[2025-05-28T09:30:16.435+0000] {animals_api_hook.py:65} INFO - Fetched page 562: 10 animals
+[2025-05-28T09:30:16.435+0000] {animals_api_hook.py:33} INFO - Fetching animals page 563
+[2025-05-28T09:30:16.461+0000] {animals_api_hook.py:65} INFO - Fetched page 563: 10 animals
+[2025-05-28T09:30:16.461+0000] {animals_api_hook.py:33} INFO - Fetching animals page 564
+[2025-05-28T09:30:16.487+0000] {animals_api_hook.py:65} INFO - Fetched page 564: 10 animals
+[2025-05-28T09:30:16.488+0000] {animals_api_hook.py:33} INFO - Fetching animals page 565
+[2025-05-28T09:30:16.516+0000] {animals_api_hook.py:65} INFO - Fetched page 565: 10 animals
+[2025-05-28T09:30:16.517+0000] {animals_api_hook.py:33} INFO - Fetching animals page 566
+[2025-05-28T09:30:16.553+0000] {animals_api_hook.py:65} INFO - Fetched page 566: 10 animals
+[2025-05-28T09:30:16.553+0000] {animals_api_hook.py:33} INFO - Fetching animals page 567
+[2025-05-28T09:30:16.580+0000] {animals_api_hook.py:65} INFO - Fetched page 567: 10 animals
+[2025-05-28T09:30:16.581+0000] {animals_api_hook.py:33} INFO - Fetching animals page 568
+[2025-05-28T09:30:16.607+0000] {animals_api_hook.py:65} INFO - Fetched page 568: 10 animals
+[2025-05-28T09:30:16.608+0000] {animals_api_hook.py:33} INFO - Fetching animals page 569
+[2025-05-28T09:30:16.633+0000] {animals_api_hook.py:65} INFO - Fetched page 569: 10 animals
+[2025-05-28T09:30:16.633+0000] {animals_api_hook.py:33} INFO - Fetching animals page 570
+[2025-05-28T09:30:16.659+0000] {animals_api_hook.py:65} INFO - Fetched page 570: 10 animals
+[2025-05-28T09:30:16.659+0000] {animals_api_hook.py:33} INFO - Fetching animals page 571
+[2025-05-28T09:30:16.685+0000] {animals_api_hook.py:65} INFO - Fetched page 571: 10 animals
+[2025-05-28T09:30:16.685+0000] {animals_api_hook.py:33} INFO - Fetching animals page 572
+[2025-05-28T09:30:16.711+0000] {animals_api_hook.py:65} INFO - Fetched page 572: 10 animals
+[2025-05-28T09:30:16.711+0000] {animals_api_hook.py:33} INFO - Fetching animals page 573
+[2025-05-28T09:30:16.737+0000] {animals_api_hook.py:65} INFO - Fetched page 573: 10 animals
+[2025-05-28T09:30:16.737+0000] {animals_api_hook.py:33} INFO - Fetching animals page 574
+[2025-05-28T09:30:16.764+0000] {animals_api_hook.py:65} INFO - Fetched page 574: 10 animals
+[2025-05-28T09:30:16.764+0000] {animals_api_hook.py:33} INFO - Fetching animals page 575
+[2025-05-28T09:30:16.800+0000] {animals_api_hook.py:65} INFO - Fetched page 575: 10 animals
+[2025-05-28T09:30:16.801+0000] {animals_api_hook.py:33} INFO - Fetching animals page 576
+[2025-05-28T09:30:16.827+0000] {animals_api_hook.py:65} INFO - Fetched page 576: 10 animals
+[2025-05-28T09:30:16.828+0000] {animals_api_hook.py:80} INFO - Completed fetching all animals: 5760 total
+[2025-05-28T09:30:16.828+0000] {animal_etl_operators.py:30} INFO - Extracted 5760 animals
+[2025-05-28T09:30:16.877+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymysql/cursors.py", line 153, in execute
+    result = self._query(query)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymysql/connections.py", line 563, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymysql/connections.py", line 825, in _read_query_result
+    result.read()
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymysql/connections.py", line 1199, in read
+    first_packet = self.connection._read_packet()
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1406, "Data too long for column 'value' at row 1")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 451, in _execute_task
+    task_instance.xcom_push(key=XCOM_RETURN_KEY, value=xcom_value, session=session)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 3013, in xcom_push
+    XCom.set(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/xcom.py", line 276, in set
+    session.flush()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3449, in flush
+    self._flush(objects)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3589, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3549, in _flush
+    flush_context.execute()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    _emit_insert_statements(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 1097, in _emit_insert_statements
+    c = connection._execute_20(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1710, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 334, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1577, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1953, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymysql/cursors.py", line 153, in execute
+    result = self._query(query)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymysql/connections.py", line 563, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymysql/connections.py", line 825, in _read_query_result
+    result.read()
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymysql/connections.py", line 1199, in read
+    first_packet = self.connection._read_packet()
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.DataError: (pymysql.err.DataError) (1406, "Data too long for column 'value' at row 1")
+[SQL: INSERT INTO xcom (dag_run_id, task_id, map_index, `key`, dag_id, run_id, value, timestamp) VALUES (%(dag_run_id)s, %(task_id)s, %(map_index)s, %(key)s, %(dag_id)s, %(run_id)s, %(value)s, %(timestamp)s)]
+[parameters: {'dag_run_id': 9, 'task_id': 'extract_animals', 'map_index': -1, 'key': 'return_value', 'dag_id': 'animal_etl_pipeline_v1.0.0', 'run_id': 'manual__2025-05-28T09:28:27.095608+00:00', 'value': b'[{"id": 0, "name": "Buffalo", "species": "Unknown", "born_at": null}, {"id": 1, "name": "Gnat", "species": "Unknown", "born_at": "1995-10-24T08:53:2 ... (430936 characters truncated) ... t": null}, {"id": 5758, "name": "Crow", "species": "Unknown", "born_at": null}, {"id": 5759, "name": "Otter", "species": "Unknown", "born_at": null}]', 'timestamp': datetime.datetime(2025, 5, 28, 9, 30, 16, 851709)}]
+(Background on this error at: https://sqlalche.me/e/14/9h9h)
+[2025-05-28T09:30:16.901+0000] {taskinstance.py:1149} INFO - Marking task as UP_FOR_RETRY. dag_id=animal_etl_pipeline_v1.0.0, task_id=extract_animals, execution_date=20250528T092827, start_date=20250528T092829, end_date=20250528T093016
+[2025-05-28T09:30:16.920+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 13 for task extract_animals ((pymysql.err.DataError) (1406, "Data too long for column 'value' at row 1")
+[SQL: INSERT INTO xcom (dag_run_id, task_id, map_index, `key`, dag_id, run_id, value, timestamp) VALUES (%(dag_run_id)s, %(task_id)s, %(map_index)s, %(key)s, %(dag_id)s, %(run_id)s, %(value)s, %(timestamp)s)]
+[parameters: {'dag_run_id': 9, 'task_id': 'extract_animals', 'map_index': -1, 'key': 'return_value', 'dag_id': 'animal_etl_pipeline_v1.0.0', 'run_id': 'manual__2025-05-28T09:28:27.095608+00:00', 'value': b'[{"id": 0, "name": "Buffalo", "species": "Unknown", "born_at": null}, {"id": 1, "name": "Gnat", "species": "Unknown", "born_at": "1995-10-24T08:53:2 ... (430936 characters truncated) ... t": null}, {"id": 5758, "name": "Crow", "species": "Unknown", "born_at": null}, {"id": 5759, "name": "Otter", "species": "Unknown", "born_at": null}]', 'timestamp': datetime.datetime(2025, 5, 28, 9, 30, 16, 851709)}]
+(Background on this error at: https://sqlalche.me/e/14/9h9h); 67)
+[2025-05-28T09:30:16.970+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-05-28T09:30:17.002+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

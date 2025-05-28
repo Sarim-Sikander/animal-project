@@ -1,0 +1,21 @@
+[2025-05-28T10:02:22.609+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: animal_etl_pipeline_v1.0.1.success_notification manual__2025-05-28T09:51:33.857443+00:00 [queued]>
+[2025-05-28T10:02:22.624+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: animal_etl_pipeline_v1.0.1.success_notification manual__2025-05-28T09:51:33.857443+00:00 [queued]>
+[2025-05-28T10:02:22.624+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 4
+[2025-05-28T10:02:22.642+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): success_notification> on 2025-05-28 09:51:33.857443+00:00
+[2025-05-28T10:02:22.649+0000] {standard_task_runner.py:60} INFO - Started process 86 to run task
+[2025-05-28T10:02:22.652+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'animal_etl_pipeline_v1.0.1', 'success_notification', 'manual__2025-05-28T09:51:33.857443+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/animal_etl_dag.py', '--cfg-path', '/tmp/tmpirah__20']
+[2025-05-28T10:02:22.653+0000] {standard_task_runner.py:88} INFO - Job 22: Subtask success_notification
+[2025-05-28T10:02:22.710+0000] {task_command.py:423} INFO - Running <TaskInstance: animal_etl_pipeline_v1.0.1.success_notification manual__2025-05-28T09:51:33.857443+00:00 [running]> on host 92026f8f66a7
+[2025-05-28T10:02:22.802+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='admin@company.com' AIRFLOW_CTX_DAG_OWNER='data_team' AIRFLOW_CTX_DAG_ID='animal_etl_pipeline_v1.0.1' AIRFLOW_CTX_TASK_ID='success_notification' AIRFLOW_CTX_EXECUTION_DATE='2025-05-28T09:51:33.857443+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-28T09:51:33.857443+00:00'
+[2025-05-28T10:02:22.816+0000] {logging_mixin.py:188} INFO - ✅ Animal ETL pipeline completed successfully!
+[2025-05-28T10:02:22.817+0000] {logging_mixin.py:188} INFO - 📊 Processed 53 animals
+[2025-05-28T10:02:22.817+0000] {logging_mixin.py:188} INFO - 📦 Successful batches: 0
+[2025-05-28T10:02:22.818+0000] {logging_mixin.py:188} INFO - ❌ Failed batches: 5
+[2025-05-28T10:02:22.818+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/context.py:315: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(k, replacements))
+
+[2025-05-28T10:02:22.819+0000] {logging_mixin.py:188} INFO - 🕒 Execution date: 2025-05-28 09:51:33.857443+00:00
+[2025-05-28T10:02:22.819+0000] {python.py:202} INFO - Done. Returned value was: {'status': 'success', 'execution_date': '2025-05-28 09:51:33.857443+00:00', 'load_summary': {'status': 'completed', 'total_batches': 5, 'successful_batches': 0, 'failed_batches': 5, 'total_animals': 53}}
+[2025-05-28T10:02:22.846+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=animal_etl_pipeline_v1.0.1, task_id=success_notification, execution_date=20250528T095133, start_date=20250528T100222, end_date=20250528T100222
+[2025-05-28T10:02:22.905+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-05-28T10:02:22.929+0000] {taskinstance.py:3312} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,27 @@
+[2025-05-28T10:55:30.010+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: animal_etl_pipeline_v3_fixed.transform_animals manual__2025-05-28T10:53:43.195995+00:00 [queued]>
+[2025-05-28T10:55:30.024+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: animal_etl_pipeline_v3_fixed.transform_animals manual__2025-05-28T10:53:43.195995+00:00 [queued]>
+[2025-05-28T10:55:30.024+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 4
+[2025-05-28T10:55:30.044+0000] {taskinstance.py:2217} INFO - Executing <Task(TransformAnimalsOperator): transform_animals> on 2025-05-28 10:53:43.195995+00:00
+[2025-05-28T10:55:30.051+0000] {standard_task_runner.py:60} INFO - Started process 106 to run task
+[2025-05-28T10:55:30.054+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'animal_etl_pipeline_v3_fixed', 'transform_animals', 'manual__2025-05-28T10:53:43.195995+00:00', '--job-id', '31', '--raw', '--subdir', 'DAGS_FOLDER/animal_etl_dag.py', '--cfg-path', '/tmp/tmpo9j3jynq']
+[2025-05-28T10:55:30.055+0000] {standard_task_runner.py:88} INFO - Job 31: Subtask transform_animals
+[2025-05-28T10:55:30.113+0000] {task_command.py:423} INFO - Running <TaskInstance: animal_etl_pipeline_v3_fixed.transform_animals manual__2025-05-28T10:53:43.195995+00:00 [running]> on host 92026f8f66a7
+[2025-05-28T10:55:30.213+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='sarimsikander24@gmail.com' AIRFLOW_CTX_DAG_OWNER='Sarim Sikander' AIRFLOW_CTX_DAG_ID='animal_etl_pipeline_v3_fixed' AIRFLOW_CTX_TASK_ID='transform_animals' AIRFLOW_CTX_EXECUTION_DATE='2025-05-28T10:53:43.195995+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-28T10:53:43.195995+00:00'
+[2025-05-28T10:55:30.233+0000] {animal_etl_operators.py:80} INFO - Loaded 5740 animals from /tmp/animals_data_manual__2025-05-28T10:53:43.195995+00:00.json
+[2025-05-28T10:55:30.235+0000] {animal_etl_operators.py:92} INFO - Processing batch 1: IDs 0 to 99
+[2025-05-28T10:55:30.236+0000] {animals_api_hook.py:125} INFO - Fetching details for 100 animals
+[2025-05-28T10:55:35.036+0000] {logging_mixin.py:188} INFO - Transforming batch of 100 animals
+[2025-05-28T10:55:35.042+0000] {logging_mixin.py:188} INFO - Converted 100 animals to API format
+[2025-05-28T10:55:35.044+0000] {animal_etl_operators.py:124} INFO - Processed 100/5740 animals so far
+[2025-05-28T10:55:35.044+0000] {animal_etl_operators.py:92} INFO - Processing batch 2: IDs 100 to 199
+[2025-05-28T10:55:35.044+0000] {animals_api_hook.py:125} INFO - Fetching details for 100 animals
+[2025-05-28T10:55:37.694+0000] {logging_mixin.py:188} INFO - Transforming batch of 100 animals
+[2025-05-28T10:55:37.698+0000] {logging_mixin.py:188} INFO - Converted 100 animals to API format
+[2025-05-28T10:55:37.700+0000] {animal_etl_operators.py:124} INFO - Processed 200/5740 animals so far
+[2025-05-28T10:55:37.700+0000] {animal_etl_operators.py:92} INFO - Processing batch 3: IDs 200 to 299
+[2025-05-28T10:55:37.700+0000] {animals_api_hook.py:125} INFO - Fetching details for 100 animals
+[2025-05-28T10:55:40.371+0000] {logging_mixin.py:188} INFO - Transforming batch of 100 animals
+[2025-05-28T10:55:40.374+0000] {logging_mixin.py:188} INFO - Converted 100 animals to API format
+[2025-05-28T10:55:40.376+0000] {animal_etl_operators.py:124} INFO - Processed 300/5740 animals so far
+[2025-05-28T10:55:40.376+0000] {animal_etl_operators.py:92} INFO - Processing batch 4: IDs 300 to 399
+[2025-05-28T10:55:40.377+0000] {animals_api_hook.py:125} INFO - Fetching details for 100 animals

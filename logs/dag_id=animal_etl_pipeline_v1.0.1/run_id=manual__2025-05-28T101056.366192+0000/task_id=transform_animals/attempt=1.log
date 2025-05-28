@@ -1,0 +1,504 @@
+[2025-05-28T10:12:54.342+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: animal_etl_pipeline_v1.0.1.transform_animals manual__2025-05-28T10:10:56.366192+00:00 [queued]>
+[2025-05-28T10:12:54.353+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: animal_etl_pipeline_v1.0.1.transform_animals manual__2025-05-28T10:10:56.366192+00:00 [queued]>
+[2025-05-28T10:12:54.354+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 4
+[2025-05-28T10:12:54.370+0000] {taskinstance.py:2217} INFO - Executing <Task(TransformAnimalsOperator): transform_animals> on 2025-05-28 10:10:56.366192+00:00
+[2025-05-28T10:12:54.376+0000] {standard_task_runner.py:60} INFO - Started process 93 to run task
+[2025-05-28T10:12:54.379+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'animal_etl_pipeline_v1.0.1', 'transform_animals', 'manual__2025-05-28T10:10:56.366192+00:00', '--job-id', '25', '--raw', '--subdir', 'DAGS_FOLDER/animal_etl_dag.py', '--cfg-path', '/tmp/tmpy1kcy4i_']
+[2025-05-28T10:12:54.380+0000] {standard_task_runner.py:88} INFO - Job 25: Subtask transform_animals
+[2025-05-28T10:12:54.433+0000] {task_command.py:423} INFO - Running <TaskInstance: animal_etl_pipeline_v1.0.1.transform_animals manual__2025-05-28T10:10:56.366192+00:00 [running]> on host 92026f8f66a7
+[2025-05-28T10:12:54.531+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='admin@company.com' AIRFLOW_CTX_DAG_OWNER='data_team' AIRFLOW_CTX_DAG_ID='animal_etl_pipeline_v1.0.1' AIRFLOW_CTX_TASK_ID='transform_animals' AIRFLOW_CTX_EXECUTION_DATE='2025-05-28T10:10:56.366192+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-28T10:10:56.366192+00:00'
+[2025-05-28T10:12:54.549+0000] {animal_etl_operators.py:84} INFO - Loaded 5820 animals from /tmp/animals_data_manual__2025-05-28T10:10:56.366192+00:00.json
+[2025-05-28T10:12:54.550+0000] {animal_etl_operators.py:96} INFO - Processing batch 1: IDs 0 to 99
+[2025-05-28T10:12:54.550+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:13:05.486+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:13:05.498+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:13:05.500+0000] {animal_etl_operators.py:128} INFO - Processed 100/5820 animals so far
+[2025-05-28T10:13:05.500+0000] {animal_etl_operators.py:96} INFO - Processing batch 2: IDs 100 to 199
+[2025-05-28T10:13:05.501+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:13:15.177+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:13:15.183+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:13:15.185+0000] {animal_etl_operators.py:128} INFO - Processed 200/5820 animals so far
+[2025-05-28T10:13:15.185+0000] {animal_etl_operators.py:96} INFO - Processing batch 3: IDs 200 to 299
+[2025-05-28T10:13:15.185+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:13:37.772+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:13:37.775+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:13:37.778+0000] {animal_etl_operators.py:128} INFO - Processed 300/5820 animals so far
+[2025-05-28T10:13:37.778+0000] {animal_etl_operators.py:96} INFO - Processing batch 4: IDs 300 to 399
+[2025-05-28T10:13:37.778+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:14:01.366+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:14:01.370+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:14:01.372+0000] {animal_etl_operators.py:128} INFO - Processed 400/5820 animals so far
+[2025-05-28T10:14:01.373+0000] {animal_etl_operators.py:96} INFO - Processing batch 5: IDs 400 to 499
+[2025-05-28T10:14:01.373+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:14:19.095+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:14:19.099+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:14:19.101+0000] {animal_etl_operators.py:128} INFO - Processed 500/5820 animals so far
+[2025-05-28T10:14:19.101+0000] {animal_etl_operators.py:96} INFO - Processing batch 6: IDs 500 to 599
+[2025-05-28T10:14:19.102+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:14:21.703+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:14:21.707+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:14:21.709+0000] {animal_etl_operators.py:128} INFO - Processed 600/5820 animals so far
+[2025-05-28T10:14:21.709+0000] {animal_etl_operators.py:96} INFO - Processing batch 7: IDs 600 to 699
+[2025-05-28T10:14:21.710+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:14:24.275+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:14:24.279+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:14:24.281+0000] {animal_etl_operators.py:128} INFO - Processed 700/5820 animals so far
+[2025-05-28T10:14:24.282+0000] {animal_etl_operators.py:96} INFO - Processing batch 8: IDs 700 to 799
+[2025-05-28T10:14:24.282+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:14:45.851+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:14:45.854+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:14:45.856+0000] {animal_etl_operators.py:128} INFO - Processed 800/5820 animals so far
+[2025-05-28T10:14:45.856+0000] {animal_etl_operators.py:96} INFO - Processing batch 9: IDs 800 to 899
+[2025-05-28T10:14:45.856+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:15:05.454+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:15:05.458+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:15:05.460+0000] {animal_etl_operators.py:128} INFO - Processed 900/5820 animals so far
+[2025-05-28T10:15:05.460+0000] {animal_etl_operators.py:96} INFO - Processing batch 10: IDs 900 to 999
+[2025-05-28T10:15:05.461+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:15:21.136+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:15:21.140+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:15:21.142+0000] {animal_etl_operators.py:128} INFO - Processed 1000/5820 animals so far
+[2025-05-28T10:15:21.142+0000] {animal_etl_operators.py:96} INFO - Processing batch 11: IDs 1000 to 1099
+[2025-05-28T10:15:21.143+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:15:37.833+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:15:37.837+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:15:37.839+0000] {animal_etl_operators.py:128} INFO - Processed 1100/5820 animals so far
+[2025-05-28T10:15:37.839+0000] {animal_etl_operators.py:96} INFO - Processing batch 12: IDs 1100 to 1199
+[2025-05-28T10:15:37.839+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:15:46.406+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:15:46.410+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:15:46.411+0000] {animal_etl_operators.py:128} INFO - Processed 1200/5820 animals so far
+[2025-05-28T10:15:46.412+0000] {animal_etl_operators.py:96} INFO - Processing batch 13: IDs 1200 to 1299
+[2025-05-28T10:15:46.412+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:15:51.045+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:15:51.049+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:15:51.051+0000] {animal_etl_operators.py:128} INFO - Processed 1300/5820 animals so far
+[2025-05-28T10:15:51.051+0000] {animal_etl_operators.py:96} INFO - Processing batch 14: IDs 1300 to 1399
+[2025-05-28T10:15:51.051+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:15:54.679+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:15:54.683+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:15:54.685+0000] {animal_etl_operators.py:128} INFO - Processed 1400/5820 animals so far
+[2025-05-28T10:15:54.685+0000] {animal_etl_operators.py:96} INFO - Processing batch 15: IDs 1400 to 1499
+[2025-05-28T10:15:54.686+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:15:58.297+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:15:58.301+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:15:58.302+0000] {animal_etl_operators.py:128} INFO - Processed 1500/5820 animals so far
+[2025-05-28T10:15:58.303+0000] {animal_etl_operators.py:96} INFO - Processing batch 16: IDs 1500 to 1599
+[2025-05-28T10:15:58.303+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:16:01.891+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:16:01.894+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:16:01.896+0000] {animal_etl_operators.py:128} INFO - Processed 1600/5820 animals so far
+[2025-05-28T10:16:01.896+0000] {animal_etl_operators.py:96} INFO - Processing batch 17: IDs 1600 to 1699
+[2025-05-28T10:16:01.896+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:16:05.481+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:16:05.484+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:16:05.486+0000] {animal_etl_operators.py:128} INFO - Processed 1700/5820 animals so far
+[2025-05-28T10:16:05.487+0000] {animal_etl_operators.py:96} INFO - Processing batch 18: IDs 1700 to 1799
+[2025-05-28T10:16:05.487+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:16:13.138+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:16:13.142+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:16:13.144+0000] {animal_etl_operators.py:128} INFO - Processed 1800/5820 animals so far
+[2025-05-28T10:16:13.144+0000] {animal_etl_operators.py:96} INFO - Processing batch 19: IDs 1800 to 1899
+[2025-05-28T10:16:13.145+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:16:39.726+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:16:39.729+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:16:39.731+0000] {animal_etl_operators.py:128} INFO - Processed 1900/5820 animals so far
+[2025-05-28T10:16:39.732+0000] {animal_etl_operators.py:96} INFO - Processing batch 20: IDs 1900 to 1999
+[2025-05-28T10:16:39.732+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:16:51.304+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:16:51.307+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:16:51.309+0000] {animal_etl_operators.py:128} INFO - Processed 2000/5820 animals so far
+[2025-05-28T10:16:51.309+0000] {animal_etl_operators.py:96} INFO - Processing batch 21: IDs 2000 to 2099
+[2025-05-28T10:16:51.309+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:16:54.907+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:16:54.911+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:16:54.913+0000] {animal_etl_operators.py:128} INFO - Processed 2100/5820 animals so far
+[2025-05-28T10:16:54.913+0000] {animal_etl_operators.py:96} INFO - Processing batch 22: IDs 2100 to 2199
+[2025-05-28T10:16:54.914+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:17:00.541+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:17:00.544+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:17:00.546+0000] {animal_etl_operators.py:128} INFO - Processed 2200/5820 animals so far
+[2025-05-28T10:17:00.546+0000] {animal_etl_operators.py:96} INFO - Processing batch 23: IDs 2200 to 2299
+[2025-05-28T10:17:00.547+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:17:06.203+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:17:06.207+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:17:06.209+0000] {animal_etl_operators.py:128} INFO - Processed 2300/5820 animals so far
+[2025-05-28T10:17:06.209+0000] {animal_etl_operators.py:96} INFO - Processing batch 24: IDs 2300 to 2399
+[2025-05-28T10:17:06.209+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:17:09.784+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:17:09.787+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:17:09.789+0000] {animal_etl_operators.py:128} INFO - Processed 2400/5820 animals so far
+[2025-05-28T10:17:09.789+0000] {animal_etl_operators.py:96} INFO - Processing batch 25: IDs 2400 to 2499
+[2025-05-28T10:17:09.790+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:17:15.612+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:17:15.615+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:17:15.617+0000] {animal_etl_operators.py:128} INFO - Processed 2500/5820 animals so far
+[2025-05-28T10:17:15.617+0000] {animal_etl_operators.py:96} INFO - Processing batch 26: IDs 2500 to 2599
+[2025-05-28T10:17:15.618+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:17:20.308+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:17:20.311+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:17:20.313+0000] {animal_etl_operators.py:128} INFO - Processed 2600/5820 animals so far
+[2025-05-28T10:17:20.314+0000] {animal_etl_operators.py:96} INFO - Processing batch 27: IDs 2600 to 2699
+[2025-05-28T10:17:20.314+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:17:38.928+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:17:38.931+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:17:38.933+0000] {animal_etl_operators.py:128} INFO - Processed 2700/5820 animals so far
+[2025-05-28T10:17:38.933+0000] {animal_etl_operators.py:96} INFO - Processing batch 28: IDs 2700 to 2799
+[2025-05-28T10:17:38.934+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:17:54.529+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:17:54.532+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:17:54.534+0000] {animal_etl_operators.py:128} INFO - Processed 2800/5820 animals so far
+[2025-05-28T10:17:54.535+0000] {animal_etl_operators.py:96} INFO - Processing batch 29: IDs 2800 to 2899
+[2025-05-28T10:17:54.535+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:18:12.207+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:18:12.212+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:18:12.214+0000] {animal_etl_operators.py:128} INFO - Processed 2900/5820 animals so far
+[2025-05-28T10:18:12.214+0000] {animal_etl_operators.py:96} INFO - Processing batch 30: IDs 2900 to 2999
+[2025-05-28T10:18:12.214+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:18:23.828+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:18:23.832+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:18:23.834+0000] {animal_etl_operators.py:128} INFO - Processed 3000/5820 animals so far
+[2025-05-28T10:18:23.834+0000] {animal_etl_operators.py:96} INFO - Processing batch 31: IDs 3000 to 3099
+[2025-05-28T10:18:23.835+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:18:44.516+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:18:44.520+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:18:44.522+0000] {animal_etl_operators.py:128} INFO - Processed 3100/5820 animals so far
+[2025-05-28T10:18:44.522+0000] {animal_etl_operators.py:96} INFO - Processing batch 32: IDs 3100 to 3199
+[2025-05-28T10:18:44.523+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:19:04.099+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:19:04.103+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:19:04.105+0000] {animal_etl_operators.py:128} INFO - Processed 3200/5820 animals so far
+[2025-05-28T10:19:04.105+0000] {animal_etl_operators.py:96} INFO - Processing batch 33: IDs 3200 to 3299
+[2025-05-28T10:19:04.105+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:19:09.762+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:19:09.766+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:19:09.768+0000] {animal_etl_operators.py:128} INFO - Processed 3300/5820 animals so far
+[2025-05-28T10:19:09.768+0000] {animal_etl_operators.py:96} INFO - Processing batch 34: IDs 3300 to 3399
+[2025-05-28T10:19:09.769+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:19:13.383+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:19:13.386+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:19:13.388+0000] {animal_etl_operators.py:128} INFO - Processed 3400/5820 animals so far
+[2025-05-28T10:19:13.389+0000] {animal_etl_operators.py:96} INFO - Processing batch 35: IDs 3400 to 3499
+[2025-05-28T10:19:13.389+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:19:43.999+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:19:44.003+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:19:44.005+0000] {animal_etl_operators.py:128} INFO - Processed 3500/5820 animals so far
+[2025-05-28T10:19:44.005+0000] {animal_etl_operators.py:96} INFO - Processing batch 36: IDs 3500 to 3599
+[2025-05-28T10:19:44.005+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:19:52.571+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:19:52.575+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:19:52.577+0000] {animal_etl_operators.py:128} INFO - Processed 3600/5820 animals so far
+[2025-05-28T10:19:52.577+0000] {animal_etl_operators.py:96} INFO - Processing batch 37: IDs 3600 to 3699
+[2025-05-28T10:19:52.578+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:20:03.212+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:20:03.216+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:20:03.218+0000] {animal_etl_operators.py:128} INFO - Processed 3700/5820 animals so far
+[2025-05-28T10:20:03.218+0000] {animal_etl_operators.py:96} INFO - Processing batch 38: IDs 3700 to 3799
+[2025-05-28T10:20:03.218+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:20:06.836+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:20:06.839+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:20:06.841+0000] {animal_etl_operators.py:128} INFO - Processed 3800/5820 animals so far
+[2025-05-28T10:20:06.842+0000] {animal_etl_operators.py:96} INFO - Processing batch 39: IDs 3800 to 3899
+[2025-05-28T10:20:06.842+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:20:32.427+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:20:32.433+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:20:32.435+0000] {animal_etl_operators.py:128} INFO - Processed 3900/5820 animals so far
+[2025-05-28T10:20:32.435+0000] {animal_etl_operators.py:96} INFO - Processing batch 40: IDs 3900 to 3999
+[2025-05-28T10:20:32.435+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:21:02.104+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:21:02.108+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:21:02.110+0000] {animal_etl_operators.py:128} INFO - Processed 4000/5820 animals so far
+[2025-05-28T10:21:02.110+0000] {animal_etl_operators.py:96} INFO - Processing batch 41: IDs 4000 to 4099
+[2025-05-28T10:21:02.111+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:21:48.800+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:21:48.804+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:21:48.806+0000] {animal_etl_operators.py:128} INFO - Processed 4100/5820 animals so far
+[2025-05-28T10:21:48.806+0000] {animal_etl_operators.py:96} INFO - Processing batch 42: IDs 4100 to 4199
+[2025-05-28T10:21:48.806+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:21:57.376+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:21:57.380+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:21:57.381+0000] {animal_etl_operators.py:128} INFO - Processed 4200/5820 animals so far
+[2025-05-28T10:21:57.382+0000] {animal_etl_operators.py:96} INFO - Processing batch 43: IDs 4200 to 4299
+[2025-05-28T10:21:57.382+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:22:07.007+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:22:07.011+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:22:07.013+0000] {animal_etl_operators.py:128} INFO - Processed 4300/5820 animals so far
+[2025-05-28T10:22:07.013+0000] {animal_etl_operators.py:96} INFO - Processing batch 44: IDs 4300 to 4399
+[2025-05-28T10:22:07.013+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:22:21.616+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:22:21.620+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:22:21.622+0000] {animal_etl_operators.py:128} INFO - Processed 4400/5820 animals so far
+[2025-05-28T10:22:21.622+0000] {animal_etl_operators.py:96} INFO - Processing batch 45: IDs 4400 to 4499
+[2025-05-28T10:22:21.623+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:22:24.279+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:22:24.282+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:22:24.284+0000] {animal_etl_operators.py:128} INFO - Processed 4500/5820 animals so far
+[2025-05-28T10:22:24.285+0000] {animal_etl_operators.py:96} INFO - Processing batch 46: IDs 4500 to 4599
+[2025-05-28T10:22:24.285+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:22:35.882+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:22:35.886+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:22:35.888+0000] {animal_etl_operators.py:128} INFO - Processed 4600/5820 animals so far
+[2025-05-28T10:22:35.889+0000] {animal_etl_operators.py:96} INFO - Processing batch 47: IDs 4600 to 4699
+[2025-05-28T10:22:35.889+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:22:55.533+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:22:55.536+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:22:55.538+0000] {animal_etl_operators.py:128} INFO - Processed 4700/5820 animals so far
+[2025-05-28T10:22:55.539+0000] {animal_etl_operators.py:96} INFO - Processing batch 48: IDs 4700 to 4799
+[2025-05-28T10:22:55.539+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:22:58.138+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:22:58.142+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:22:58.144+0000] {animal_etl_operators.py:128} INFO - Processed 4800/5820 animals so far
+[2025-05-28T10:22:58.144+0000] {animal_etl_operators.py:96} INFO - Processing batch 49: IDs 4800 to 4899
+[2025-05-28T10:22:58.144+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:23:12.783+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:23:12.787+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:23:12.789+0000] {animal_etl_operators.py:128} INFO - Processed 4900/5820 animals so far
+[2025-05-28T10:23:12.789+0000] {animal_etl_operators.py:96} INFO - Processing batch 50: IDs 4900 to 4999
+[2025-05-28T10:23:12.790+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:23:16.414+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:23:16.418+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:23:16.420+0000] {animal_etl_operators.py:128} INFO - Processed 5000/5820 animals so far
+[2025-05-28T10:23:16.420+0000] {animal_etl_operators.py:96} INFO - Processing batch 51: IDs 5000 to 5099
+[2025-05-28T10:23:16.420+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:23:27.072+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5020: RetryError[<Future at 0x7f043c5d8160 state=finished raised ExternalAPIException>]
+[2025-05-28T10:23:30.152+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5021: RetryError[<Future at 0x7f043c586bb0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:23:33.248+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5022: RetryError[<Future at 0x7f043c5d8280 state=finished raised ExternalAPIException>]
+[2025-05-28T10:23:36.332+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5023: RetryError[<Future at 0x7f043caacfa0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:23:39.425+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5024: RetryError[<Future at 0x7f043c5cb1c0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:23:42.505+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5025: RetryError[<Future at 0x7f043c59a130 state=finished raised ExternalAPIException>]
+[2025-05-28T10:23:45.589+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5026: RetryError[<Future at 0x7f043c586700 state=finished raised ExternalAPIException>]
+[2025-05-28T10:23:48.676+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5027: RetryError[<Future at 0x7f043c5c4940 state=finished raised ExternalAPIException>]
+[2025-05-28T10:23:51.759+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5028: RetryError[<Future at 0x7f043c59d490 state=finished raised ExternalAPIException>]
+[2025-05-28T10:23:54.844+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5029: RetryError[<Future at 0x7f043c587d00 state=finished raised ExternalAPIException>]
+[2025-05-28T10:23:57.929+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5030: RetryError[<Future at 0x7f043cc12940 state=finished raised ExternalAPIException>]
+[2025-05-28T10:24:01.012+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5031: RetryError[<Future at 0x7f043c5d61f0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:24:04.102+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5032: RetryError[<Future at 0x7f043c5e9d30 state=finished raised ExternalAPIException>]
+[2025-05-28T10:24:07.185+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5033: RetryError[<Future at 0x7f043c5e0b20 state=finished raised ExternalAPIException>]
+[2025-05-28T10:24:10.268+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5034: RetryError[<Future at 0x7f043c5d0160 state=finished raised ExternalAPIException>]
+[2025-05-28T10:24:13.360+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5035: RetryError[<Future at 0x7f043c5d0d60 state=finished raised ExternalAPIException>]
+[2025-05-28T10:24:16.443+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5036: RetryError[<Future at 0x7f043c5e09a0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:24:19.526+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5037: RetryError[<Future at 0x7f043c5f9e80 state=finished raised ExternalAPIException>]
+[2025-05-28T10:24:22.621+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5038: RetryError[<Future at 0x7f043c5f9670 state=finished raised ExternalAPIException>]
+[2025-05-28T10:24:25.705+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5039: RetryError[<Future at 0x7f043c587c10 state=finished raised ExternalAPIException>]
+[2025-05-28T10:24:28.793+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5040: RetryError[<Future at 0x7f0445de2760 state=finished raised ExternalAPIException>]
+[2025-05-28T10:24:31.872+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5041: RetryError[<Future at 0x7f043c5e9040 state=finished raised ExternalAPIException>]
+[2025-05-28T10:24:34.955+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5042: RetryError[<Future at 0x7f043ca8f190 state=finished raised ExternalAPIException>]
+[2025-05-28T10:24:38.048+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5043: RetryError[<Future at 0x7f043c5e0700 state=finished raised ExternalAPIException>]
+[2025-05-28T10:24:41.128+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5044: RetryError[<Future at 0x7f043c5e9a60 state=finished raised ExternalAPIException>]
+[2025-05-28T10:24:44.210+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5045: RetryError[<Future at 0x7f043c5d6f10 state=finished raised ExternalAPIException>]
+[2025-05-28T10:24:47.299+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5046: RetryError[<Future at 0x7f043c567fa0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:24:50.382+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5047: RetryError[<Future at 0x7f043c5f91c0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:24:53.460+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5048: RetryError[<Future at 0x7f043c5c4cd0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:24:56.548+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5049: RetryError[<Future at 0x7f043c5f9d90 state=finished raised ExternalAPIException>]
+[2025-05-28T10:24:59.624+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5050: RetryError[<Future at 0x7f043c5896d0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:25:02.714+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5051: RetryError[<Future at 0x7f043c5da580 state=finished raised ExternalAPIException>]
+[2025-05-28T10:25:05.794+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5052: RetryError[<Future at 0x7f043caafc10 state=finished raised ExternalAPIException>]
+[2025-05-28T10:25:08.874+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5053: RetryError[<Future at 0x7f043c5c4160 state=finished raised ExternalAPIException>]
+[2025-05-28T10:25:11.964+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5054: RetryError[<Future at 0x7f043c5c46a0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:25:15.047+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5055: RetryError[<Future at 0x7f043c5e9880 state=finished raised ExternalAPIException>]
+[2025-05-28T10:25:18.128+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5056: RetryError[<Future at 0x7f043c542430 state=finished raised ExternalAPIException>]
+[2025-05-28T10:25:21.218+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5057: RetryError[<Future at 0x7f043c5e9430 state=finished raised ExternalAPIException>]
+[2025-05-28T10:25:24.298+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5058: RetryError[<Future at 0x7f043c5845b0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:25:27.386+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5059: RetryError[<Future at 0x7f043c562340 state=finished raised ExternalAPIException>]
+[2025-05-28T10:25:30.467+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5060: RetryError[<Future at 0x7f043c5d03a0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:25:33.549+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5061: RetryError[<Future at 0x7f043c5a47c0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:25:36.637+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5062: RetryError[<Future at 0x7f043cabc340 state=finished raised ExternalAPIException>]
+[2025-05-28T10:25:39.721+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5063: RetryError[<Future at 0x7f043c58bca0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:25:42.808+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5064: RetryError[<Future at 0x7f043c579e80 state=finished raised ExternalAPIException>]
+[2025-05-28T10:25:45.885+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5065: RetryError[<Future at 0x7f043c5d00a0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:25:50.853+0000] {animals_api_hook.py:117} WARNING - Failed to fetch 46 animals: [5020, 5021, 5022, 5023, 5024, 5025, 5026, 5027, 5028, 5029, 5030, 5031, 5032, 5033, 5034, 5035, 5036, 5037, 5038, 5039, 5040, 5041, 5042, 5043, 5044, 5045, 5046, 5047, 5048, 5049, 5050, 5051, 5052, 5053, 5054, 5055, 5056, 5057, 5058, 5059, 5060, 5061, 5062, 5063, 5064, 5065]
+[2025-05-28T10:25:50.853+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 54 animals
+[2025-05-28T10:25:50.855+0000] {logging_mixin.py:188} INFO - ✅ Converted 54 animals to API format
+[2025-05-28T10:25:50.857+0000] {animal_etl_operators.py:128} INFO - Processed 5054/5820 animals so far
+[2025-05-28T10:25:50.857+0000] {animal_etl_operators.py:96} INFO - Processing batch 52: IDs 5100 to 5199
+[2025-05-28T10:25:50.857+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:26:14.508+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:26:14.522+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:26:14.524+0000] {animal_etl_operators.py:128} INFO - Processed 5154/5820 animals so far
+[2025-05-28T10:26:14.525+0000] {animal_etl_operators.py:96} INFO - Processing batch 53: IDs 5200 to 5299
+[2025-05-28T10:26:14.525+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:26:17.190+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:26:17.194+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:26:17.196+0000] {animal_etl_operators.py:128} INFO - Processed 5254/5820 animals so far
+[2025-05-28T10:26:17.196+0000] {animal_etl_operators.py:96} INFO - Processing batch 54: IDs 5300 to 5399
+[2025-05-28T10:26:17.197+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:26:29.822+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:26:29.826+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:26:29.828+0000] {animal_etl_operators.py:128} INFO - Processed 5354/5820 animals so far
+[2025-05-28T10:26:29.828+0000] {animal_etl_operators.py:96} INFO - Processing batch 55: IDs 5400 to 5499
+[2025-05-28T10:26:29.828+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:26:55.519+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:26:55.523+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:26:55.525+0000] {animal_etl_operators.py:128} INFO - Processed 5454/5820 animals so far
+[2025-05-28T10:26:55.526+0000] {animal_etl_operators.py:96} INFO - Processing batch 56: IDs 5500 to 5599
+[2025-05-28T10:26:55.526+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:27:13.102+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 100 animals
+[2025-05-28T10:27:13.106+0000] {logging_mixin.py:188} INFO - ✅ Converted 100 animals to API format
+[2025-05-28T10:27:13.108+0000] {animal_etl_operators.py:128} INFO - Processed 5554/5820 animals so far
+[2025-05-28T10:27:13.108+0000] {animal_etl_operators.py:96} INFO - Processing batch 57: IDs 5600 to 5699
+[2025-05-28T10:27:13.109+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:27:16.191+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5600: RetryError[<Future at 0x7f043c504df0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:27:19.270+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5601: RetryError[<Future at 0x7f043cafc490 state=finished raised ExternalAPIException>]
+[2025-05-28T10:27:22.361+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5602: RetryError[<Future at 0x7f043c5f9340 state=finished raised ExternalAPIException>]
+[2025-05-28T10:27:25.444+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5603: RetryError[<Future at 0x7f043c5bf5e0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:27:28.522+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5604: RetryError[<Future at 0x7f043c59fcd0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:27:31.613+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5605: RetryError[<Future at 0x7f043c5d2460 state=finished raised ExternalAPIException>]
+[2025-05-28T10:27:34.690+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5606: RetryError[<Future at 0x7f043c5c4bb0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:27:37.778+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5607: RetryError[<Future at 0x7f043c5daeb0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:27:40.861+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5608: RetryError[<Future at 0x7f043c5bff70 state=finished raised ExternalAPIException>]
+[2025-05-28T10:27:43.942+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5609: RetryError[<Future at 0x7f043c5cb430 state=finished raised ExternalAPIException>]
+[2025-05-28T10:27:47.033+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5610: RetryError[<Future at 0x7f043c5d0370 state=finished raised ExternalAPIException>]
+[2025-05-28T10:27:50.115+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5611: RetryError[<Future at 0x7f043c5f5130 state=finished raised ExternalAPIException>]
+[2025-05-28T10:27:53.193+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5612: RetryError[<Future at 0x7f043c57e040 state=finished raised ExternalAPIException>]
+[2025-05-28T10:27:56.279+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5613: RetryError[<Future at 0x7f043c5f5400 state=finished raised ExternalAPIException>]
+[2025-05-28T10:27:59.358+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5614: RetryError[<Future at 0x7f04416d8190 state=finished raised ExternalAPIException>]
+[2025-05-28T10:28:02.457+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5615: RetryError[<Future at 0x7f043c5424f0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:28:05.537+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5616: RetryError[<Future at 0x7f043c59af70 state=finished raised ExternalAPIException>]
+[2025-05-28T10:28:08.613+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5617: RetryError[<Future at 0x7f043c5d0eb0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:28:11.704+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5618: RetryError[<Future at 0x7f043c5c4670 state=finished raised ExternalAPIException>]
+[2025-05-28T10:28:14.789+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5619: RetryError[<Future at 0x7f043c59a130 state=finished raised ExternalAPIException>]
+[2025-05-28T10:28:17.868+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5620: RetryError[<Future at 0x7f043c5d4580 state=finished raised ExternalAPIException>]
+[2025-05-28T10:28:20.957+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5621: RetryError[<Future at 0x7f043c5bffa0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:28:36.057+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5660: RetryError[<Future at 0x7f043cc12610 state=finished raised ExternalAPIException>]
+[2025-05-28T10:28:39.150+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5661: RetryError[<Future at 0x7f043caf0430 state=finished raised ExternalAPIException>]
+[2025-05-28T10:28:42.228+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5662: RetryError[<Future at 0x7f043c5d0730 state=finished raised ExternalAPIException>]
+[2025-05-28T10:28:45.311+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5663: RetryError[<Future at 0x7f043c5d45e0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:28:48.403+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5664: RetryError[<Future at 0x7f043c5d4e80 state=finished raised ExternalAPIException>]
+[2025-05-28T10:28:51.484+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5665: RetryError[<Future at 0x7f043c5d03d0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:28:54.569+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5666: RetryError[<Future at 0x7f043c5e9070 state=finished raised ExternalAPIException>]
+[2025-05-28T10:28:57.656+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5667: RetryError[<Future at 0x7f043c5de0a0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:29:00.740+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5668: RetryError[<Future at 0x7f043c5f20a0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:29:03.820+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5669: RetryError[<Future at 0x7f043c634340 state=finished raised ExternalAPIException>]
+[2025-05-28T10:29:11.910+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5670: RetryError[<Future at 0x7f043c569370 state=finished raised ExternalAPIException>]
+[2025-05-28T10:29:14.990+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5671: RetryError[<Future at 0x7f043c5f91c0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:29:18.090+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5672: RetryError[<Future at 0x7f043c554640 state=finished raised ExternalAPIException>]
+[2025-05-28T10:29:21.170+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5673: RetryError[<Future at 0x7f043c58bbb0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:29:24.254+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5674: RetryError[<Future at 0x7f043c5757c0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:29:27.352+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5675: RetryError[<Future at 0x7f043c57e220 state=finished raised ExternalAPIException>]
+[2025-05-28T10:29:30.437+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5676: RetryError[<Future at 0x7f043cafc310 state=finished raised ExternalAPIException>]
+[2025-05-28T10:29:33.515+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5677: RetryError[<Future at 0x7f043c5e7940 state=finished raised ExternalAPIException>]
+[2025-05-28T10:29:42.608+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5678: RetryError[<Future at 0x7f043c5e9f40 state=finished raised ExternalAPIException>]
+[2025-05-28T10:29:59.690+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5679: RetryError[<Future at 0x7f043c57fa60 state=finished raised ExternalAPIException>]
+[2025-05-28T10:30:02.782+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5680: RetryError[<Future at 0x7f043c587e80 state=finished raised ExternalAPIException>]
+[2025-05-28T10:30:05.861+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5681: RetryError[<Future at 0x7f043c5f9ac0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:30:08.938+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5682: RetryError[<Future at 0x7f043c5541f0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:30:12.027+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5683: RetryError[<Future at 0x7f043c554700 state=finished raised ExternalAPIException>]
+[2025-05-28T10:30:15.104+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5684: RetryError[<Future at 0x7f043c5d8fd0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:30:18.181+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5685: RetryError[<Future at 0x7f043c5690d0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:30:21.269+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5686: RetryError[<Future at 0x7f043c575be0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:30:24.349+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5687: RetryError[<Future at 0x7f043c5dad60 state=finished raised ExternalAPIException>]
+[2025-05-28T10:30:27.428+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5688: RetryError[<Future at 0x7f043c5bf550 state=finished raised ExternalAPIException>]
+[2025-05-28T10:30:30.524+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5689: RetryError[<Future at 0x7f043c5549a0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:30:33.607+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5690: RetryError[<Future at 0x7f043c57f5e0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:30:36.699+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5691: RetryError[<Future at 0x7f043c5d45b0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:30:39.779+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5692: RetryError[<Future at 0x7f043c5e01c0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:30:42.856+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5693: RetryError[<Future at 0x7f043c5bf850 state=finished raised ExternalAPIException>]
+[2025-05-28T10:30:45.949+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5694: RetryError[<Future at 0x7f043c5d0730 state=finished raised ExternalAPIException>]
+[2025-05-28T10:30:49.033+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5695: RetryError[<Future at 0x7f043c5e0be0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:30:52.109+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5696: RetryError[<Future at 0x7f043c634280 state=finished raised ExternalAPIException>]
+[2025-05-28T10:30:55.204+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5697: RetryError[<Future at 0x7f043c5a4f70 state=finished raised ExternalAPIException>]
+[2025-05-28T10:30:58.283+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5698: RetryError[<Future at 0x7f043c5f2ac0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:31:01.372+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5699: RetryError[<Future at 0x7f043c579fa0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:31:01.372+0000] {animals_api_hook.py:117} WARNING - Failed to fetch 62 animals: [5600, 5601, 5602, 5603, 5604, 5605, 5606, 5607, 5608, 5609, 5610, 5611, 5612, 5613, 5614, 5615, 5616, 5617, 5618, 5619, 5620, 5621, 5660, 5661, 5662, 5663, 5664, 5665, 5666, 5667, 5668, 5669, 5670, 5671, 5672, 5673, 5674, 5675, 5676, 5677, 5678, 5679, 5680, 5681, 5682, 5683, 5684, 5685, 5686, 5687, 5688, 5689, 5690, 5691, 5692, 5693, 5694, 5695, 5696, 5697, 5698, 5699]
+[2025-05-28T10:31:01.373+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 38 animals
+[2025-05-28T10:31:01.375+0000] {logging_mixin.py:188} INFO - ✅ Converted 38 animals to API format
+[2025-05-28T10:31:01.377+0000] {animal_etl_operators.py:128} INFO - Processed 5592/5820 animals so far
+[2025-05-28T10:31:01.377+0000] {animal_etl_operators.py:96} INFO - Processing batch 58: IDs 5700 to 5799
+[2025-05-28T10:31:01.377+0000] {animals_api_hook.py:103} INFO - Fetching details for 100 animals
+[2025-05-28T10:31:04.456+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5700: RetryError[<Future at 0x7f043c58bfd0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:31:07.539+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5701: RetryError[<Future at 0x7f043c568850 state=finished raised ExternalAPIException>]
+[2025-05-28T10:31:10.629+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5702: RetryError[<Future at 0x7f043c542280 state=finished raised ExternalAPIException>]
+[2025-05-28T10:31:13.711+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5703: RetryError[<Future at 0x7f043c569820 state=finished raised ExternalAPIException>]
+[2025-05-28T10:31:16.793+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5704: RetryError[<Future at 0x7f043c639850 state=finished raised ExternalAPIException>]
+[2025-05-28T10:31:19.885+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5705: RetryError[<Future at 0x7f043c5daaf0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:31:22.962+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5706: RetryError[<Future at 0x7f043c639d90 state=finished raised ExternalAPIException>]
+[2025-05-28T10:31:40.072+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5707: RetryError[<Future at 0x7f0441442fa0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:31:43.152+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5708: RetryError[<Future at 0x7f043c5de880 state=finished raised ExternalAPIException>]
+[2025-05-28T10:31:46.231+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5709: RetryError[<Future at 0x7f043c5c45e0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:31:49.318+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5710: RetryError[<Future at 0x7f043c5c4730 state=finished raised ExternalAPIException>]
+[2025-05-28T10:31:52.398+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5711: RetryError[<Future at 0x7f043c5de0a0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:31:55.478+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5712: RetryError[<Future at 0x7f043c5d0b20 state=finished raised ExternalAPIException>]
+[2025-05-28T10:31:58.563+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5713: RetryError[<Future at 0x7f043c5b5d30 state=finished raised ExternalAPIException>]
+[2025-05-28T10:32:01.641+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5714: RetryError[<Future at 0x7f043c634b80 state=finished raised ExternalAPIException>]
+[2025-05-28T10:32:04.734+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5715: RetryError[<Future at 0x7f043c5d6130 state=finished raised ExternalAPIException>]
+[2025-05-28T10:32:07.815+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5716: RetryError[<Future at 0x7f043c632520 state=finished raised ExternalAPIException>]
+[2025-05-28T10:32:10.889+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5717: RetryError[<Future at 0x7f043c569460 state=finished raised ExternalAPIException>]
+[2025-05-28T10:32:24.977+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5718: RetryError[<Future at 0x7f043c569d00 state=finished raised ExternalAPIException>]
+[2025-05-28T10:32:28.056+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5719: RetryError[<Future at 0x7f043c5f24c0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:32:31.138+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5720: RetryError[<Future at 0x7f043caaf550 state=finished raised ExternalAPIException>]
+[2025-05-28T10:32:34.228+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5721: RetryError[<Future at 0x7f043c5796a0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:32:37.310+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5722: RetryError[<Future at 0x7f043c639430 state=finished raised ExternalAPIException>]
+[2025-05-28T10:32:40.395+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5723: RetryError[<Future at 0x7f043c575820 state=finished raised ExternalAPIException>]
+[2025-05-28T10:32:43.476+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5724: RetryError[<Future at 0x7f043c5b5340 state=finished raised ExternalAPIException>]
+[2025-05-28T10:32:46.560+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5725: RetryError[<Future at 0x7f043c58d2e0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:32:49.650+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5726: RetryError[<Future at 0x7f043c58d7c0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:32:52.735+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5727: RetryError[<Future at 0x7f043c5b56a0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:32:55.818+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5728: RetryError[<Future at 0x7f043c587400 state=finished raised ExternalAPIException>]
+[2025-05-28T10:32:58.904+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5729: RetryError[<Future at 0x7f043c639bb0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:33:01.987+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5730: RetryError[<Future at 0x7f043c5c4a00 state=finished raised ExternalAPIException>]
+[2025-05-28T10:33:05.094+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5731: RetryError[<Future at 0x7f043c57eb50 state=finished raised ExternalAPIException>]
+[2025-05-28T10:33:08.178+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5732: RetryError[<Future at 0x7f043c5f2730 state=finished raised ExternalAPIException>]
+[2025-05-28T10:33:11.260+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5733: RetryError[<Future at 0x7f043c586580 state=finished raised ExternalAPIException>]
+[2025-05-28T10:33:14.350+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5734: RetryError[<Future at 0x7f043c5e7e80 state=finished raised ExternalAPIException>]
+[2025-05-28T10:33:17.436+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5735: RetryError[<Future at 0x7f043c59d490 state=finished raised ExternalAPIException>]
+[2025-05-28T10:33:20.519+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5736: RetryError[<Future at 0x7f043c5e1d60 state=finished raised ExternalAPIException>]
+[2025-05-28T10:33:23.608+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5737: RetryError[<Future at 0x7f043c579c10 state=finished raised ExternalAPIException>]
+[2025-05-28T10:33:26.696+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5738: RetryError[<Future at 0x7f043c567eb0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:33:29.772+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5739: RetryError[<Future at 0x7f043c5c7ca0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:33:32.878+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5740: RetryError[<Future at 0x7f043c58bb50 state=finished raised ExternalAPIException>]
+[2025-05-28T10:33:35.959+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5741: RetryError[<Future at 0x7f043cafcfd0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:33:39.047+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5742: RetryError[<Future at 0x7f043c589ca0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:33:42.130+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5743: RetryError[<Future at 0x7f043c5862e0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:33:45.210+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5744: RetryError[<Future at 0x7f043c5e1d00 state=finished raised ExternalAPIException>]
+[2025-05-28T10:33:48.294+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5745: RetryError[<Future at 0x7f043c632940 state=finished raised ExternalAPIException>]
+[2025-05-28T10:33:51.376+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5746: RetryError[<Future at 0x7f043c5869d0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:33:54.460+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5747: RetryError[<Future at 0x7f043ca8f7c0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:34:04.555+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5748: RetryError[<Future at 0x7f043c57e370 state=finished raised ExternalAPIException>]
+[2025-05-28T10:34:07.633+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5749: RetryError[<Future at 0x7f043c5e9ee0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:34:10.719+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5750: RetryError[<Future at 0x7f043c569670 state=finished raised ExternalAPIException>]
+[2025-05-28T10:34:13.799+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5751: RetryError[<Future at 0x7f043c580d00 state=finished raised ExternalAPIException>]
+[2025-05-28T10:34:16.881+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5752: RetryError[<Future at 0x7f043ca8f820 state=finished raised ExternalAPIException>]
+[2025-05-28T10:34:19.971+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5753: RetryError[<Future at 0x7f043c5d40d0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:34:23.053+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5754: RetryError[<Future at 0x7f043c5e7ee0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:34:26.139+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5755: RetryError[<Future at 0x7f043c639c40 state=finished raised ExternalAPIException>]
+[2025-05-28T10:34:29.227+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5756: RetryError[<Future at 0x7f043c5e7160 state=finished raised ExternalAPIException>]
+[2025-05-28T10:34:32.309+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5757: RetryError[<Future at 0x7f043c554820 state=finished raised ExternalAPIException>]
+[2025-05-28T10:34:35.401+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5758: RetryError[<Future at 0x7f043c5d0370 state=finished raised ExternalAPIException>]
+[2025-05-28T10:34:38.484+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5759: RetryError[<Future at 0x7f043c587d90 state=finished raised ExternalAPIException>]
+[2025-05-28T10:34:41.563+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5760: RetryError[<Future at 0x7f043caec0d0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:34:44.655+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5761: RetryError[<Future at 0x7f043caec4f0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:34:47.738+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5762: RetryError[<Future at 0x7f043c587a00 state=finished raised ExternalAPIException>]
+[2025-05-28T10:34:50.816+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5763: RetryError[<Future at 0x7f043c5c4880 state=finished raised ExternalAPIException>]
+[2025-05-28T10:34:53.907+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5764: RetryError[<Future at 0x7f043c584190 state=finished raised ExternalAPIException>]
+[2025-05-28T10:34:56.989+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5765: RetryError[<Future at 0x7f043caeca00 state=finished raised ExternalAPIException>]
+[2025-05-28T10:35:00.080+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5766: RetryError[<Future at 0x7f043c5b9fa0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:35:03.162+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5767: RetryError[<Future at 0x7f043c59f160 state=finished raised ExternalAPIException>]
+[2025-05-28T10:35:06.240+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5768: RetryError[<Future at 0x7f043c5683d0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:35:09.330+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5769: RetryError[<Future at 0x7f043c568550 state=finished raised ExternalAPIException>]
+[2025-05-28T10:35:12.407+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5770: RetryError[<Future at 0x7f043c59f070 state=finished raised ExternalAPIException>]
+[2025-05-28T10:35:15.492+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5771: RetryError[<Future at 0x7f043c504340 state=finished raised ExternalAPIException>]
+[2025-05-28T10:35:18.605+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5772: RetryError[<Future at 0x7f043c568940 state=finished raised ExternalAPIException>]
+[2025-05-28T10:35:21.689+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5773: RetryError[<Future at 0x7f043c5b5790 state=finished raised ExternalAPIException>]
+[2025-05-28T10:35:24.781+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5774: RetryError[<Future at 0x7f043c6394c0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:35:27.862+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5775: RetryError[<Future at 0x7f043c5d9880 state=finished raised ExternalAPIException>]
+[2025-05-28T10:35:30.942+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5776: RetryError[<Future at 0x7f043c587a60 state=finished raised ExternalAPIException>]
+[2025-05-28T10:35:34.033+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5777: RetryError[<Future at 0x7f043c587bb0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:35:37.119+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5778: RetryError[<Future at 0x7f043c542190 state=finished raised ExternalAPIException>]
+[2025-05-28T10:35:40.199+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5779: RetryError[<Future at 0x7f043c579e80 state=finished raised ExternalAPIException>]
+[2025-05-28T10:35:43.290+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5780: RetryError[<Future at 0x7f043c5b5b80 state=finished raised ExternalAPIException>]
+[2025-05-28T10:35:46.369+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5781: RetryError[<Future at 0x7f043c55e1c0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:35:49.462+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5782: RetryError[<Future at 0x7f043c5e9a60 state=finished raised ExternalAPIException>]
+[2025-05-28T10:35:52.546+0000] {animals_api_hook.py:114} ERROR - Failed to fetch animal 5783: RetryError[<Future at 0x7f043c504be0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:35:56.018+0000] {animals_api_hook.py:117} WARNING - Failed to fetch 84 animals: [5700, 5701, 5702, 5703, 5704, 5705, 5706, 5707, 5708, 5709, 5710, 5711, 5712, 5713, 5714, 5715, 5716, 5717, 5718, 5719, 5720, 5721, 5722, 5723, 5724, 5725, 5726, 5727, 5728, 5729, 5730, 5731, 5732, 5733, 5734, 5735, 5736, 5737, 5738, 5739, 5740, 5741, 5742, 5743, 5744, 5745, 5746, 5747, 5748, 5749, 5750, 5751, 5752, 5753, 5754, 5755, 5756, 5757, 5758, 5759, 5760, 5761, 5762, 5763, 5764, 5765, 5766, 5767, 5768, 5769, 5770, 5771, 5772, 5773, 5774, 5775, 5776, 5777, 5778, 5779, 5780, 5781, 5782, 5783]
+[2025-05-28T10:35:56.019+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 16 animals
+[2025-05-28T10:35:56.020+0000] {logging_mixin.py:188} INFO - ✅ Converted 16 animals to API format
+[2025-05-28T10:35:56.021+0000] {animal_etl_operators.py:128} INFO - Processed 5608/5820 animals so far
+[2025-05-28T10:35:56.021+0000] {animal_etl_operators.py:96} INFO - Processing batch 59: IDs 5800 to 5819
+[2025-05-28T10:35:56.021+0000] {animals_api_hook.py:103} INFO - Fetching details for 20 animals
+[2025-05-28T10:35:56.539+0000] {logging_mixin.py:188} INFO - 🔄 Transforming batch of 20 animals
+[2025-05-28T10:35:56.540+0000] {logging_mixin.py:188} INFO - ✅ Converted 20 animals to API format
+[2025-05-28T10:35:56.541+0000] {animal_etl_operators.py:128} INFO - Processed 5628/5820 animals so far
+[2025-05-28T10:35:56.542+0000] {animal_etl_operators.py:136} INFO - Transformed 5628 animals into 59 load batches
+[2025-05-28T10:35:56.577+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=animal_etl_pipeline_v1.0.1, task_id=transform_animals, execution_date=20250528T101056, start_date=20250528T101254, end_date=20250528T103556
+[2025-05-28T10:35:56.615+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-05-28T10:35:56.650+0000] {taskinstance.py:3312} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,115 @@
+[2025-05-28T10:35:57.993+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: animal_etl_pipeline_v1.0.1.load_animals manual__2025-05-28T10:10:56.366192+00:00 [queued]>
+[2025-05-28T10:35:58.010+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: animal_etl_pipeline_v1.0.1.load_animals manual__2025-05-28T10:10:56.366192+00:00 [queued]>
+[2025-05-28T10:35:58.011+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 4
+[2025-05-28T10:35:58.033+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): load_animals> on 2025-05-28 10:10:56.366192+00:00
+[2025-05-28T10:35:58.039+0000] {standard_task_runner.py:60} INFO - Started process 95 to run task
+[2025-05-28T10:35:58.044+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'animal_etl_pipeline_v1.0.1', 'load_animals', 'manual__2025-05-28T10:10:56.366192+00:00', '--job-id', '26', '--raw', '--subdir', 'DAGS_FOLDER/animal_etl_dag.py', '--cfg-path', '/tmp/tmprp0c5qth']
+[2025-05-28T10:35:58.045+0000] {standard_task_runner.py:88} INFO - Job 26: Subtask load_animals
+[2025-05-28T10:35:58.102+0000] {task_command.py:423} INFO - Running <TaskInstance: animal_etl_pipeline_v1.0.1.load_animals manual__2025-05-28T10:10:56.366192+00:00 [running]> on host 92026f8f66a7
+[2025-05-28T10:35:58.196+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='admin@company.com' AIRFLOW_CTX_DAG_OWNER='data_team' AIRFLOW_CTX_DAG_ID='animal_etl_pipeline_v1.0.1' AIRFLOW_CTX_TASK_ID='load_animals' AIRFLOW_CTX_EXECUTION_DATE='2025-05-28T10:10:56.366192+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-28T10:10:56.366192+00:00'
+[2025-05-28T10:35:58.212+0000] {logging_mixin.py:188} INFO - Processing 5 batches
+[2025-05-28T10:35:58.212+0000] {logging_mixin.py:188} INFO - Loading batch 1/5 with 13 animals
+[2025-05-28T10:35:58.212+0000] {animals_api_hook.py:130} INFO - Sending 13 animals to home endpoint
+[2025-05-28T10:35:58.213+0000] {animals_api_hook.py:136} INFO - Sample animal data: "t"
+[2025-05-28T10:35:58.246+0000] {animals_api_hook.py:146} INFO - POST response status: 422
+[2025-05-28T10:35:58.247+0000] {animals_api_hook.py:147} INFO - POST response headers: {'date': 'Wed, 28 May 2025 10:35:58 GMT', 'server': 'uvicorn', 'content-length': '88', 'content-type': 'application/json'}
+[2025-05-28T10:35:58.247+0000] {animals_api_hook.py:150} ERROR - HTTP Error 422: {"detail":[{"loc":["body"],"msg":"value is not a valid list","type":"type_error.list"}]}
+[2025-05-28T10:35:58.248+0000] {animals_api_hook.py:169} ERROR - HTTP Status Error: {'status_code': 422, 'response_text': '{"detail":[{"loc":["body"],"msg":"value is not a valid list","type":"type_error.list"}]}', 'request_url': 'http://animals-api:3123/animals/v1/home', 'request_method': 'POST'}
+[2025-05-28T10:35:59.249+0000] {animals_api_hook.py:130} INFO - Sending 13 animals to home endpoint
+[2025-05-28T10:35:59.250+0000] {animals_api_hook.py:136} INFO - Sample animal data: "t"
+[2025-05-28T10:35:59.281+0000] {animals_api_hook.py:146} INFO - POST response status: 422
+[2025-05-28T10:35:59.282+0000] {animals_api_hook.py:147} INFO - POST response headers: {'date': 'Wed, 28 May 2025 10:35:59 GMT', 'server': 'uvicorn', 'content-length': '88', 'content-type': 'application/json'}
+[2025-05-28T10:35:59.283+0000] {animals_api_hook.py:150} ERROR - HTTP Error 422: {"detail":[{"loc":["body"],"msg":"value is not a valid list","type":"type_error.list"}]}
+[2025-05-28T10:35:59.283+0000] {animals_api_hook.py:169} ERROR - HTTP Status Error: {'status_code': 422, 'response_text': '{"detail":[{"loc":["body"],"msg":"value is not a valid list","type":"type_error.list"}]}', 'request_url': 'http://animals-api:3123/animals/v1/home', 'request_method': 'POST'}
+[2025-05-28T10:36:01.286+0000] {animals_api_hook.py:130} INFO - Sending 13 animals to home endpoint
+[2025-05-28T10:36:01.286+0000] {animals_api_hook.py:136} INFO - Sample animal data: "t"
+[2025-05-28T10:36:01.311+0000] {animals_api_hook.py:146} INFO - POST response status: 422
+[2025-05-28T10:36:01.312+0000] {animals_api_hook.py:147} INFO - POST response headers: {'date': 'Wed, 28 May 2025 10:36:01 GMT', 'server': 'uvicorn', 'content-length': '88', 'content-type': 'application/json'}
+[2025-05-28T10:36:01.312+0000] {animals_api_hook.py:150} ERROR - HTTP Error 422: {"detail":[{"loc":["body"],"msg":"value is not a valid list","type":"type_error.list"}]}
+[2025-05-28T10:36:01.313+0000] {animals_api_hook.py:169} ERROR - HTTP Status Error: {'status_code': 422, 'response_text': '{"detail":[{"loc":["body"],"msg":"value is not a valid list","type":"type_error.list"}]}', 'request_url': 'http://animals-api:3123/animals/v1/home', 'request_method': 'POST'}
+[2025-05-28T10:36:01.313+0000] {logging_mixin.py:188} INFO - ❌ Batch 1 failed with error: RetryError[<Future at 0x7f043c86f490 state=finished raised ExternalAPIException>]
+[2025-05-28T10:36:01.313+0000] {logging_mixin.py:188} INFO - Loading batch 2/5 with 13 animals
+[2025-05-28T10:36:01.314+0000] {animals_api_hook.py:130} INFO - Sending 13 animals to home endpoint
+[2025-05-28T10:36:01.314+0000] {animals_api_hook.py:136} INFO - Sample animal data: "t"
+[2025-05-28T10:36:01.341+0000] {animals_api_hook.py:146} INFO - POST response status: 422
+[2025-05-28T10:36:01.342+0000] {animals_api_hook.py:147} INFO - POST response headers: {'date': 'Wed, 28 May 2025 10:36:01 GMT', 'server': 'uvicorn', 'content-length': '88', 'content-type': 'application/json'}
+[2025-05-28T10:36:01.342+0000] {animals_api_hook.py:150} ERROR - HTTP Error 422: {"detail":[{"loc":["body"],"msg":"value is not a valid list","type":"type_error.list"}]}
+[2025-05-28T10:36:01.343+0000] {animals_api_hook.py:169} ERROR - HTTP Status Error: {'status_code': 422, 'response_text': '{"detail":[{"loc":["body"],"msg":"value is not a valid list","type":"type_error.list"}]}', 'request_url': 'http://animals-api:3123/animals/v1/home', 'request_method': 'POST'}
+[2025-05-28T10:36:02.344+0000] {animals_api_hook.py:130} INFO - Sending 13 animals to home endpoint
+[2025-05-28T10:36:02.345+0000] {animals_api_hook.py:136} INFO - Sample animal data: "t"
+[2025-05-28T10:36:02.370+0000] {animals_api_hook.py:146} INFO - POST response status: 422
+[2025-05-28T10:36:02.370+0000] {animals_api_hook.py:147} INFO - POST response headers: {'date': 'Wed, 28 May 2025 10:36:02 GMT', 'server': 'uvicorn', 'content-length': '88', 'content-type': 'application/json'}
+[2025-05-28T10:36:02.371+0000] {animals_api_hook.py:150} ERROR - HTTP Error 422: {"detail":[{"loc":["body"],"msg":"value is not a valid list","type":"type_error.list"}]}
+[2025-05-28T10:36:02.371+0000] {animals_api_hook.py:169} ERROR - HTTP Status Error: {'status_code': 422, 'response_text': '{"detail":[{"loc":["body"],"msg":"value is not a valid list","type":"type_error.list"}]}', 'request_url': 'http://animals-api:3123/animals/v1/home', 'request_method': 'POST'}
+[2025-05-28T10:36:04.374+0000] {animals_api_hook.py:130} INFO - Sending 13 animals to home endpoint
+[2025-05-28T10:36:04.375+0000] {animals_api_hook.py:136} INFO - Sample animal data: "t"
+[2025-05-28T10:36:04.412+0000] {animals_api_hook.py:146} INFO - POST response status: 422
+[2025-05-28T10:36:04.413+0000] {animals_api_hook.py:147} INFO - POST response headers: {'date': 'Wed, 28 May 2025 10:36:04 GMT', 'server': 'uvicorn', 'content-length': '88', 'content-type': 'application/json'}
+[2025-05-28T10:36:04.413+0000] {animals_api_hook.py:150} ERROR - HTTP Error 422: {"detail":[{"loc":["body"],"msg":"value is not a valid list","type":"type_error.list"}]}
+[2025-05-28T10:36:04.414+0000] {animals_api_hook.py:169} ERROR - HTTP Status Error: {'status_code': 422, 'response_text': '{"detail":[{"loc":["body"],"msg":"value is not a valid list","type":"type_error.list"}]}', 'request_url': 'http://animals-api:3123/animals/v1/home', 'request_method': 'POST'}
+[2025-05-28T10:36:04.415+0000] {logging_mixin.py:188} INFO - ❌ Batch 2 failed with error: RetryError[<Future at 0x7f043c870520 state=finished raised ExternalAPIException>]
+[2025-05-28T10:36:04.415+0000] {logging_mixin.py:188} INFO - Loading batch 3/5 with 11 animals
+[2025-05-28T10:36:04.415+0000] {animals_api_hook.py:130} INFO - Sending 11 animals to home endpoint
+[2025-05-28T10:36:04.416+0000] {animals_api_hook.py:136} INFO - Sample animal data: "b"
+[2025-05-28T10:36:04.443+0000] {animals_api_hook.py:146} INFO - POST response status: 422
+[2025-05-28T10:36:04.443+0000] {animals_api_hook.py:147} INFO - POST response headers: {'date': 'Wed, 28 May 2025 10:36:04 GMT', 'server': 'uvicorn', 'content-length': '88', 'content-type': 'application/json'}
+[2025-05-28T10:36:04.444+0000] {animals_api_hook.py:150} ERROR - HTTP Error 422: {"detail":[{"loc":["body"],"msg":"value is not a valid list","type":"type_error.list"}]}
+[2025-05-28T10:36:04.444+0000] {animals_api_hook.py:169} ERROR - HTTP Status Error: {'status_code': 422, 'response_text': '{"detail":[{"loc":["body"],"msg":"value is not a valid list","type":"type_error.list"}]}', 'request_url': 'http://animals-api:3123/animals/v1/home', 'request_method': 'POST'}
+[2025-05-28T10:36:05.446+0000] {animals_api_hook.py:130} INFO - Sending 11 animals to home endpoint
+[2025-05-28T10:36:05.447+0000] {animals_api_hook.py:136} INFO - Sample animal data: "b"
+[2025-05-28T10:36:05.476+0000] {animals_api_hook.py:146} INFO - POST response status: 422
+[2025-05-28T10:36:05.476+0000] {animals_api_hook.py:147} INFO - POST response headers: {'date': 'Wed, 28 May 2025 10:36:05 GMT', 'server': 'uvicorn', 'content-length': '88', 'content-type': 'application/json'}
+[2025-05-28T10:36:05.477+0000] {animals_api_hook.py:150} ERROR - HTTP Error 422: {"detail":[{"loc":["body"],"msg":"value is not a valid list","type":"type_error.list"}]}
+[2025-05-28T10:36:05.477+0000] {animals_api_hook.py:169} ERROR - HTTP Status Error: {'status_code': 422, 'response_text': '{"detail":[{"loc":["body"],"msg":"value is not a valid list","type":"type_error.list"}]}', 'request_url': 'http://animals-api:3123/animals/v1/home', 'request_method': 'POST'}
+[2025-05-28T10:36:07.480+0000] {animals_api_hook.py:130} INFO - Sending 11 animals to home endpoint
+[2025-05-28T10:36:07.480+0000] {animals_api_hook.py:136} INFO - Sample animal data: "b"
+[2025-05-28T10:36:07.505+0000] {animals_api_hook.py:146} INFO - POST response status: 422
+[2025-05-28T10:36:07.506+0000] {animals_api_hook.py:147} INFO - POST response headers: {'date': 'Wed, 28 May 2025 10:36:07 GMT', 'server': 'uvicorn', 'content-length': '88', 'content-type': 'application/json'}
+[2025-05-28T10:36:07.506+0000] {animals_api_hook.py:150} ERROR - HTTP Error 422: {"detail":[{"loc":["body"],"msg":"value is not a valid list","type":"type_error.list"}]}
+[2025-05-28T10:36:07.507+0000] {animals_api_hook.py:169} ERROR - HTTP Status Error: {'status_code': 422, 'response_text': '{"detail":[{"loc":["body"],"msg":"value is not a valid list","type":"type_error.list"}]}', 'request_url': 'http://animals-api:3123/animals/v1/home', 'request_method': 'POST'}
+[2025-05-28T10:36:07.507+0000] {logging_mixin.py:188} INFO - ❌ Batch 3 failed with error: RetryError[<Future at 0x7f043c879bb0 state=finished raised ExternalAPIException>]
+[2025-05-28T10:36:07.508+0000] {logging_mixin.py:188} INFO - Loading batch 4/5 with 10 animals
+[2025-05-28T10:36:07.508+0000] {animals_api_hook.py:130} INFO - Sending 10 animals to home endpoint
+[2025-05-28T10:36:07.508+0000] {animals_api_hook.py:136} INFO - Sample animal data: "b"
+[2025-05-28T10:36:07.534+0000] {animals_api_hook.py:146} INFO - POST response status: 422
+[2025-05-28T10:36:07.534+0000] {animals_api_hook.py:147} INFO - POST response headers: {'date': 'Wed, 28 May 2025 10:36:07 GMT', 'server': 'uvicorn', 'content-length': '88', 'content-type': 'application/json'}
+[2025-05-28T10:36:07.535+0000] {animals_api_hook.py:150} ERROR - HTTP Error 422: {"detail":[{"loc":["body"],"msg":"value is not a valid list","type":"type_error.list"}]}
+[2025-05-28T10:36:07.535+0000] {animals_api_hook.py:169} ERROR - HTTP Status Error: {'status_code': 422, 'response_text': '{"detail":[{"loc":["body"],"msg":"value is not a valid list","type":"type_error.list"}]}', 'request_url': 'http://animals-api:3123/animals/v1/home', 'request_method': 'POST'}
+[2025-05-28T10:36:08.537+0000] {animals_api_hook.py:130} INFO - Sending 10 animals to home endpoint
+[2025-05-28T10:36:08.538+0000] {animals_api_hook.py:136} INFO - Sample animal data: "b"
+[2025-05-28T10:36:08.573+0000] {animals_api_hook.py:146} INFO - POST response status: 502
+[2025-05-28T10:36:08.574+0000] {animals_api_hook.py:147} INFO - POST response headers: {'date': 'Wed, 28 May 2025 10:36:08 GMT', 'server': 'uvicorn', 'content-length': '6'}
+[2025-05-28T10:36:08.574+0000] {animals_api_hook.py:150} ERROR - HTTP Error 502: Sorry!
+[2025-05-28T10:36:08.575+0000] {animals_api_hook.py:169} ERROR - HTTP Status Error: {'status_code': 502, 'response_text': 'Sorry!', 'request_url': 'http://animals-api:3123/animals/v1/home', 'request_method': 'POST'}
+[2025-05-28T10:36:10.576+0000] {animals_api_hook.py:130} INFO - Sending 10 animals to home endpoint
+[2025-05-28T10:36:10.577+0000] {animals_api_hook.py:136} INFO - Sample animal data: "b"
+[2025-05-28T10:36:10.604+0000] {animals_api_hook.py:146} INFO - POST response status: 422
+[2025-05-28T10:36:10.604+0000] {animals_api_hook.py:147} INFO - POST response headers: {'date': 'Wed, 28 May 2025 10:36:10 GMT', 'server': 'uvicorn', 'content-length': '88', 'content-type': 'application/json'}
+[2025-05-28T10:36:10.605+0000] {animals_api_hook.py:150} ERROR - HTTP Error 422: {"detail":[{"loc":["body"],"msg":"value is not a valid list","type":"type_error.list"}]}
+[2025-05-28T10:36:10.605+0000] {animals_api_hook.py:169} ERROR - HTTP Status Error: {'status_code': 422, 'response_text': '{"detail":[{"loc":["body"],"msg":"value is not a valid list","type":"type_error.list"}]}', 'request_url': 'http://animals-api:3123/animals/v1/home', 'request_method': 'POST'}
+[2025-05-28T10:36:10.606+0000] {logging_mixin.py:188} INFO - ❌ Batch 4 failed with error: RetryError[<Future at 0x7f043c870c40 state=finished raised ExternalAPIException>]
+[2025-05-28T10:36:10.606+0000] {logging_mixin.py:188} INFO - Loading batch 5/5 with 6 animals
+[2025-05-28T10:36:10.606+0000] {animals_api_hook.py:130} INFO - Sending 6 animals to home endpoint
+[2025-05-28T10:36:10.607+0000] {animals_api_hook.py:136} INFO - Sample animal data: "s"
+[2025-05-28T10:36:10.630+0000] {animals_api_hook.py:146} INFO - POST response status: 422
+[2025-05-28T10:36:10.631+0000] {animals_api_hook.py:147} INFO - POST response headers: {'date': 'Wed, 28 May 2025 10:36:10 GMT', 'server': 'uvicorn', 'content-length': '88', 'content-type': 'application/json'}
+[2025-05-28T10:36:10.631+0000] {animals_api_hook.py:150} ERROR - HTTP Error 422: {"detail":[{"loc":["body"],"msg":"value is not a valid list","type":"type_error.list"}]}
+[2025-05-28T10:36:10.632+0000] {animals_api_hook.py:169} ERROR - HTTP Status Error: {'status_code': 422, 'response_text': '{"detail":[{"loc":["body"],"msg":"value is not a valid list","type":"type_error.list"}]}', 'request_url': 'http://animals-api:3123/animals/v1/home', 'request_method': 'POST'}
+[2025-05-28T10:36:11.633+0000] {animals_api_hook.py:130} INFO - Sending 6 animals to home endpoint
+[2025-05-28T10:36:11.634+0000] {animals_api_hook.py:136} INFO - Sample animal data: "s"
+[2025-05-28T10:36:11.658+0000] {animals_api_hook.py:146} INFO - POST response status: 422
+[2025-05-28T10:36:11.659+0000] {animals_api_hook.py:147} INFO - POST response headers: {'date': 'Wed, 28 May 2025 10:36:11 GMT', 'server': 'uvicorn', 'content-length': '88', 'content-type': 'application/json'}
+[2025-05-28T10:36:11.659+0000] {animals_api_hook.py:150} ERROR - HTTP Error 422: {"detail":[{"loc":["body"],"msg":"value is not a valid list","type":"type_error.list"}]}
+[2025-05-28T10:36:11.660+0000] {animals_api_hook.py:169} ERROR - HTTP Status Error: {'status_code': 422, 'response_text': '{"detail":[{"loc":["body"],"msg":"value is not a valid list","type":"type_error.list"}]}', 'request_url': 'http://animals-api:3123/animals/v1/home', 'request_method': 'POST'}
+[2025-05-28T10:36:13.661+0000] {animals_api_hook.py:130} INFO - Sending 6 animals to home endpoint
+[2025-05-28T10:36:13.662+0000] {animals_api_hook.py:136} INFO - Sample animal data: "s"
+[2025-05-28T10:36:13.691+0000] {animals_api_hook.py:146} INFO - POST response status: 422
+[2025-05-28T10:36:13.691+0000] {animals_api_hook.py:147} INFO - POST response headers: {'date': 'Wed, 28 May 2025 10:36:13 GMT', 'server': 'uvicorn', 'content-length': '88', 'content-type': 'application/json'}
+[2025-05-28T10:36:13.692+0000] {animals_api_hook.py:150} ERROR - HTTP Error 422: {"detail":[{"loc":["body"],"msg":"value is not a valid list","type":"type_error.list"}]}
+[2025-05-28T10:36:13.692+0000] {animals_api_hook.py:169} ERROR - HTTP Status Error: {'status_code': 422, 'response_text': '{"detail":[{"loc":["body"],"msg":"value is not a valid list","type":"type_error.list"}]}', 'request_url': 'http://animals-api:3123/animals/v1/home', 'request_method': 'POST'}
+[2025-05-28T10:36:13.692+0000] {logging_mixin.py:188} INFO - ❌ Batch 5 failed with error: RetryError[<Future at 0x7f043c879220 state=finished raised ExternalAPIException>]
+[2025-05-28T10:36:13.693+0000] {logging_mixin.py:188} INFO - 📊 Load Summary: {'status': 'completed', 'total_batches': 5, 'successful_batches': 0, 'failed_batches': 5, 'total_animals': 53}
+[2025-05-28T10:36:13.693+0000] {python.py:202} INFO - Done. Returned value was: {'status': 'completed', 'total_batches': 5, 'successful_batches': 0, 'failed_batches': 5, 'total_animals': 53}
+[2025-05-28T10:36:13.727+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=animal_etl_pipeline_v1.0.1, task_id=load_animals, execution_date=20250528T101056, start_date=20250528T103557, end_date=20250528T103613
+[2025-05-28T10:36:13.766+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-05-28T10:36:13.796+0000] {taskinstance.py:3312} INFO - 1 downstream tasks scheduled from follow-on schedule check

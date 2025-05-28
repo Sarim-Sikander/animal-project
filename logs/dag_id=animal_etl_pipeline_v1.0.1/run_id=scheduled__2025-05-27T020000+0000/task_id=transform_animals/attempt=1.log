@@ -1,0 +1,222 @@
+[2025-05-28T09:34:41.574+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: animal_etl_pipeline_v1.0.1.transform_animals scheduled__2025-05-27T02:00:00+00:00 [queued]>
+[2025-05-28T09:34:41.585+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: animal_etl_pipeline_v1.0.1.transform_animals scheduled__2025-05-27T02:00:00+00:00 [queued]>
+[2025-05-28T09:34:41.586+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 4
+[2025-05-28T09:34:41.603+0000] {taskinstance.py:2217} INFO - Executing <Task(TransformAnimalsOperator): transform_animals> on 2025-05-27 02:00:00+00:00
+[2025-05-28T09:34:41.609+0000] {standard_task_runner.py:60} INFO - Started process 71 to run task
+[2025-05-28T09:34:41.612+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'animal_etl_pipeline_v1.0.1', 'transform_animals', 'scheduled__2025-05-27T02:00:00+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/animal_etl_dag.py', '--cfg-path', '/tmp/tmpwnk8lt7f']
+[2025-05-28T09:34:41.613+0000] {standard_task_runner.py:88} INFO - Job 15: Subtask transform_animals
+[2025-05-28T09:34:41.673+0000] {task_command.py:423} INFO - Running <TaskInstance: animal_etl_pipeline_v1.0.1.transform_animals scheduled__2025-05-27T02:00:00+00:00 [running]> on host 92026f8f66a7
+[2025-05-28T09:34:41.763+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='admin@company.com' AIRFLOW_CTX_DAG_OWNER='data_team' AIRFLOW_CTX_DAG_ID='animal_etl_pipeline_v1.0.1' AIRFLOW_CTX_TASK_ID='transform_animals' AIRFLOW_CTX_EXECUTION_DATE='2025-05-27T02:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-27T02:00:00+00:00'
+[2025-05-28T09:34:41.784+0000] {animal_etl_operators.py:81} INFO - Loaded 5190 animals from /tmp/animals_data_scheduled__2025-05-27T02:00:00+00:00.json
+[2025-05-28T09:34:41.785+0000] {animal_etl_operators.py:93} INFO - Processing batch 1: IDs 0 to 99
+[2025-05-28T09:34:41.785+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:34:55.475+0000] {logging_mixin.py:188} INFO - Warning: 19 transformations failed
+[2025-05-28T09:34:55.477+0000] {animal_etl_operators.py:124} INFO - Processed 81/5190 animals so far
+[2025-05-28T09:34:55.478+0000] {animal_etl_operators.py:93} INFO - Processing batch 2: IDs 100 to 199
+[2025-05-28T09:34:55.478+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:35:21.082+0000] {logging_mixin.py:188} INFO - Warning: 14 transformations failed
+[2025-05-28T09:35:21.085+0000] {animal_etl_operators.py:124} INFO - Processed 167/5190 animals so far
+[2025-05-28T09:35:21.085+0000] {animal_etl_operators.py:93} INFO - Processing batch 3: IDs 200 to 299
+[2025-05-28T09:35:21.085+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:35:24.667+0000] {logging_mixin.py:188} INFO - Warning: 15 transformations failed
+[2025-05-28T09:35:24.670+0000] {animal_etl_operators.py:124} INFO - Processed 252/5190 animals so far
+[2025-05-28T09:35:24.670+0000] {animal_etl_operators.py:93} INFO - Processing batch 4: IDs 300 to 399
+[2025-05-28T09:35:24.670+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:35:29.307+0000] {logging_mixin.py:188} INFO - Warning: 9 transformations failed
+[2025-05-28T09:35:29.310+0000] {animal_etl_operators.py:124} INFO - Processed 343/5190 animals so far
+[2025-05-28T09:35:29.310+0000] {animal_etl_operators.py:93} INFO - Processing batch 5: IDs 400 to 499
+[2025-05-28T09:35:29.311+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:35:46.920+0000] {logging_mixin.py:188} INFO - Warning: 18 transformations failed
+[2025-05-28T09:35:46.923+0000] {animal_etl_operators.py:124} INFO - Processed 425/5190 animals so far
+[2025-05-28T09:35:46.923+0000] {animal_etl_operators.py:93} INFO - Processing batch 6: IDs 500 to 599
+[2025-05-28T09:35:46.924+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:36:16.518+0000] {logging_mixin.py:188} INFO - Warning: 14 transformations failed
+[2025-05-28T09:36:16.521+0000] {animal_etl_operators.py:124} INFO - Processed 511/5190 animals so far
+[2025-05-28T09:36:16.521+0000] {animal_etl_operators.py:93} INFO - Processing batch 7: IDs 600 to 699
+[2025-05-28T09:36:16.522+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:36:20.073+0000] {logging_mixin.py:188} INFO - Warning: 12 transformations failed
+[2025-05-28T09:36:20.075+0000] {animal_etl_operators.py:124} INFO - Processed 599/5190 animals so far
+[2025-05-28T09:36:20.076+0000] {animal_etl_operators.py:93} INFO - Processing batch 8: IDs 700 to 799
+[2025-05-28T09:36:20.076+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:36:32.656+0000] {logging_mixin.py:188} INFO - Warning: 13 transformations failed
+[2025-05-28T09:36:32.658+0000] {animal_etl_operators.py:124} INFO - Processed 686/5190 animals so far
+[2025-05-28T09:36:32.658+0000] {animal_etl_operators.py:93} INFO - Processing batch 9: IDs 800 to 899
+[2025-05-28T09:36:32.659+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:36:36.303+0000] {logging_mixin.py:188} INFO - Warning: 13 transformations failed
+[2025-05-28T09:36:36.306+0000] {animal_etl_operators.py:124} INFO - Processed 773/5190 animals so far
+[2025-05-28T09:36:36.306+0000] {animal_etl_operators.py:93} INFO - Processing batch 10: IDs 900 to 999
+[2025-05-28T09:36:36.306+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:36:48.874+0000] {logging_mixin.py:188} INFO - Warning: 16 transformations failed
+[2025-05-28T09:36:48.877+0000] {animal_etl_operators.py:124} INFO - Processed 857/5190 animals so far
+[2025-05-28T09:36:48.877+0000] {animal_etl_operators.py:93} INFO - Processing batch 11: IDs 1000 to 1099
+[2025-05-28T09:36:48.878+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:36:58.472+0000] {logging_mixin.py:188} INFO - Warning: 13 transformations failed
+[2025-05-28T09:36:58.475+0000] {animal_etl_operators.py:124} INFO - Processed 944/5190 animals so far
+[2025-05-28T09:36:58.475+0000] {animal_etl_operators.py:93} INFO - Processing batch 12: IDs 1100 to 1199
+[2025-05-28T09:36:58.475+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:37:12.117+0000] {logging_mixin.py:188} INFO - Warning: 8 transformations failed
+[2025-05-28T09:37:12.120+0000] {animal_etl_operators.py:124} INFO - Processed 1036/5190 animals so far
+[2025-05-28T09:37:12.120+0000] {animal_etl_operators.py:93} INFO - Processing batch 13: IDs 1200 to 1299
+[2025-05-28T09:37:12.121+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:37:16.736+0000] {logging_mixin.py:188} INFO - Warning: 14 transformations failed
+[2025-05-28T09:37:16.739+0000] {animal_etl_operators.py:124} INFO - Processed 1122/5190 animals so far
+[2025-05-28T09:37:16.739+0000] {animal_etl_operators.py:93} INFO - Processing batch 14: IDs 1300 to 1399
+[2025-05-28T09:37:16.739+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:37:33.370+0000] {logging_mixin.py:188} INFO - Warning: 24 transformations failed
+[2025-05-28T09:37:33.372+0000] {animal_etl_operators.py:124} INFO - Processed 1198/5190 animals so far
+[2025-05-28T09:37:33.373+0000] {animal_etl_operators.py:93} INFO - Processing batch 15: IDs 1400 to 1499
+[2025-05-28T09:37:33.373+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:37:35.918+0000] {logging_mixin.py:188} INFO - Warning: 19 transformations failed
+[2025-05-28T09:37:35.921+0000] {animal_etl_operators.py:124} INFO - Processed 1279/5190 animals so far
+[2025-05-28T09:37:35.921+0000] {animal_etl_operators.py:93} INFO - Processing batch 16: IDs 1500 to 1599
+[2025-05-28T09:37:35.922+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:38:06.521+0000] {logging_mixin.py:188} INFO - Warning: 27 transformations failed
+[2025-05-28T09:38:06.523+0000] {animal_etl_operators.py:124} INFO - Processed 1352/5190 animals so far
+[2025-05-28T09:38:06.524+0000] {animal_etl_operators.py:93} INFO - Processing batch 17: IDs 1600 to 1699
+[2025-05-28T09:38:06.524+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:38:30.141+0000] {logging_mixin.py:188} INFO - Warning: 19 transformations failed
+[2025-05-28T09:38:30.144+0000] {animal_etl_operators.py:124} INFO - Processed 1433/5190 animals so far
+[2025-05-28T09:38:30.144+0000] {animal_etl_operators.py:93} INFO - Processing batch 18: IDs 1700 to 1799
+[2025-05-28T09:38:30.144+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:38:32.737+0000] {logging_mixin.py:188} INFO - Warning: 18 transformations failed
+[2025-05-28T09:38:32.740+0000] {animal_etl_operators.py:124} INFO - Processed 1515/5190 animals so far
+[2025-05-28T09:38:32.740+0000] {animal_etl_operators.py:93} INFO - Processing batch 19: IDs 1800 to 1899
+[2025-05-28T09:38:32.740+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:38:35.325+0000] {logging_mixin.py:188} INFO - Warning: 17 transformations failed
+[2025-05-28T09:38:35.328+0000] {animal_etl_operators.py:124} INFO - Processed 1598/5190 animals so far
+[2025-05-28T09:38:35.328+0000] {animal_etl_operators.py:93} INFO - Processing batch 20: IDs 1900 to 1999
+[2025-05-28T09:38:35.329+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:38:45.954+0000] {logging_mixin.py:188} INFO - Warning: 14 transformations failed
+[2025-05-28T09:38:45.957+0000] {animal_etl_operators.py:124} INFO - Processed 1684/5190 animals so far
+[2025-05-28T09:38:45.957+0000] {animal_etl_operators.py:93} INFO - Processing batch 21: IDs 2000 to 2099
+[2025-05-28T09:38:45.957+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:39:20.609+0000] {logging_mixin.py:188} INFO - Warning: 21 transformations failed
+[2025-05-28T09:39:20.611+0000] {animal_etl_operators.py:124} INFO - Processed 1763/5190 animals so far
+[2025-05-28T09:39:20.611+0000] {animal_etl_operators.py:93} INFO - Processing batch 22: IDs 2100 to 2199
+[2025-05-28T09:39:20.612+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:39:50.300+0000] {logging_mixin.py:188} INFO - Warning: 23 transformations failed
+[2025-05-28T09:39:50.302+0000] {animal_etl_operators.py:124} INFO - Processed 1840/5190 animals so far
+[2025-05-28T09:39:50.303+0000] {animal_etl_operators.py:93} INFO - Processing batch 23: IDs 2200 to 2299
+[2025-05-28T09:39:50.303+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:40:11.956+0000] {logging_mixin.py:188} INFO - Warning: 19 transformations failed
+[2025-05-28T09:40:11.958+0000] {animal_etl_operators.py:124} INFO - Processed 1921/5190 animals so far
+[2025-05-28T09:40:11.959+0000] {animal_etl_operators.py:93} INFO - Processing batch 24: IDs 2300 to 2399
+[2025-05-28T09:40:11.959+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:40:22.595+0000] {logging_mixin.py:188} INFO - Warning: 16 transformations failed
+[2025-05-28T09:40:22.598+0000] {animal_etl_operators.py:124} INFO - Processed 2005/5190 animals so far
+[2025-05-28T09:40:22.598+0000] {animal_etl_operators.py:93} INFO - Processing batch 25: IDs 2400 to 2499
+[2025-05-28T09:40:22.599+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:40:38.729+0000] {logging_mixin.py:188} INFO - Warning: 18 transformations failed
+[2025-05-28T09:40:38.732+0000] {animal_etl_operators.py:124} INFO - Processed 2087/5190 animals so far
+[2025-05-28T09:40:38.732+0000] {animal_etl_operators.py:93} INFO - Processing batch 26: IDs 2500 to 2599
+[2025-05-28T09:40:38.733+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:40:43.404+0000] {logging_mixin.py:188} INFO - Warning: 18 transformations failed
+[2025-05-28T09:40:43.406+0000] {animal_etl_operators.py:124} INFO - Processed 2169/5190 animals so far
+[2025-05-28T09:40:43.407+0000] {animal_etl_operators.py:93} INFO - Processing batch 27: IDs 2600 to 2699
+[2025-05-28T09:40:43.407+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:40:59.702+0000] {logging_mixin.py:188} INFO - Warning: 20 transformations failed
+[2025-05-28T09:40:59.705+0000] {animal_etl_operators.py:124} INFO - Processed 2249/5190 animals so far
+[2025-05-28T09:40:59.706+0000] {animal_etl_operators.py:93} INFO - Processing batch 28: IDs 2700 to 2799
+[2025-05-28T09:40:59.706+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:41:52.278+0000] {logging_mixin.py:188} INFO - Warning: 22 transformations failed
+[2025-05-28T09:41:52.280+0000] {animal_etl_operators.py:124} INFO - Processed 2327/5190 animals so far
+[2025-05-28T09:41:52.281+0000] {animal_etl_operators.py:93} INFO - Processing batch 29: IDs 2800 to 2899
+[2025-05-28T09:41:52.281+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:42:17.892+0000] {logging_mixin.py:188} INFO - Warning: 22 transformations failed
+[2025-05-28T09:42:17.895+0000] {animal_etl_operators.py:124} INFO - Processed 2405/5190 animals so far
+[2025-05-28T09:42:17.895+0000] {animal_etl_operators.py:93} INFO - Processing batch 30: IDs 2900 to 2999
+[2025-05-28T09:42:17.896+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:42:22.525+0000] {logging_mixin.py:188} INFO - Warning: 9 transformations failed
+[2025-05-28T09:42:22.528+0000] {animal_etl_operators.py:124} INFO - Processed 2496/5190 animals so far
+[2025-05-28T09:42:22.528+0000] {animal_etl_operators.py:93} INFO - Processing batch 31: IDs 3000 to 3099
+[2025-05-28T09:42:22.529+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:42:39.178+0000] {logging_mixin.py:188} INFO - Warning: 19 transformations failed
+[2025-05-28T09:42:39.181+0000] {animal_etl_operators.py:124} INFO - Processed 2577/5190 animals so far
+[2025-05-28T09:42:39.181+0000] {animal_etl_operators.py:93} INFO - Processing batch 32: IDs 3100 to 3199
+[2025-05-28T09:42:39.182+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:42:58.824+0000] {logging_mixin.py:188} INFO - Warning: 23 transformations failed
+[2025-05-28T09:42:58.827+0000] {animal_etl_operators.py:124} INFO - Processed 2654/5190 animals so far
+[2025-05-28T09:42:58.827+0000] {animal_etl_operators.py:93} INFO - Processing batch 33: IDs 3200 to 3299
+[2025-05-28T09:42:58.828+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:43:10.405+0000] {logging_mixin.py:188} INFO - Warning: 16 transformations failed
+[2025-05-28T09:43:10.408+0000] {animal_etl_operators.py:124} INFO - Processed 2738/5190 animals so far
+[2025-05-28T09:43:10.408+0000] {animal_etl_operators.py:93} INFO - Processing batch 34: IDs 3300 to 3399
+[2025-05-28T09:43:10.409+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:43:12.981+0000] {logging_mixin.py:188} INFO - Warning: 17 transformations failed
+[2025-05-28T09:43:12.983+0000] {animal_etl_operators.py:124} INFO - Processed 2821/5190 animals so far
+[2025-05-28T09:43:12.984+0000] {animal_etl_operators.py:93} INFO - Processing batch 35: IDs 3400 to 3499
+[2025-05-28T09:43:12.984+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:43:30.559+0000] {logging_mixin.py:188} INFO - Warning: 25 transformations failed
+[2025-05-28T09:43:30.562+0000] {animal_etl_operators.py:124} INFO - Processed 2896/5190 animals so far
+[2025-05-28T09:43:30.562+0000] {animal_etl_operators.py:93} INFO - Processing batch 36: IDs 3500 to 3599
+[2025-05-28T09:43:30.562+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:43:33.150+0000] {logging_mixin.py:188} INFO - Warning: 14 transformations failed
+[2025-05-28T09:43:33.152+0000] {animal_etl_operators.py:124} INFO - Processed 2982/5190 animals so far
+[2025-05-28T09:43:33.153+0000] {animal_etl_operators.py:93} INFO - Processing batch 37: IDs 3600 to 3699
+[2025-05-28T09:43:33.153+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:43:47.782+0000] {logging_mixin.py:188} INFO - Warning: 17 transformations failed
+[2025-05-28T09:43:47.784+0000] {animal_etl_operators.py:124} INFO - Processed 3065/5190 animals so far
+[2025-05-28T09:43:47.785+0000] {animal_etl_operators.py:93} INFO - Processing batch 38: IDs 3700 to 3799
+[2025-05-28T09:43:47.785+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:43:58.376+0000] {logging_mixin.py:188} INFO - Warning: 19 transformations failed
+[2025-05-28T09:43:58.378+0000] {animal_etl_operators.py:124} INFO - Processed 3146/5190 animals so far
+[2025-05-28T09:43:58.379+0000] {animal_etl_operators.py:93} INFO - Processing batch 39: IDs 3800 to 3899
+[2025-05-28T09:43:58.379+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:44:10.931+0000] {logging_mixin.py:188} INFO - Warning: 13 transformations failed
+[2025-05-28T09:44:10.933+0000] {animal_etl_operators.py:124} INFO - Processed 3233/5190 animals so far
+[2025-05-28T09:44:10.934+0000] {animal_etl_operators.py:93} INFO - Processing batch 40: IDs 3900 to 3999
+[2025-05-28T09:44:10.934+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:44:31.538+0000] {logging_mixin.py:188} INFO - Warning: 15 transformations failed
+[2025-05-28T09:44:31.541+0000] {animal_etl_operators.py:124} INFO - Processed 3318/5190 animals so far
+[2025-05-28T09:44:31.541+0000] {animal_etl_operators.py:93} INFO - Processing batch 41: IDs 4000 to 4099
+[2025-05-28T09:44:31.542+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:44:57.196+0000] {logging_mixin.py:188} INFO - Warning: 17 transformations failed
+[2025-05-28T09:44:57.198+0000] {animal_etl_operators.py:124} INFO - Processed 3401/5190 animals so far
+[2025-05-28T09:44:57.199+0000] {animal_etl_operators.py:93} INFO - Processing batch 42: IDs 4100 to 4199
+[2025-05-28T09:44:57.199+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:45:12.789+0000] {logging_mixin.py:188} INFO - Warning: 11 transformations failed
+[2025-05-28T09:45:12.792+0000] {animal_etl_operators.py:124} INFO - Processed 3490/5190 animals so far
+[2025-05-28T09:45:12.792+0000] {animal_etl_operators.py:93} INFO - Processing batch 43: IDs 4200 to 4299
+[2025-05-28T09:45:12.793+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:45:37.457+0000] {logging_mixin.py:188} INFO - Warning: 22 transformations failed
+[2025-05-28T09:45:37.460+0000] {animal_etl_operators.py:124} INFO - Processed 3568/5190 animals so far
+[2025-05-28T09:45:37.460+0000] {animal_etl_operators.py:93} INFO - Processing batch 44: IDs 4300 to 4399
+[2025-05-28T09:45:37.460+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:45:48.145+0000] {logging_mixin.py:188} INFO - Warning: 19 transformations failed
+[2025-05-28T09:45:48.148+0000] {animal_etl_operators.py:124} INFO - Processed 3649/5190 animals so far
+[2025-05-28T09:45:48.148+0000] {animal_etl_operators.py:93} INFO - Processing batch 45: IDs 4400 to 4499
+[2025-05-28T09:45:48.148+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:46:01.792+0000] {logging_mixin.py:188} INFO - Warning: 20 transformations failed
+[2025-05-28T09:46:01.795+0000] {animal_etl_operators.py:124} INFO - Processed 3729/5190 animals so far
+[2025-05-28T09:46:01.795+0000] {animal_etl_operators.py:93} INFO - Processing batch 46: IDs 4500 to 4599
+[2025-05-28T09:46:01.795+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:46:04.380+0000] {logging_mixin.py:188} INFO - Warning: 20 transformations failed
+[2025-05-28T09:46:04.382+0000] {animal_etl_operators.py:124} INFO - Processed 3809/5190 animals so far
+[2025-05-28T09:46:04.383+0000] {animal_etl_operators.py:93} INFO - Processing batch 47: IDs 4600 to 4699
+[2025-05-28T09:46:04.383+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:46:27.990+0000] {logging_mixin.py:188} INFO - Warning: 19 transformations failed
+[2025-05-28T09:46:27.992+0000] {animal_etl_operators.py:124} INFO - Processed 3890/5190 animals so far
+[2025-05-28T09:46:27.993+0000] {animal_etl_operators.py:93} INFO - Processing batch 48: IDs 4700 to 4799
+[2025-05-28T09:46:27.993+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:46:44.583+0000] {logging_mixin.py:188} INFO - Warning: 15 transformations failed
+[2025-05-28T09:46:44.586+0000] {animal_etl_operators.py:124} INFO - Processed 3975/5190 animals so far
+[2025-05-28T09:46:44.586+0000] {animal_etl_operators.py:93} INFO - Processing batch 49: IDs 4800 to 4899
+[2025-05-28T09:46:44.586+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:46:47.178+0000] {logging_mixin.py:188} INFO - Warning: 20 transformations failed
+[2025-05-28T09:46:47.181+0000] {animal_etl_operators.py:124} INFO - Processed 4055/5190 animals so far
+[2025-05-28T09:46:47.181+0000] {animal_etl_operators.py:93} INFO - Processing batch 50: IDs 4900 to 4999
+[2025-05-28T09:46:47.182+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:46:50.756+0000] {logging_mixin.py:188} INFO - Warning: 14 transformations failed
+[2025-05-28T09:46:50.759+0000] {animal_etl_operators.py:124} INFO - Processed 4141/5190 animals so far
+[2025-05-28T09:46:50.759+0000] {animal_etl_operators.py:93} INFO - Processing batch 51: IDs 5000 to 5099
+[2025-05-28T09:46:50.760+0000] {animals_api_hook.py:102} INFO - Fetching details for 100 animals
+[2025-05-28T09:47:02.391+0000] {logging_mixin.py:188} INFO - Warning: 10 transformations failed
+[2025-05-28T09:47:02.394+0000] {animal_etl_operators.py:124} INFO - Processed 4231/5190 animals so far
+[2025-05-28T09:47:02.394+0000] {animal_etl_operators.py:93} INFO - Processing batch 52: IDs 5100 to 5189
+[2025-05-28T09:47:02.394+0000] {animals_api_hook.py:102} INFO - Fetching details for 90 animals
+[2025-05-28T09:47:05.758+0000] {logging_mixin.py:188} INFO - Warning: 17 transformations failed
+[2025-05-28T09:47:05.760+0000] {animal_etl_operators.py:124} INFO - Processed 4304/5190 animals so far
+[2025-05-28T09:47:05.761+0000] {animal_etl_operators.py:132} INFO - Transformed 4304 animals into 52 load batches
+[2025-05-28T09:47:05.792+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=animal_etl_pipeline_v1.0.1, task_id=transform_animals, execution_date=20250527T020000, start_date=20250528T093441, end_date=20250528T094705
+[2025-05-28T09:47:05.823+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-05-28T09:47:05.856+0000] {taskinstance.py:3312} INFO - 1 downstream tasks scheduled from follow-on schedule check
